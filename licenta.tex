@@ -20,6 +20,10 @@
   escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
   keywordstyle=\color{blue},       % keyword style
   stringstyle=\color{mymauve},     % string literal style
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{mygray},
+  rulecolor=\color{black}
 }
 
 \newtheorem{thm}{Teorema}[section]
@@ -403,33 +407,33 @@
 \end{enumerate}
 
 \begin{lstlisting}[language=Java, caption={Clasa prin care se realizează configurarea CORS}]
-    @Configuration
-    @EnableWebMvc
-    public class CorsConfig
-    {
-        @Bean
-        public CorsFilter corsFilter(){
-            UrlBasedCorsConfigurationSource source= new UrlBasedCorsConfigurationSource();
-            CorsConfiguration config = new CorsConfiguration();
-            config.setAllowCredentials(true);
-            config.addAllowedOrigin("http://localhost:4200");
-            config.setAllowedHeaders(Arrays.asList(
-                    HttpHeaders.AUTHORIZATION,
-                    HttpHeaders.CONTENT_TYPE,
-                    HttpHeaders.ACCEPT
-            ));
-            config.setAllowedMethods(Arrays.asList(
-                    HttpMethod.GET.name(),
-                    HttpMethod.POST.name(),
-                    HttpMethod.PUT.name(),
-                    HttpMethod.DELETE.name()
-            ));
-            config.setMaxAge(3600L);
-            source.registerCorsConfiguration("/**",config);
+@Configuration
+@EnableWebMvc
+public class CorsConfig
+{
+    @Bean
+    public CorsFilter corsFilter(){
+        UrlBasedCorsConfigurationSource source= new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowCredentials(true);
+        config.addAllowedOrigin("http://localhost:4200");
+        config.setAllowedHeaders(Arrays.asList(
+                HttpHeaders.AUTHORIZATION,
+                HttpHeaders.CONTENT_TYPE,
+                HttpHeaders.ACCEPT
+        ));
+        config.setAllowedMethods(Arrays.asList(
+                HttpMethod.GET.name(),
+                HttpMethod.POST.name(),
+                HttpMethod.PUT.name(),
+                HttpMethod.DELETE.name()
+        ));
+        config.setMaxAge(3600L);
+        source.registerCorsConfiguration("/**",config);
 
-            return new CorsFilter(source);
-        }
+        return new CorsFilter(source);
     }
+}
 \end{lstlisting}
 
 \subsection{JSON Web Token Authentification}
@@ -438,25 +442,97 @@
 \par În cadrul aplicației UVTDorms, obiectul JSON encryptat conține o cheie de autentificare temporară, rolul și adresa de email ale utilizatorului. Token-ul obținut prin encryptarea obiectului este inclus în header-ul fiecărei solicitare ce se face din front- spre back-end. Acesta este generat în momentul în care utilizatorul se autentifică și selectează opțiunea de \textit{`Ține-mă minte'}.
 
 \begin{lstlisting}[language=Java, caption={Funcția de generare a token-ului}]
-    public String createToken(TokenDto dto)
-    {
-        Date now = new Date();
-        Date validity = new Date(now.getTime() + 3_600_000);
+public String createToken(TokenDto dto)
+{
+    Date now = new Date();
+    Date validity = new Date(now.getTime() + 3_600_000);
 
-        return JWT.create()
-                .withIssuer(dto.getEmail())
-                .withIssuedAt(now)
-                .withExpiresAt(validity)
-                .withClaim("role", dto.getRole().toString())
-                .sign(Algorithm.HMAC256(secretKey));
-    }
+    return JWT.create()
+            .withIssuer(dto.getEmail())
+            .withIssuedAt(now)
+            .withExpiresAt(validity)
+            .withClaim("role", dto.getRole().toString())
+            .sign(Algorithm.HMAC256(secretKey));
+}
 \end{lstlisting}
 
 \subsection{Security configuration}
 
+\par În cadrul aplicației UVTDorms, un alt strat de security este adăugat print configurarrea Spring Security\cite{spilca2020spring}. Aceste este un framework ce oferă funcționalități de securitate pentru aplicațiile Java. Permite configurarea securității la nivel de URL, de metode HTTP, de acces la resurse și de autentificare. Face posibilă crearea de end-point-uri `publice' și `private', în funcție de necesități.
+
+\par Pentru a configura Spring Security, se va crea o clasă \textit{`SecurityConfig'} în folderul \textit{`utils/'}. Aceasta van avea o metodă care returnează un \textit{`SecurityFilterChain'}, ce va conține configurarea end-point-urilor securizate. Configurarea va include:
+
+\begin{enumerate}
+    \item Verificarea de JWT Token înaintea accesării end-point-urilor
+    \item Crearea unei sesiuni STATELESS, adică fără stocarea informațiilor de autentificare
+    \item Crearea de excepții pentru cazurile în care token-ul nu este valid sau nu este prezent
+\end{enumerate}
+
+\begin{lstlisting}[language=Java, caption={Clasa prin care se realizează configurarea Spring Security}]
+@RequiredArgsConstructor
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    private final UserAuthProvider userAuthProvider;
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf(AbstractHttpConfigurer::disable)
+                .addFilterBefore(new JwtAuthFilter(userAuthProvider), BasicAuthenticationFilter.class)
+                .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests((requests) -> requests.requestMatchers(HttpMethod.POST, "/api/auth/login")
+                        .permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/dorms/dorms-names").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/auth/register-student").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/rooms/get-rooms-numbers-from-dorm/**").permitAll()
+                        .anyRequest().authenticated());
+        return http.build();
+    }
+}
+\end{lstlisting}
+
+\par Configurarea creată permite accesul fără token pentru end-point-urile de autentificare, înregistrare și pentru accesarea listei de cămine. Pentru toate celelalte end-point-uri, accesul este permis doar utilizatorilor autentificați.
 \subsection{Exception handler}
 
-\newpage
+\par Pentru standardizarea modului de gestionare a excepțiilor, am creat un set de clase care permit tratarea excepțiilor într-un mod unitar. În primul rând am creat o clasă \textit{`AppException'}, care extinde clasă \textit{`RuntimeException'} și este o clasă de bază pentru toate excepțiile aplicației. Aceasta conține un mesaj și un status \textit{HTTP}.
+
+\begin{lstlisting}[language=Java, caption={Clasa de bază pentru excepții}]
+public class AppException extends RuntimeException {
+    private final HttpStatus httpStatus;
+
+    public AppException(String message, HttpStatus httpStatus) {
+        super(message);
+        this.httpStatus = httpStatus;
+    }
+
+    public HttpStatus getHttpStatus() {
+        return httpStatus;
+    }
+}
+\end{lstlisting}
+
+\par Acest mesaj de eroare este pus într-un obiect de tip \textit{`ErrorDto'}, care este un \textit{record}\cite{baeldung_java_vs_final_class} ce încapsulează mesajul de tip \textit{String}. Acesta este folosit pentru a transmite mesajul de eroare în body-ul unui răspuns de tip \textit{`ResponseEntity'}.
+
+\begin{lstlisting}[language=Java, caption={Record pentru mesaje de eroare}]
+public record ErrorDto(String message) {}
+\end{lstlisting}
+
+\par Pentru a gestiona automat orice apariție de excepție de tipul \textit{`AppException'}, am creat un \textit{`ControllerAdvice'}, care detectează excepțiile de acest tip, crează un obiect de tip \textit{`ErrorDto'} și îl returnează într-un răspuns de tip \textit{`ResponseEntity'}.
+
+\begin{lstlisting}[language=Java, caption={Clasă care gestionează excepțiile apărute}]
+@ControllerAdvice
+public class RestExceptionHandler {
+    @SuppressWarnings("null")
+    @ExceptionHandler(value = { AppException.class })
+    @ResponseBody
+    public ResponseEntity<ErrorDto> handleException(AppException ex)
+    {
+        return ResponseEntity.status(ex.getHttpStatus())
+                .body(new ErrorDto(ex.getMessage()));
+    }
+}
+\end{lstlisting}
 
 \section{Configurarea bazei de date}
 
