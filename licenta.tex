@@ -264,7 +264,7 @@
     \caption{Diagrama unităților de execuție}
 \end{figure}
 
-\section{Structura bazei de date}
+\section{Structura bazei de date}\label{sec:architectura-bazei-de-date}
 \par Având în vedere varietatea obiectelor abstracte pe care le folosește sistemul, și necesitatea de reutilizare a acestora, aplicația își are datele structurate într-o bază de date. Toate elementele din această structură încapsulează informații esențiale despre principalele obiecte cu care operează aplicația.
 
 \par Una dintre cele mai importante abstractizări este cea al userului, tabelul {\itshape users}, care este o structură ce încapsulează datele unui utilizator obișnuit, cum ar fi numele, adresa de e-mail, numărul de telefon, parola, rolul, starea de activitate a contului și, desigur, un identificator unic.
@@ -536,15 +536,73 @@ public class RestExceptionHandler {
 
 \section{Configurarea bazei de date}
 
+\par Pentru stocarea datelor aplicației UVTDorms, am ales să folosesc un sistem de gestionare de baze de date relaționale, și anume PostgreSQL\cite{drake2002practical}. Arhitectura bazei de date poate fi observată în capitolul \ref{sec:architectura-bazei-de-date}.
+
 \subsection{JPA Repository}
 
+\par Pentru a accesa baza de date, am folosit JPA Repository\cite{gierke2012spring}. Acesta oferă un strat de abstractizare dintre o bază de date și aplicația Spring-Boot. Prin intermediul JPA Repository, se pot crea ușor metode de manipulare a datelor, precum adăugarea, ștergerea sau modificarea acestora. Acest strat oferă și posibilitatea de a crea metode specifice pentru operații complexe, dar permite și crearea de metode de căutare după anumite criterii, cum ar fi numele sau adresa de email a unui utilizator, fără scrierea de query-uri SQL.
+
+\par Pentru a crea un repository, se va crea o interfață care extinde \textit{`JpaRepository'} și care are ca parametri tipul entității și tipul cheii primare a acesteia. În această interfață se pot adăuga metode specifice pentru operații complexe. În exemplul următor se poate fi observat implementarea unor metode specifice pentru entitatea \textit{`Room'}.
+
+\begin{lstlisting}[language=Java, caption={Interfața JPA Repository pentru entitatea Room}]
+@Repository
+public interface IRoomRepository extends JpaRepository<Room, Long> {
+    public Optional<Room> getRoomByRoomNumber(String roomNumber);
+    public List<Room> findByDormDormName(String dormName);
+    public Optional<Room> findByDormAndRoomNumber(Dorm dorm, String roomNumber);
+    public Optional<Room> findByDormDormNameAndRoomNumber(String dormName, String roomNumber);
+}
+\end{lstlisting}
+
 \subsection{Maparea claselor Spring-Boot la tabelele PostgreSQL}
-%entitATI, RELATII, ATNOTATRI, TABELE
+
+\par Prin intermediul JPA Repository, se poate realiza maparea entităților (claselor Java) la tabelele din baza de date. Această mapare se realizează prin numele membrilor claselor și prin ajutorul anotărilor. Anotările sunt adnotări care oferă informații suplimentare despre cum să fie interpretate clasele și membrii acestora. Tot aici se pot specifica și relațiile dintre entități.
+
+\par În exemplul de mai jos se poate observa cum se realizează maparea entității \textit{`User'} la tabela \textit{`users'}. Entitatea are un identificator unic de tib UUID, numele, prenumele, adresa de email, numărul de telefon, parola și alte detalii specifice unui utilizator. De asemenea, entitatea are și relații cu alte entități, precum \textit{`StudentDetails'} sau \textit{`DormAdministratorDetails'}.
+
+\begin{lstlisting}[language=Java, caption={Clasa User}]
+@Entity
+@Builder
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(generator = "UUID")
+    private UUID userId;
+    private String firstName;
+    private String lastName;
+    @Column(unique = true)
+    private String email;
+    @Column(unique = true)
+    private String phoneNumber;
+    private String password;
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private StudentDetails studentDetails;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<RepairTicket> repairTickets;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Announcement> announcements;
+    @Enumerated(EnumType.STRING)
+    private Role role;
+    @OneToOne(mappedBy = "administrator", cascade = CascadeType.ALL)
+    private DormAdministratorDetails dormAdministratorDetails;
+    private Boolean isActive;
+}
+\end{lstlisting}
 
 \subsection{Data Transfer Object}
-%cum sunt transmise datele prin dto-s
 
-\newpage
+\par Datele aplicației UVTDorms sunt stocate în entitățile mapate la tabelele din baza de date. Acestea conțin toate informațiile asociate cu o entitate, inclusiv relațiile cu alte entități. De fiecare dată când front-end solicită informații serverului, acestea sunt trimise sub formă de obiecte. Pentru a evita trimiterea unui obiect întreg și pentru a restructura înformații într-un mode mai ușor de folosit, am creat obiecte de transfer de date (DTO)\cite{pantaleev2007identifying}.
+
+\par Aceste obiecte sunt clase simple, care conțin doar informațiile necesare pentru o anumită operație. De exemplu, pentru a afișa informațiile unui utilizator pe pagina de profil, se va folosi clasa \textit{UserDetailsDto}, care conține doar numele, prenumele, adresa de email și numărul de telefon al utilizatorului.
+
+\begin{lstlisting}[language=Java, caption={Clasa UserDetailsDto}]
+public class UserDetailsDto {
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phoneNumber;
+}
+\end{lstlisting}
 
 \section{Servicii back-end}
 %ce servicii, ce se intampla,exemple, lucrarea si cu repo.
