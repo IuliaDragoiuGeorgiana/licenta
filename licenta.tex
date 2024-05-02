@@ -11,13 +11,12 @@
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 
-\lstset{ %
+\lstset{
   backgroundcolor=\color{white},   % choose the background color
   basicstyle=\footnotesize,        % size of fonts used for the code
   breaklines=true,                 % automatic line breaking only at whitespace
   captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{mygreen},    % comment style
-  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  commentstyle=\color{mygreen},    % if you want to add LaTeX within your code
   keywordstyle=\color{blue},       % keyword style
   stringstyle=\color{mymauve},     % string literal style
   frame=single,
@@ -60,7 +59,7 @@
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
 
-\noindent Prof.Conf.Dr. Micot\u a Flavia Elena\hfill Dr\u agoiu  Iulia-Georgiana}
+\noindent Prof.Conf.Dr.\ Micotă Flavia Elena\hfill Dr\u agoiu  Iulia-Georgiana}
 
 \vfill
 \begin{center}
@@ -86,7 +85,7 @@
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
 
-\noindent Prof.Conf.Dr. Micot\u a Flavia Elena \hfill Dr\u agoiu Iulia-Georgiana}
+\noindent Prof.Conf.Dr.\ Micot\u a Flavia Elena \hfill Dr\u agoiu Iulia-Georgiana}
 
 \vfill
 \begin{center}
@@ -143,7 +142,7 @@
 \end{figure}
 
 \subsection{TUSA }
-\par TUSA (Tasmanian University Student Association) \footnote{\url{https://www.tusa.org.au/student-advocate-appointment/}}  este o aplicație destinată studenților din cadrul Universității din Tasmania oferind sprijin pentru integrare, dar și sprijin și informații legate de resurse și servicii pentru o cât mai bună experiență studențească. Aplicația oferă informații studenților sau viitorilor studenți despre posibilele oportunități, evenimente, cluburi sau voluntariate la care pot lua parte, cum se pot înscrie  sau cum pot chiar ei să creeze un astfel de club sau societate. De asemenea, aplicația ajută studenții în ceea ce privește informarea despre beneficiile precum suport academic, consultanță financiară, alimentație sau locuințe. Studenții pot să își facă programare la mașina de spălat rufe conform orarului și disponibilității. Aceștia aleg ora și data disponibilă și își introduc numele, adresa de email și un număr de telefon. Accesul la programare nu este restricționat, deci și persoanele din afara universității pot face programare.
+\par TUSA (Tasmanian University Student Association)\footnote{\url{https://www.tusa.org.au/student-advocate-appointment/}}  este o aplicație destinată studenților din cadrul Universității din Tasmania oferind sprijin pentru integrare, dar și sprijin și informații legate de resurse și servicii pentru o cât mai bună experiență studențească. Aplicația oferă informații studenților sau viitorilor studenți despre posibilele oportunități, evenimente, cluburi sau voluntariate la care pot lua parte, cum se pot înscrie  sau cum pot chiar ei să creeze un astfel de club sau societate. De asemenea, aplicația ajută studenții în ceea ce privește informarea despre beneficiile precum suport academic, consultanță financiară, alimentație sau locuințe. Studenții pot să își facă programare la mașina de spălat rufe conform orarului și disponibilității. Aceștia aleg ora și data disponibilă și își introduc numele, adresa de email și un număr de telefon. Accesul la programare nu este restricționat, deci și persoanele din afara universității pot face programare.
 În plus, studenții sunt încurajați să ofere feedback despre experiența lor ca studenți, având o secțiune  destinată pentru acest lucru. Pentru orice întrebare sau problemă, acesția pot completa un formular în care să  detalieze nelămurirea avută.
 
 \begin{figure}[H]
@@ -162,19 +161,17 @@
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        & \textbf{me.UTCN} & \textbf{TUSA} \\ \hline
-        Notificarea defecțiunilor                      & Nu               & Nu            \\ \hline
-        Instrucțiuni de utilizare mașina de spălat     & Nu               & Nu            \\ \hline
-        Evenimente/anunțuri                            & Nu               & Da            \\ \hline
-        Feedback                                       & Nu               & Da            \\ \hline
-        Formular reparații                             & Da               & Nu            \\ \hline
-        Validare cont                                  & Da               & Nu            \\ \hline
-        Programare limitată                            & Da               & Nu            \\ \hline
+    \begin{tabular}{ccc}
+        & \textbf{me.UTCN} & \textbf{TUSA} \\
+        Notificarea defecțiunilor                      & Nu               & Nu            \\
+        Instrucțiuni de utilizare mașina de spălat     & Nu               & Nu            \\
+        Evenimente/anunțuri                            & Nu               & Da            \\
+        Feedback                                       & Nu               & Da            \\
+        Formular reparații                             & Da               & Nu            \\
+        Validare cont                                  & Da               & Nu            \\
+        Programare limitată                            & Da               & Nu            \\
     \end{tabular}
-    \caption{Your caption here} % TODO: add caption here
-    \label{your-label-here}
+    \caption{Comparații între aplicații\label{comparatii-intre-aplicatii}}
 \end{table}
 
 \chapter{Arhitectura aplicației}
@@ -183,15 +180,14 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{resurse/diagrame/Diagrama_Arhitectura2.drawio.png}
-    \caption{Diagrama de instalare}
-    \label{fig:arhitect}
+    \caption{Diagrama de instalare}\label{fig:arhitect}
 \end{figure}
 
-\par Așa cum reiese și din figura \ref{fig:arhitect} , utilizatorul aplicației poate interacționa cu aceasta folosind un browser web care oferă o interfață intuitivă, simplă și ușor de folosit. Prin utilizarea infrastructurii oferite de browserele web, aplicația devine accesibilă utilizatorilor prin mai multe moduri de utilizare, cum ar fi telefoanele mobile.
+\par Așa cum reiese și din figura\ref{fig:arhitect}, utilizatorul aplicației poate interacționa cu aceasta folosind un browser web care oferă o interfață intuitivă, simplă și ușor de folosit. Prin utilizarea infrastructurii oferite de browserele web, aplicația devine accesibilă utilizatorilor prin mai multe moduri de utilizare, cum ar fi telefoanele mobile.
 
-\par Browserul web este modulul care reprezintă legătura directă dintre utilizator și componenta logică și funcțională a aplicației, serverul web. Acesta oferă serviciile principale ale aplicației accesibile prin stratul de prezentare, accesat direct de browserul web prin protocolul HTTPS.
+\par Browserul web este modulul care reprezintă legătura directă dintre utilizator și componenta logică și funcțională a aplicației, serverul web. Acesta oferă serviciile principale ale aplicației accesibile prin stratul de prezentare, accesat direct de browserul web prin protocolul HTTPS\@.
 
-\par HTTPS (Hyper Text Transfer Protocol/Secure) este un protocol folosit de rețele de calculatoare. Acesta criptează datele transmise de-a lungul rețelei de la un punct la altul. Este predecesorul protocolului HTTP. Acesta oferă în plus securitate care se bazează pe certificatele bazate pe criptografia digitală care permite urmărirea autenticității utilizatorilor.
+\par HTTPS (Hyper Text Transfer Protocol/Secure) este un protocol folosit de rețele de calculatoare. Acesta criptează datele transmise de-a lungul rețelei de la un punct la altul. Este predecesorul protocolului HTTP\@. Acesta oferă în plus securitate care se bazează pe certificatele bazate pe criptografia digitală care permite urmărirea autenticității utilizatorilor.
 
 \par În momentul declanșării unor activități de prelucrare a datelor sau a unei cereri de date, browserul web accesează unul dintre end-point-urile stratului de prezentare a serverului web, care aplică logica funcționalității sale si returnează datele solicitate sau realizează modificările cerute.
 
@@ -267,24 +263,24 @@
 \section{Structura bazei de date}\label{sec:architectura-bazei-de-date}
 \par Având în vedere varietatea obiectelor abstracte pe care le folosește sistemul, și necesitatea de reutilizare a acestora, aplicația își are datele structurate într-o bază de date. Toate elementele din această structură încapsulează informații esențiale despre principalele obiecte cu care operează aplicația.
 
-\par Una dintre cele mai importante abstractizări este cea al userului, tabelul {\itshape users}, care este o structură ce încapsulează datele unui utilizator obișnuit, cum ar fi numele, adresa de e-mail, numărul de telefon, parola, rolul, starea de activitate a contului și, desigur, un identificator unic.
+\par Una dintre cele mai importante abstractizări este cea al userului, tabelul \textit{users}, care este o structură ce încapsulează datele unui utilizator obișnuit, cum ar fi numele, adresa de e-mail, numărul de telefon, parola, rolul, starea de activitate a contului și, desigur, un identificator unic.
 
-\par Printre tipurile de utilizatori se enumără și studenții, care au anumite date pe care restul tipurilor de utilizatori nu le au, motiv pentru care a fost nevoie crearea unei tabele, {\itshape students\_details}, care are ca atribute detaliile necesare lucrării cu obiecte ce abstractizează studenți. Printre aceste detalii se află CNP-ul, identificatorul unic al camerei în care este cazat studentul și numărul matricol.
+\par Printre tipurile de utilizatori se enumără și studenții, care au anumite date pe care restul tipurilor de utilizatori nu le au, motiv pentru care a fost nevoie crearea unei tabele, \textit{students\_details}, care are ca atribute detaliile necesare lucrării cu obiecte ce abstractizează studenți. Printre aceste detalii se află CNP-ul, identificatorul unic al camerei în care este cazat studentul și numărul matricol.
 
-\par Un alt tip de utilizator cu detalii diferite este administratorul căminului, care, pe lângă datele unui utilizator obișnuit, mai are și identificatorul unic al căminului pentru care este responsabil. Pentru încapsularea acestor informații am creat tabelul {\itshape dorm\_administrator\_details}.q
+\par Un alt tip de utilizator cu detalii diferite este administratorul căminului, care, pe lângă datele unui utilizator obișnuit, mai are și identificatorul unic al căminului pentru care este responsabil. Pentru încapsularea acestor informații am creat tabelul \textit{dorm\_administrator\_details}.q
 
-\par Anunțurile din sistem sunt încapsulate în tabelul {\itshape announcements}, care are un identificator unic al anunțului, identificatorul unic al utilizatorului care a creat anunțul, un titlu, un text ce reprezintă descrierea anunțului și data in care anunțul a fost creat.
+\par Anunțurile din sistem sunt încapsulate în tabelul \textit{announcements}, care are un identificator unic al anunțului, identificatorul unic al utilizatorului care a creat anunțul, un titlu, un text ce reprezintă descrierea anunțului și data in care anunțul a fost creat.
 
-\par Căminele aflate în sistem au fiecare un identificator unic, o adresă și un nume, încapsulate în tabelul {\itshape dorms}. Camerele din cămine au într-un mod similar un identificator unic, numărul camerei în contextul căminului și identificatorul unic al căminului, în tabelul {\itshape rooms}.
+\par Căminele aflate în sistem au fiecare un identificator unic, o adresă și un nume, încapsulate în tabelul \textit{dorms}. Camerele din cămine au într-un mod similar un identificator unic, numărul camerei în contextul căminului și identificatorul unic al căminului, în tabelul \textit{rooms}.
 
-\par Datele mașinilor de spălat și ale uscătoarelor din spălătoriile căminelor sunt în tabelele {\itshape wash\_machines} și {\itshape dryers}. Ambele au un identificator unic, la fel și identificatorul unic al căminului în care se află, un număr de identificare în contextul căminului și un câmp care reprezintă starea mașinii, adică disponibilitatea acesteia, sau dacă este defectă.
+\par Datele mașinilor de spălat și ale uscătoarelor din spălătoriile căminelor sunt în tabelele \textit{wash\_machines} și \textit{dryers}. Ambele au un identificator unic, la fel și identificatorul unic al căminului în care se află, un număr de identificare în contextul căminului și un câmp care reprezintă starea mașinii, adică disponibilitatea acesteia, sau dacă este defectă.
 
-\par Programările la spălătoria căminului sunt reprezentate prin structura tabelului {\itshape laundry\_appointments}. Fiecare programare are un identificator unic, precum și identificatorul unic al utilizatorului care a creat-o, dar și identificatoarele unice al mașinii de spălat și al uscătorului la care s-a făcut programarea. Începutul și finalul rezervării sunt informații care sunt încapsulate tot în această structură.
+\par Programările la spălătoria căminului sunt reprezentate prin structura tabelului \textit{laundry\_appointments}. Fiecare programare are un identificator unic, precum și identificatorul unic al utilizatorului care a creat-o, dar și identificatoarele unice al mașinii de spălat și al uscătorului la care s-a făcut programarea. Începutul și finalul rezervării sunt informații care sunt încapsulate tot în această structură.
 
 \section{Structura unităților de cod}
 \par Mai jos sunt prezentate diagramele unităților de cod. Acestea reflectă structurarea codului care implementează funcționalitățile și serviciile serverului web, precum și mapările care permint conectarea la baza de date.
 
-\par Entitățile existente în cod sunt mapările directe ale elementelor din baza de date în care se specifică explicit încapsularea internă dintre ele, ca și consecință a relațiilor. Prin urmare, în diagrama din Figura 2.7. putem observa relații bidirecționale, de compoziție și agregare. De exemplu, relația de compoziție dintre {\itshape User} și {\itshape StudentDetails}, unde cel din urmă are mereu un obiect de tip {\itshape User}. Dar această relație în contextul entităților presupune și un complement al relației de compoziție, în cazul nostru cea de agregare care se realizează printr-o listă de obiecte de tip {\itshape StudentDetails} în contextul {\itshape User}.
+\par Entitățile existente în cod sunt mapările directe ale elementelor din baza de date în care se specifică explicit încapsularea internă dintre ele, ca și consecință a relațiilor. Prin urmare, în diagrama din Figura 2.7.\ putem observa relații bidirecționale, de compoziție și agregare. De exemplu, relația de compoziție dintre \textit{User} și \textit{StudentDetails}, unde cel din urmă are mereu un obiect de tip \textit{User}. Dar această relație în contextul entităților presupune și un complement al relației de compoziție, în cazul nostru cea de agregare care se realizează printr-o listă de obiecte de tip \textit{StudentDetails} în contextul \textit{User}.
 
 \begin{figure}[H]
     \centering
@@ -300,7 +296,7 @@
     \caption{Diagrama unităților de cod pentru repository}
 \end{figure}
 
-\par Serviciile corespunzătoare fiecărei componente din sistem sunt elementele cheie în manipularea obiectelor existente. Ele sunt responsabile pentru activitățile principale și execută operații complexe, uneori folosindu-se chiar de alte servicii. De exemplu, {\itshape LaundryAppointmentService} utilizează numeroase alte servicii pentru realizarea cererilor legate de programările la spălătorie.
+\par Serviciile corespunzătoare fiecărei componente din sistem sunt elementele cheie în manipularea obiectelor existente. Ele sunt responsabile pentru activitățile principale și execută operații complexe, uneori folosindu-se chiar de alte servicii. De exemplu, \textit{LaundryAppointmentService} utilizează numeroase alte servicii pentru realizarea cererilor legate de programările la spălătorie.
 
 \begin{figure}[H]
     \centering
@@ -330,7 +326,7 @@
 \subsection{Fluxul de navigare din perspectiva unui student}
 \par Studenții sunt cei care au acces la paginile care întruchipează principalele funcționalități ale aplicației.
 
-\par Una dintre aceste pagini este pagina de crearea programărilor la spălătorie, accesibilă prin butonul {\itshape creare programare} aflat pe pagina acasă. Pentru a face o programare, studenții trebuie să completeze un formular unde tebuie să seteze informații legate de programare, precum data și intervalul în care are loc aceasta și mașina de spălat la care se face programarea. După finalizarea completării formularului, în urma apăsării butonului de finalizare, apare pop-up-ul de confirmare a creării programării cu un buton de redirecționare pe pagina acasă.
+\par Una dintre aceste pagini este pagina de crearea programărilor la spălătorie, accesibilă prin butonul \textit{creare programare} aflat pe pagina acasă. Pentru a face o programare, studenții trebuie să completeze un formular unde tebuie să seteze informații legate de programare, precum data și intervalul în care are loc aceasta și mașina de spălat la care se face programarea. După finalizarea completării formularului, în urma apăsării butonului de finalizare, apare pop-up-ul de confirmare a creării programării cu un buton de redirecționare pe pagina acasă.
 
 \par O altă pagină accesibilă doar studenților este pagina de raportare de probleme tehnice. Aici studentul poate furniza informații despre camera sau căminul în care a fost identificată problema (în cazul în care problema nu se află într-o cameră a căminului, atunci se specifică doar căminul), data identificării acesteia, descrierea problemei și alte informații relevante. După trimiterea raportului, apare un pop-up care confirmă crearea acestuia, alături de un buton de redirecționare pe pagina acasă.
 
@@ -343,17 +339,17 @@
 \end{figure}
 
 \subsection{Fluxul de navigare din perspectiva unui administrator cămin}
-\par Administratorul căminului este responsabil pentru majoritatea elementelor organizatorice din cadrul unui cămin. Prin urmare, acesta are acces la numeroase pagini de administrare, de unde poate reveni pe pagina acasă cu ajutorului butonului {\itshape acasă}.
+\par Administratorul căminului este responsabil pentru majoritatea elementelor organizatorice din cadrul unui cămin. Prin urmare, acesta are acces la numeroase pagini de administrare, de unde poate reveni pe pagina acasă cu ajutorului butonului \textit{acasă}.
 
 \par Una dintre paginile de administrare este cea a studenților, unde administratorul căminului poate accepta sau respinge studenții care s-au înregistrat la un cămin. Tot aici, administratorul poate să efectueze căutări în lista studenților cazați în cămin și mai are și opțiuni de a inactiva conturile studenților.
 
-\par Pentru adăugarea sau aplicarea stării de indisponibiliate a mașinilor din spălătoria căminului și administrarea altor utilități din cămin, administratorul are la dispoziție pagina de administrare a căminului, accesibilă prin butonul {\itshape cămin}.
+\par Pentru adăugarea sau aplicarea stării de indisponibiliate a mașinilor din spălătoria căminului și administrarea altor utilități din cămin, administratorul are la dispoziție pagina de administrare a căminului, accesibilă prin butonul \textit{cămin}.
 
-\par Pagina de administrare programări, accesibilă prin butonul {\itshape programări}, afișează detaliile legate de programările la spălătoria căminului precum și istoricul de programări. Aici administratorul are opțiunea de a urmări demersul acestora și opțiunea de a anula programări.
+\par Pagina de administrare programări, accesibilă prin butonul \textit{programări}, afișează detaliile legate de programările la spălătoria căminului precum și istoricul de programări. Aici administratorul are opțiunea de a urmări demersul acestora și opțiunea de a anula programări.
 
-\par Pentru administrarea raportărilor problemelor tehnice, administratorul căminului are acces la o pagină dedicată, prin butonul {\itshape raportări probleme tehnice}, unde poate vedea detaliile rapoartelor și le poate închide după ce acestea au fost rezolvate.
+\par Pentru administrarea raportărilor problemelor tehnice, administratorul căminului are acces la o pagină dedicată, prin butonul \textit{raportări probleme tehnice}, unde poate vedea detaliile rapoartelor și le poate închide după ce acestea au fost rezolvate.
 
-\par Ultima pagină administrativă ce se află la dispoziția administratorului este cea a evenimentelor, pe care poate intra apăsând pe butonul {\itshape evenimente}. Aici administratorul poate crea, modifica și șterge evenimente ce au loc în cadrul căminului.
+\par Ultima pagină administrativă ce se află la dispoziția administratorului este cea a evenimentelor, pe care poate intra apăsând pe butonul \textit{evenimente}. Aici administratorul poate crea, modifica și șterge evenimente ce au loc în cadrul căminului.
 
 \begin{figure}[H]
     \centering
@@ -364,9 +360,9 @@
 \subsection{Fluxul de navigare din perspectiva administratorului aplicției}
 \par Administrartorul aplicației este cel care se ocupă atât de buna funcționare a aplicației, cât și de adăugarea căminelor și distribuirea noilor administratori.
 
-\par Acesta prin butonul  {\itshape administratori} poate accesa pagina unde are posibilitatea de a vizualiza și  a realiza diferite operații asupra administratorilor de cămine, precum adăugarea și inactivarea conturilor administratorilor sau căutarea acestora. Tot aici, odată adăugați administratorii, acestora li se pot atribui căminul corespunzător.
+\par Acesta prin butonul \textit{administratori} poate accesa pagina unde are posibilitatea de a vizualiza și  a realiza diferite operații asupra administratorilor de cămine, precum adăugarea și inactivarea conturilor administratorilor sau căutarea acestora. Tot aici, odată adăugați administratorii, acestora li se pot atribui căminul corespunzător.
 
-\par Pentru administrarea căminelor, administratorul aplicației are acces la pagina cu același nume prin intermediul butonului {\itshape cămine}, unde poate adăuga sau șterge cămine.
+\par Pentru administrarea căminelor, administratorul aplicației are acces la pagina cu același nume prin intermediul butonului \textit{cămine}, unde poate adăuga sau șterge cămine.
 
 \begin{figure}[H]
     \centering
@@ -536,11 +532,11 @@ public class RestExceptionHandler {
 
 \section{Configurarea bazei de date}
 
-\par Pentru stocarea datelor aplicației UVTDorms, am ales să folosesc un sistem de gestionare de baze de date relaționale, și anume PostgreSQL\cite{drake2002practical}. Arhitectura bazei de date poate fi observată în capitolul \ref{sec:architectura-bazei-de-date}.
+\par Pentru stocarea datelor aplicației UVTDorms, am ales să folosesc un sistem de gestionare de baze de date relaționale, și anume PostgreSQL\cite{drake2002practical}. Arhitectura bazei de date poate fi observată în capitolul\ref{sec:architectura-bazei-de-date}.
 
 \subsection{JPA Repository}
 
-\par Pentru a accesa baza de date, am folosit JPA Repository\cite{gierke2012spring}. Acesta oferă un strat de abstractizare dintre o bază de date și aplicația Spring-Boot. Prin intermediul JPA Repository, se pot crea ușor metode de manipulare a datelor, precum adăugarea, ștergerea sau modificarea acestora. Acest strat oferă și posibilitatea de a crea metode specifice pentru operații complexe, dar permite și crearea de metode de căutare după anumite criterii, cum ar fi numele sau adresa de email a unui utilizator, fără scrierea de query-uri SQL.
+\par Pentru a accesa baza de date, am folosit JPA Repository\cite{gierke2012spring}. Acesta oferă un strat de abstractizare dintre o bază de date și aplicația Spring-Boot. Prin intermediul JPA Repository, se pot crea ușor metode de manipulare a datelor, precum adăugarea, ștergerea sau modificarea acestora. Acest strat oferă și posibilitatea de a crea metode specifice pentru operații complexe, dar permite și crearea de metode de căutare după anumite criterii, cum ar fi numele sau adresa de email a unui utilizator, fără scrierea de query-uri SQL\@.
 
 \par Pentru a crea un repository, se va crea o interfață care extinde \textit{`JpaRepository'} și care are ca parametri tipul entității și tipul cheii primare a acesteia. În această interfață se pot adăuga metode specifice pentru operații complexe. În exemplul următor se poate fi observat implementarea unor metode specifice pentru entitatea \textit{`Room'}.
 
@@ -606,8 +602,57 @@ public class UserDetailsDto {
 
 \section{Servicii back-end}
 %ce servicii, ce se intampla,exemple, lucrarea si cu repo.
+\par Serviciile back-end sunt clase care reprezintă partea logică a aplicației. Acestea sunt responsabile pentru manipularea datelor, pentru efectuarea operațiilor complexe și pentru pregătirea datelor pentru a fi trimise către front-end. Fiecare set de funcționalități ale aplicației are propriul serviciu, care este responsabil pentru operațiile specifice.
 
-\newpage
+\par Serviciile pot să comunice atât cu alte servicii cât și cu baza de date. În cazul în care un serviciu are nevoie de date, acesta apelează metodele din repository pentru a obține informațiile necesare. În cazul în care serviciul are nevoie de date de tipul unei entități neasociate serviciul, se apelează metodele din repository-urile altor entități pentru a obține informațiile necesare. Dacă aceste date trebuie să fie prelucrate, se pot apela serviciile care se ocupă de aceste operații.
+
+\par De exemplu, clasa \textit{`LaundryAppointmentService'} oferă un serviciu pentru crearea programărilor la spălătorie, prin intermediul metodei \textit{`createLaundryAppointment (\ldots)'}. Acest serviciu se ocupă doar de operațiile legate de programări. În cadrul acestei metode se întâmplă următoarele:
+
+\begin{enumerate}
+    \item se verifică dacă studentul are deja o programare pentru aceeași săptămână,
+    \item se verifică dacă mașina de spălat și uscătorul sunt disponibile,
+    \item se procesează intervalul selectat de student astfel încât să fie în formatul necesar creării programării,
+    \item se creează programarea,
+    \item programarea se salvează în baza de date.
+\end{enumerate}
+
+\begin{lstlisting}[language=Java, caption={Clasa LaundryAppointmentService}]
+@Service
+@RequiredArgsConstructor
+public class LaundryAppointmentService {
+    // ... class members and private helper functions ...
+
+    public void createLaundryAppointment(CreateLaundryAppointmentDto createLaundryAppointmentDto, String studentEmail) throws AppException {
+        User user = userRepository.getByEmail(studentEmail)
+            .orElseThrow(() -> new AppException("User not found", HttpStatus.NOT_FOUND));
+
+        StudentDetails student = studentDetailsRepository.findByUser(user)
+            .orElseThrow(() -> new AppException("The user is not a student",
+                            HttpStatus.BAD_REQUEST));
+
+        if (studentAlreadyHasAppointmentForThisWeek(student, createLaundryAppointmentDto.selectedDate()
+                                .atTime(createLaundryAppointmentDto.selectedInterval(), 0))) {
+            throw new AppException("The student already has an appointment for this week",
+                            HttpStatus.BAD_REQUEST);
+        }
+
+        WashingMachine washingMachine = washingMachineRepository
+            .findById(createLaundryAppointmentDto.selectedMachineId())
+            .orElseThrow(() -> new AppException("Washing machine not found", HttpStatus.NOT_FOUND));
+
+        Dryer dryer = dryerRepository.findById(createLaundryAppointmentDto.selectedDryerId())
+            .orElseThrow(() -> new AppException("Dryer not found", HttpStatus.NOT_FOUND));
+
+        LocalDateTime intervalBeginDate = createLaundryAppointmentDto.selectedDate()
+            .atTime(createLaundryAppointmentDto.selectedInterval(), 0);
+        LaundryAppointment laundryAppointment = new LaundryAppointment(intervalBeginDate, student,
+            washingMachine, dryer);
+        laundryAppointmentRepository.save(laundryAppointment);
+    }
+
+    // ... other methods ...
+}
+\end{lstlisting}
 
 \section{Accesare servicii back-end}
 %controlere back-end
