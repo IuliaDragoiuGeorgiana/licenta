@@ -377,19 +377,19 @@
 \chapter{Implementarea aplicației}
 \par Pentru realizarea propriu-zisă a aplicației voi urmări structura prezentată în capitolul anterior. Dezvoltarea se va desfășura în paralel atât pe partea de front-end a aplicației, cât și pe partea de back-end. Astfel, fiecare funcționalitate va fi implementată incremental, iar testarea lor va fi posibilă și din perspectiva utilizatorului, deja de la începutul dezvoltării.
 
-\par Având în vedere că implementarea unor mechanisme sunt similare, vor fi prezentate doar câte un exemplar din cele distincte. Deși pe parcursul realizării codului sursă se urmăresc pincipiile \textit{Clean Code}\cite{martin2009clean} și se evită repetarea codului și se profită de avantajele programării orientate obiect, este totuși imposibilă modularizarea microserviciilor astfel încăt să nu existe părți similare.
+\par Având în vedere că implementarea unor mecanisme sunt similare, vor fi prezentate doar câte un exemplar din cele distincte. Deși pe parcursul realizării codului sursă se urmăresc pincipiile \textit{Clean Code}\cite{martin2009clean} și se evită repetarea codului și se profită de avantajele programării orientate obiect, este totuși imposibilă modularizarea microserviciilor astfel încăt să nu existe părți similare.
 
 \section{Configurarea backend-ului}
-\par Printre lucrurile prioritare în dezvoltarea aplicației se află realizarea conexiunii dintre front- și back-end. Acesta presupune mai mulți factori, principalele fiind de natură de securitate. Framework-ul Spring-Boot permite variate configurații ale serverului pentru a asigura accesarea serviciilor doar de cei autorizați, creând astfel măsurile de bază ale securității aplicației\cite{scarioni2019pro}.
+\par Printre lucrurile prioritare în dezvoltarea aplicației se află realizarea conexiunii dintre front-end și back-end. Acesta presupune mai mulți factori, principalele fiind de natură de securitate. Framework-ul Spring-Boot permite variate configurații ale serverului pentru a asigura accesarea serviciilor doar de cei autorizați, creând astfel măsurile de bază ale securității aplicației\cite{scarioni2019pro}.
 
-\par În secțiile următoare vor fi prezentate configurarea accesului la serviciile serverului atât prin condiționarea adreselor care solicită acces, cât și prin condiționarea accesurilor prin verificarea parametrilor din solicitare. Cel din urmă va fi executată doar în cazul anumitor puncte de acces, fiindcă serverul va avea și servicii \textit{publice}, adică servicii care sunt accesibile nu numai utilizatorilor care au un cont.
+\par În secțiunile următoare vor fi prezentate configurarea accesului la serviciile serverului atât prin condiționarea adreselor care solicită acces, cât și prin condiționarea accesurilor prin verificarea parametrilor din solicitare. Cel din urmă va fi executată doar în cazul anumitor puncte de acces, fiindcă serverul va avea și servicii \textit{publice}, adică servicii care sunt accesibile nu numai utilizatorilor care au un cont.
 
 \subsection{Cross-Origin Resource Sharing}
-\par Unul dintre cele mai aplicate mechanisme de filtrarea apelurilor este \textit{Cross-Origin Resource Sharing}\cite{gibbinscross} (CORS). Aceste vine cu funcționalități diferite în funcție de nivelul de aplicabilitate.
+\par Unul dintre cele mai aplicate mecanisme de filtrarea apelurilor este \textit{Cross-Origin Resource Sharing}\cite{gibbinscross} (CORS). Acesta vine cu funcționalități diferite în funcție de nivelul de aplicabilitate.
 
-\par La nivelul protocolului CORS adaugă un câmp nou în header-ul cererilor, care indică originea solicitării de acces. Astfel pot fi restricționate originile de la care serverul să accepte cereri. Tot aici, pot fi specificate și tipul cererilor ce se pot face pentru back-end (GET, PUT, OPTIONS, etc.).
+\par La nivelul protocolului, CORS adaugă un câmp nou în header-ul cererilor, care indică originea solicitării de acces. Astfel, pot fi restricționate originile de la care serverul să accepte cereri. Tot aici, pot fi specificate și tipul cererilor ce se pot face pentru back-end (GET, PUT, OPTIONS, etc.).
 
-\par La nivel de API (Application Programming Interface) cererile restricționate vor primi totuși un răspuns, generat de browser. Un mesaj de eroare se generează în cazul cererilor respinse, dar acesta nu este accesibil din script, doar apare în console.
+\par La nivel de API (Application Programming Interface) cererile restricționate vor primi totuși un răspuns, generat de browser. Un mesaj de eroare se generează în cazul cererilor respinse, dar acesta nu este accesibil din script, doar apare în consolă.
 
 \begin{figure}[H]
     \centering
@@ -397,7 +397,7 @@
     \caption{CORS flow\cite{gibbinscross}}
 \end{figure}
 
-\par Pentru a configura CORS pentru aplicația UVTDorms, se va crea clasa \textit{`CorsConfig'} în folderul \textit{`utils/'}. Clasa va avea un \textit{`@Bean'}, adică o funcție ce va returna un obiect de tip \textit{`CorsFilter'}. Aici va fi creată sursa ce permite configurarea CORS pe paza URL-lui. Configurarea va acoperi aspecte cum ar fi:
+\par Pentru a configura CORS pentru aplicația UVTDorms, se va crea clasa \textit{`CorsConfig'} în folderul \textit{`utils/'}. Clasa va avea un \textit{`@Bean'}, adică o funcție ce va returna un obiect de tip \textit{`CorsFilter'}. Aici va fi creată sursa ce permite configurarea CORS pe baza URL-lui. Configurarea va acoperi aspecte cum ar fi:
 
 \begin{enumerate}
     \item configurarea originilor cu acces (pe parcursul dezvoltării, singurul URL cu acces va fi \textit{`http://localhost:4200'})
@@ -437,9 +437,9 @@ public class CorsConfig
 \end{lstlisting}
 
 \subsection{JSON Web Token Authentification}
-\par Una dintre cele mai sigure metode de autentificare și de încapsulare a anumitor informații relevante este JSON Web Token\cite{jones2015json}. Acesta este un token care, de fapt reprezintă un obiect JSON encodat. În mod normal, aceste obiecte conțin informații necesare la autentificarea utilizatorilor. Deoarece este encodat, token-ul poate fi salvat local, în cache-ul browser-ului și poate fi citit la următoarea accesare a aplicației web.
+\par Una dintre cele mai sigure metode de autentificare și de încapsulare a anumitor informații relevante este JSON Web Token\cite{jones2015json}. Acesta este un token care, de fapt reprezintă un obiect JSON criptat. În mod normal, aceste obiecte conțin informații necesare la autentificarea utilizatorilor. Deoarece este criptat, token-ul poate fi salvat local, în cache-ul browser-ului și poate fi citit la următoarea accesare a aplicației web.
 
-\par În cadrul aplicației UVTDorms, obiectul JSON encryptat conține o cheie de autentificare temporară, rolul și adresa de email ale utilizatorului. Token-ul obținut prin encryptarea obiectului este inclus în header-ul fiecărei solicitare ce se face din front- spre back-end. Acesta este generat în momentul în care utilizatorul se autentifică și selectează opțiunea de \textit{`Ține-mă minte'}.
+\par În cadrul aplicației UVTDorms, obiectul JSON criptat conține o cheie de autentificare temporară, rolul și adresa de email ale utilizatorului. Token-ul obținut prin criptarea obiectului este inclus în header-ul fiecărei solicitare ce se face din front- spre back-end. Acesta este generat în momentul în care utilizatorul se autentifică și selectează opțiunea de \textit{`Ține-mă minte'}.
 
 \begin{lstlisting}[language=Java, caption={Funcția de generare a token-ului}]
 public String createToken(TokenDto dto)
@@ -458,12 +458,12 @@ public String createToken(TokenDto dto)
 
 \subsection{Security configuration}
 
-\par În cadrul aplicației UVTDorms, un alt strat de security este adăugat print configurarrea Spring Security\cite{spilca2020spring}. Aceste este un framework ce oferă funcționalități de securitate pentru aplicațiile Java. Permite configurarea securității la nivel de URL, de metode HTTP, de acces la resurse și de autentificare. Face posibilă crearea de end-point-uri `publice' și `private', în funcție de necesități.
+\par În cadrul aplicației UVTDorms, un alt strat de securitate este adăugat print configurarrea Spring Security\cite{spilca2020spring}. Aceste este un framework ce oferă funcționalități de securitate pentru aplicațiile Java. Permite configurarea securității la nivel de URL, de metode HTTP, de acces la resurse și de autentificare. Face posibilă crearea de end-point-uri `publice' și `private', în funcție de necesități.
 
-\par Pentru a configura Spring Security, se va crea o clasă \textit{`SecurityConfig'} în folderul \textit{`utils/'}. Aceasta van avea o metodă care returnează un \textit{`SecurityFilterChain'}, ce va conține configurarea end-point-urilor securizate. Configurarea va include:
+\par Pentru a configura Spring Security, se va crea o clasă \textit{`SecurityConfig'} în folderul \textit{`utils/'}. Aceasta va avea o metodă care returnează un \textit{`SecurityFilterChain'}, ce va conține configurarea end-point-urilor securizate. Configurarea va include:
 
 \begin{enumerate}
-    \item Verificarea de JWT Token înaintea accesării end-point-urilor
+    \item Verificarea de JWT înaintea accesării end-point-urilor
     \item Crearea unei sesiuni STATELESS, adică fără stocarea informațiilor de autentificare
     \item Crearea de excepții pentru cazurile în care token-ul nu este valid sau nu este prezent
 \end{enumerate}
@@ -495,7 +495,7 @@ public class SecurityConfig {
 \par Configurarea creată permite accesul fără token pentru end-point-urile de autentificare, înregistrare și pentru accesarea listei de cămine. Pentru toate celelalte end-point-uri, accesul este permis doar utilizatorilor autentificați.
 \subsection{Exception handler}
 
-\par Pentru standardizarea modului de gestionare a excepțiilor, am creat un set de clase care permit tratarea excepțiilor într-un mod unitar. În primul rând am creat o clasă \textit{`AppException'}, care extinde clasă \textit{`RuntimeException'} și este o clasă de bază pentru toate excepțiile aplicației. Aceasta conține un mesaj și un status \textit{HTTP}.
+\par Pentru standardizarea modului de gestionare a excepțiilor, am creat un set de clase care permit tratarea excepțiilor într-un mod unitar. În primul rând, am creat o clasă \textit{`AppException'}, care extinde clasă \textit{`RuntimeException'} și este o clasă de bază pentru toate excepțiile aplicației. Aceasta conține un mesaj și un status \textit{HTTP}.
 
 \begin{lstlisting}[language=Java, caption={Clasa de bază pentru excepții}]
 public class AppException extends RuntimeException {
@@ -591,7 +591,7 @@ public class User {
 
 \subsection{Data Transfer Object}
 
-\par Datele aplicației UVTDorms sunt stocate în entitățile mapate la tabelele din baza de date. Acestea conțin toate informațiile asociate cu o entitate, inclusiv relațiile cu alte entități. De fiecare dată când front-end solicită informații serverului, acestea sunt trimise sub formă de obiecte. Pentru a evita trimiterea unui obiect întreg și pentru a restructura înformații într-un mode mai ușor de folosit, am creat obiecte de transfer de date (DTO)\cite{pantaleev2007identifying}.
+\par Datele aplicației UVTDorms sunt stocate în entitățile mapate la tabelele din baza de date. Acestea conțin toate informațiile asociate cu o entitate, inclusiv relațiile cu alte entități. De fiecare dată când front-end solicită informații serverului, acestea sunt trimise sub formă de obiecte. Pentru a evita trimiterea unui obiect întreg și pentru a restructura informații într-un mod mai ușor de folosit, am creat obiecte de transfer de date (DTO)\cite{pantaleev2007identifying}.
 
 \par Aceste obiecte sunt clase simple, care conțin doar informațiile necesare pentru o anumită operație. De exemplu, pentru a afișa informațiile unui utilizator pe pagina de profil, se va folosi clasa \textit{UserDetailsDto}, care conține doar numele, prenumele, adresa de email și numărul de telefon al utilizatorului.
 
