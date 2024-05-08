@@ -489,7 +489,7 @@ public class SecurityConfig {
 \end{lstlisting}
 
 \par Configurarea creată permite accesul fără token pentru end-point-urile de autentificare, înregistrare și pentru accesarea listei de cămine. Pentru toate celelalte end-point-uri, accesul este permis doar utilizatorilor autentificați.
-\subsection{Exception handler}
+\subsection{Exception handler}\label{sec:exception-handler}
 
 \par Pentru standardizarea modului de gestionare a excepțiilor, am creat un set de clase care permit tratarea excepțiilor într-un mod unitar. În primul rând, am creat o clasă \textit{`AppException'}, care extinde clasă \textit{`RuntimeException'} și este o clasă de bază pentru toate excepțiile aplicației. Aceasta conține un mesaj și un status \textit{HTTP}.
 
@@ -654,14 +654,55 @@ public class LaundryAppointmentService {
 }
 \end{lstlisting}
 
-\section{Accesare servicii back-end}
+\section{Accesarea serviciilor back-end}
 %controlere back-end
 
-\subsection{Rest Controller si maparea resurselor}
+\par Accesarea serviciilor back-end nu se poate realiza în mod direct, ci prin intermediul unor end-point-uri. Acestea sunt metode ce sa află în stratul controller al aplicației și sunt responsabile pentru a primi cererile de la front-end și pentru a le redirecționa către serviciile corespunzătoare.
+
+\subsection{Rest Controller și maparea resurselor}
+
+\par Pentru a crea un end-point accesibil din front-end, se va crea o clasă care are anotările \textit{`@RestController'} și \textit{`@RequestMapping'}\cite{burke2009restful}. Acestea indică faptul că clasa este un controller și că metodele acesteia sunt accesibile prin intermediul unor URL-uri specifice.
+
+\par Controllerele au ca membru serviciile la care transmit cererile primite. Acestea apelează metodele serviciilor și returnează rezultatele către front-end. În cazul în care o cerere nu este validă, controllerul poate să arunce o excepție, care va fi prinsă de un \textit{`ControllerAdvice'}\ref{sec:exception-handler} și va fi transformată într-un răspuns de eroare.
+
+\par De exemplu, controllerul responsabil pentru accesarea serviciilor aferente uscătoarelor din spălătoria unui cămin este \textit{`DryerController'}.
+
+\begin{lstlisting}[language=Java, caption={Clasa DryerController}]
+@RestController
+@RequestMapping("/api/dryers")
+@RequiredArgsConstructor
+public class DryerController {
+    private final DryerService dryerService;
+
+    // ... other methods ...
+}
+\end{lstlisting}
 
 \subsection{Configurarea end-point-urilor}
 
-\newpage
+\par Pentru configurarea end-point-urilor se folosește anotarea \textit{`@GetMapping'}, care specifică metoda HTTP GET, și anotarea \textit{`@PostMapping'}, care specifică metoda HTTP POST\cite{varanasi2015spring}. Acestea sunt folosite pentru a specifica URL-ul la care este accesibilă metoda.
+
+\par Metodele pot primi parametri de la front-end, care sunt extrase atât din header-ul cererii, cât și din body-ul acesteia. În cazul în care parametrii sunt trimiși în body-ul cererii, aceștia sunt obținuți prin anotarea \textit{`@RequestBody'}. În cazul în care parametrii sunt trimiși în URL-ul cererii, aceștia sunt obținuți prin anotarea \textit{`@PathVariable'}. Iar în cazul în care informațiile se află în header-ul cererii, cum ar fi token-ul de autentificare, acesta se extrage separat și controllerul o primește la parametri ca și obiect de tip \textit{`Authentication'}.
+
+\par De exemplu, o metodă a controllerului \textit{`DryerController'} este \textit{`getDryersFromDorm'}, care primește numele unui cămin și returnează lista de uscătoare din acel cămin.
+
+\begin{lstlisting}[language=Java, caption={Metoda getDryersFromDorm}]
+@GetMapping("/get-dryer-from-dorm/{dormId}")
+public ResponseEntity<List<DryerDto>> getDyerFromDorm(@PathVariable("dormId") String dormId) {
+    return ResponseEntity.ok(this.dryerService.getDryerFromDorm(dormId));
+}
+\end{lstlisting}
+
+\par Un alt exemplu de metodă, care primește ca parametru un obiect de tip \textit{`Authentication'}, este metoda \textit{`getUserDetails (\ldots)'} din controllerul \textit{`UserController'}, care returnează detaliile unui utilizator. Acesta primește token-ul de autentificare care este extras din header-ul cererii, pentru a-l identifica pe utilizator.
+
+\begin{lstlisting}[language=Java, caption={Metoda getUserDetails(...)}]
+@GetMapping("/get-user-details")
+public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authentication) {
+    TokenDto userToken = (TokenDto) authentication.getPrincipal();
+    UserDetailsDto userDetailsDto = userService.getUserDetails(userToken.getEmail());
+    return ResponseEntity.ok(userDetailsDto);
+}
+\end{lstlisting}
 
 \section{Configurarea serviciului de Email}
 
