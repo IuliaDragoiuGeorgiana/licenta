@@ -718,6 +718,20 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \section{Componentele Angular}
 
+\par Interfața aplicației, partea de front-end, este construită cu Angular, care este un framework bazat pe TypeScript\cite{geetha2022interpretation}. Acest framework permite alcătuire paginilor și a componentelor într-un mod optim, oferind un mediu de dezvoltat ușor de menținut.
+
+\par Angular permite crearea componentelor, fiecare având câte un fișier de TypeScript, HTML, CSS și testare. Astfel, componentele sunt foarte bine modularizate. În aplicația UVTDorms, fiecare pagină este o componentă separată, cu propriile \textnormal{func\-ți\-o\-na\-li\-tă\-ți}. Unele pagini au propriile lor subcomponente în cazul în care complexitatea \textnormal{func\-ți\-o\-na\-li\-tă\-ți\-lor} și, respectiv sau, aspectul reutabilizității solicită acest lucru.
+
+\par Accesarea paginilor este condiționată de rolul utilizatorului. În cazul în care un utilizator neautentificat intră pe aplicația web, singura pagină accesibilă acestuia este pagina de autentificare. Orice încercare de a intra pe o altă pagină va eșua, fiindcă verificarea rolului se întâmplă în core-ul aplicației. În mod similar, unele subcomponente și elemente apar doar pentru anumiți utilizatori. De exemplu, în bara de navigare a aplicației, butoanele de navigare apar în funcției de rolul utilizatorului. Astfel, pentru un anumit tip de utilizator, apar doar butoanele care duc la paginile la care utilizatorul are acces.
+
+\par În cazul paginilor comune, cum ar fi pagina utilizatorului, unde detaliilor contului diferă, din baza de date se vor cere doar datele potrivite rolului utilizatorului, fără să se mai apeleze și end-point-urile pentru datele altor roluri.
+
+\subsection{Biblioteci de componente IU}
+
+\par Angular permite utilizarea bibliotecilor de componente de interfețe de utilizator. Aceste biblioteci oferă componente costumizabile, atât pe partea de afișare cât și pe partea de funcționalități. În mod normal, utilizarea a astfel de biblioteci este o soluție eficientă, fiindcă permit o dezvoltare mai rapidă și consistentă.
+
+\par Pentru dezvoltarea aplicației UVTDorms, am folosit două astfel de biblioteci: \textit{`Material UI'} și \textit{`PrimeNG'}. Primul este o bibliotecă dezvoltată chiar de Angular. A doua este independentă, dar este mult mai mare și oferă componente mai complexe. Eu am folosit componentele din aceste biblioteci în special în form-uri, elementele lor de input având un aspect foarte bine realizat. Bibliotecile s-au dovedit a fi foarte eficient și la afișarea datelor, cum ar fi în cazul tabelelor. 
+
 \section{Sistemul de rutare în front-end}
 
 \newpage
