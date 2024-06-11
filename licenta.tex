@@ -667,7 +667,7 @@ public class LaundryAppointmentService {
 
 \par Controllerele au ca membru serviciile la care transmit cererile primite. Acestea apelează metodele serviciilor și returnează rezultatele către front-end. În cazul în care o cerere nu este validă, controllerul poate să arunce o excepție, care va fi prinsă de un \textit{`ControllerAdvice'}\ref{sec:exception-handler} și va fi transformată într-un răspuns de eroare.
 
-\par De exemplu, controllerul responsabil pentru accesarea serviciilor aferente uscătoarelor din spălătoria unui cămin este \textit{`DryerController'}.
+\par De exemplu, controllerul responsabil pentru accesarea serviciilor aferente \textnormal{us\-că\-toa\-re\-lor} din spălătoria unui cămin este \textit{`DryerController'}.
 
 \begin{lstlisting}[language=Java, caption={Clasa DryerController}]
 @RestController
@@ -708,9 +708,13 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \section{Configurarea serviciului de Email}
 
-% \subsection{Folosirea șabloanelor Email}
+\par Serviciile email reprezintă o parte importantă a aplicației UVTDorms, aceasta fiind principalul canal de comunicare. Am ales să transmit toate informațiile importante prin email, fiindcă astfel mesajele pot ajunge și la utilizatorii care nu urmăresc în mod activ fluxul de activitate al aplicației.
 
-\newpage
+\par Pentru a utiliza acest serviciu, m-am folosit de o clasă ce aparține pachetului \textit{`javamail'} din framework-ul \textit{`Spring Boot'}. Acesta oferă o metodă simplă și ușoară pentru compunerea și trimiterea email-urilor, prin seterea unor câmpuri esențiale, cum ar fi subiectul și receptorul\cite{guide_to_spring_email}.
+
+\par Pentru a trimite email-uri care au o structură HTML, ceea ce permite stilizarea și formatarea email-urile, am folosit \textit{`SpringTemplateEngine'}, care este un pachet ce aparține de \textit{`Thymeleaf'}. Cu ajutorul acestuia se pot deschide fișiere HTML șablonizate (în care se specifică variabile ce urmează să fie înlocuite în momentul aplicării șablonului). Pentru a înlocui variabilele din șablon, se specifică cuvântul cheie unic prin care se identifică fiecare variabilă și se specifică înlocuitorul acesteia\cite{template_engine_for_spring_boot}.
+
+\par Astfel, aplicația UVTDorms trimite email-uri utilizatorilor cu toate informațiile relevante. Tot prin email se primesc confirmările de înregistrări ale conturilor (atât la studenți cât și la administratorii de cămin), cu parola noua generată, dar și notificările, cum ar fi anularea unei programări, se trimit tot prin email.
 
 \section{Componentele Angular}
 
