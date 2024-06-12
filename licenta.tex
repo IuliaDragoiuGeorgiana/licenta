@@ -756,10 +756,76 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \par Pentru a schimba limba interfeței, utilizator are în bara de navigare un buton care este steagul țării în a cărei limba este afișarea curentă. Apăsând pe buton, utilizatorul poate schimba între limbile română și engleză.
 
-% \chapter{Verificarea integrității aplicației}
-
 \chapter{Ghid utilizator}
+
+\section{Autentificare}
+
+\par Pagina inaițială a aplicației UVTDorms este pagina de autentificare. Aici utilizatorul are posibilitatea de a se autentifica, de a se înregistra și de a-și recupare parola uitată.
+
+\par Inițial, pe pagina de autentificare se află un formular de autentificare, unde utilizatorul poate să-și introducă adresa de email și parola. Apăsând pe butonul de autentificare, utilizatorul va fi redirecționat pe pagina contului său. În cazul în care adresa de email sau parola nu au fost corecte, se va afișa un mesaj de eroare.
+
+% Poză cu formularul de login (dar să se vadă și partea din dreapta, partea albastră)
+
+\par În cazul în care utilizatorul și-a uitat parola, apăsând pe butonul de \textit{`Ți-ai uitat parola?'}, va fi redirectionat pe o altă pagină cu un formular unde poate să-și introducă adresa de mail. Apăsând pe butonul \textit{`Trimite'}, i se va trimite un mail cu un link câtre o pagină cu un formular unde poate să-și seteze o parolă nouă.
+
+% Două poze, une lângă alta, una cu formularul de email pentru resetarea parolei, și cealaltă cu formularul de resetare a parolei
+
+\subsection{Înregistrare}
+
+\par Studenții noi care încă nu au cont, pot să deschidă fereastra de înregistrare apăsând pe butonul \textit{`Înregistrare'}. Aici trebuie să introducă datele personale, cum ar fi numele, adresa de email, numărul de telefon. Deodată cu înregistrarea contului se face și o cerere de înregistrare la cămin. Din acest motiv, în formularul de înregistrare studenții trebuie să selecteze și căminul și camera lor.
+
+% Poza că formularul de înregistrare
+
+\par După trimiterea formularului, studenții vor primi un email cu parola generată (pe care pot să o schimbe ulterior). Acești studenți vor fi inactivi până când cererea lor nu va fi acceptată de administratorului căminului. Astfel, singura fereastră la care vor avea acces după ce s-au autentificat, este fereastra cererilor de înregistrare la cămine.
+
+\subsection{Setări cont}
+
+\par Pe pagina de profil al utilizatorilor, aceștia au mai multe tipuri de setări posibile. Apăsând pe poza de profil, utilizatorii o pot schimba.
+
+% Poză cu detaliile utilizatorului, unde faci hover pe poza de profil
+
+\par În partea de jos al detaliilor utilizatorilor sunt două butoane:
+\begin{itemize}
+    \item \textit{`Schimbă numărul de telefon'}, cu care utilizatorul poate deschide un formular pentru schimbarea numărului de telefon
+    \item \textit{`Schimbă parola'}, cu care utilizatorul poate deschide formularul de schimbare a parolei
+\end{itemize}
+
+% Două poze, una lângă alta: una cu formularul de schimba numarul de telefon si cealalta cu formularul de schimba parola
+
 \section{Student}
+
+\subsection{Cerere de înregistrare la cămin}
+
+\par Pe pagina de profil, studenții au o subfereastră \textit{`Cereri de înregistrare'}. Aici au posibilitatea de a face cereri noi de înregistrare, apăsând pe butonul \textit{`+'} și selectând căminul și camera. După ce cerearea a fost trimisă, aceasta va apărea în lista de cereri de înregistrare cu detaliile cererii, cum ar fi adresa de email ar administratorului care trebuie să accepte cererea, și statusul cererii.
+
+% Poză cu un tabel cu mai multe cereri, cele vechi deja acceptate (Faci cereri noi în InitialDataLoader)
+
+\subsection{Crearea de programare la spălătorie}
+
+\par Studenții pot face câte o programare pe săptămână la spălătoria căminului. Pentru a face o programare nouă, pot intra pe pagina de programări (cu butonul \textit{`Programări'} din bara de navigare) unde au un formular de completat. Aici trebuie să aleagă ziua săptămânii (începând cu ziua curentă, inclusiv), mașina de spălat și intervalul orar.
+
+\par Dacă formularul a fost completat, studentul trebuie să apese butonul \textit{`Programează-te'} și să confirme programarea.
+
+% Poză cu formularul completat
+
+\subsection{Gestionarea programărilor existente}
+
+\par Pe pagina de profil, în subfereastra \textit{`Programările mele la spălătorie'} studentul are posibilitatea de a vedea toate programările sale: cele noi, cele anulate și cele deja trecute. Pentru cele noi studentul are posibilitatea de a o anula, apăsând pe butonul \textit{`X'}.
+
+% Poză cu lista de programări (din nou, pune mai multe programări în InitialDataLoader)
+
+\subsection{Crearea de tichete de raportare a problemelor}
+
+\par Pe pagina de tichete studentul poate completa un formular pentru anunțarea problemelor din cămin. Aici completând câmpurile de \textit{`Titlu'}, \textit{`Descriere'}, selectând tipul de intervenție necesar și specificând dacă problema a fost anunțată anterior, studentul poate trimite tichetul pentru administratorul căminului.
+
+% Poză cu formularul (de preferat completat)
+
+\subsection{Lista de evenimente}
+
+\par Pe pagina de evenimente studenții și administratorii de cămin pot viziona lista de evenimente din cămin. Aici pot vedea titlul evenimentului, autorul, descrierea, data când va avea loc acesta și câți participanți vor fi. La fiecare eveniment apare și un buton \textit{`Participă'}, cu care utilizatorii pot comunica intenția de a participa la eveniment. După apăsearea butonului, acesta se transformă în butonul \textit{`Anulează participarea'}.
+
+% Poză cu pagina de evenimente
+
 \section{Administrator cămin}
 \section{Administrator aplicație}
 
