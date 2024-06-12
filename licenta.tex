@@ -827,7 +827,126 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 % Poză cu pagina de evenimente
 
 \section{Administrator cămin}
+
+\subsection{Administrarea camerelor}
+
+\par Administratorul căminului are responsabilitatea gestionării camerelor din cămin. Pentru a face acest lucru într-un mod eficient, UVTDorms pune la dispoziția administratorilor de cămine o pagină dedicată. Aici sunt listate toate camerele din cămin într-un tabel, unde apar și detalii, cum ar fi numărul camerei și numărul de studenți din cameră.
+
+\par În partea stânga a tabelei, pentru fiecare cameră este un buton care deschide lista de studenți din camera respectivă, cu nume și adresă de email. În partea dreaptă a camerelor se află butonul de ștergere. Camerele pot fi șterse doar în cazul în care nu are niciun student.
+
+% Poză cu tabelul, cu drop-down-ul cu studenti deschis pentru o camera
+
+\par Pentru a adăuga o cameră, administratorul trebuie să apese butonul verde \textit{`+'}, care deschide un formular unde trebuie specificat numărul camerei care urmează să fie adăugat.
+
+% Poză cu formularul
+
+\subsection{Administrarea spălătoriei}
+
+\par Administrarea spălătoriei este unul dintre responsabilitățile principale ale administratorului căminului. Pe pagina dedicată pentru acest lucru sunt listate toate mașinile de spălat într-un tabel, cu nume, uscător asociat și status. În partea stângă a fiecărei mașini se află un buton care afișează toate programările la mașina de spălat din săptămâna curentă. 
+
+% Poză cu tabel, cu un drop-down deschis pentru o mașină
+
+\par În partea dreaptă a fiecărei mașini se află un buton albastru de editare. Aceasta deschide o fereastră unde administratorul căminului poate să schimbe numele mașinii, uscătorul asociat și statusul. În cazul în care mașina devine defectă și are programări, toate programările vor fi anulate și studenții vor fi anunțați.
+
+% Poză cu formularul
+
+\par Pentru administrarea uscătoarelor, administratorul poate să schimba tipul \textnormal{ma\-și\-ni\-lor} afișate cu ajutorul drop-down-ului din stânga sus. Structura tabelului este aceeași cu cea a mașinilor de spălat. Singura diferență este în cazul în care un uscător devine defect, fiindcă atunci studentul are opțiunea de a păstra programarea la măsina de spălat, fără uscător.
+
+\par Pentru adăugarea mașinilor, administratorul căminului apasă pe butonul verde \textit{`+'} din partea de dreapta sus a ecranului. Se deschide o fereastră cu un formular în 3 părți:
+
+\begin{itemize}
+    \item Selectarea tipului mașinii
+    \item Setarea detaliilor mașinii (nume, mașină de spălat/uscător asociat)
+    \item Confirmare
+\end{itemize}
+
+% Poză cu formularul de adăugare, pe pasul de confirmare
+
+\subsection{Administrarea studenților}
+
+\par Cea mai importantă parte a aplicației UVTDorms sunt studenții. Pe pagina dedicată administrării studenților dintr-un cămin, administroatorul acestuia are la dispoziție un table undes sunt listați toți studenții din cămin, într-un tabel cu numele studenților, numărul camerei lor, numărul matricol, și numărul de telefon.
+
+% Poză cu tabelul
+
+\par Administratorul are două butoane pentru fiecare student:
+
+\begin{itemize}
+    \item unul de ștergere, care deschide o fereastră de confirmare
+    \item unul de editare, care deschide o fereastră unde administratorul poate schimba numărul de cameră al studentului
+\end{itemize}
+
+% Poză cu formularul pentru schimbarea camerei
+
+\par Tot pe această pagină sunt listate și cererile de înregistrare la cămin, sub forma unor cărți micuțe cu numele studentului și data în care s-a făcut cererea. Cărțile respective au un buton, care deschid o fereastră cu detaliile cererii.
+
+% Poză cu lista de cereri
+
+\par Fereastra cu detaliile studentului conține toate informațiile studentului și două butoane:
+
+\begin{itemize}
+    \item butonul \textit{`Respinge'}, cu care administratorul căminului refuză cererea făcută de student
+    \item butonul \textit{`Acceptă'}, cu care studentului i se confirmă înscrierea în cămin în \textnormal{ap\-li\-ca\-ți\-a} UVTDorms
+\end{itemize}
+
+\par În ambele cazuri, studenții sunt anunțați prin email.
+
+% Poză cu detalii cerere de înregistrare
+
+\subsection{Administrarea tichetelor de reparații}
+
+\par Pentru gestionarea tichetelor de anunțarea problemelor, deschise de studenții \textnormal{că\-mi\-nu\-lui}, administratorul acestuia are o pagină dedicată. Aici sunt listate toate tichetele din cămin, într-un tabel cu data creării, titlu și status.
+
+\par În stânga fiecărui tichet este un buton care extinde linia și apar detaliile tichetului, cum ar fi tipul de intervenție necesar, descrierea problemei, dacă problema a fost anunțată în trecut, adresa de email al studentului care a făcut tichetul și numărul de cameră.
+
+\par Pentru a actualiza statusul unui tichet, administratorul apasă pe statusul curent al acestuia și apare un fereastră mică pentru confirmarea schimbării statusului din \textit{`Deschis'} în \textit{`Rezolvat'} și invers.
+
+% Poză cu tabelul, cu o linie extinsă și popup-ul de confirmare de schimbare status vizibil pentru un tichet
+
+\subsection{Administrarea evenimentelor}
+
+\par Fiecare administrator de cămin poate organiza evenimente în căminul administrat. Pentru gestionarea evenimentelor, administratorii au o ferestră pe pagina lor de cont. Aici apar toate evenimentele din cămin, cu toate detaliile evenimentului, la fel ca pe pagina de evenimente. Singura diferență reprezintă lipsa butonului \textit{`Participă'}, care este înlocuit de butonul \textit{`Șterge'}. Acesta deschide un mesaj de confirmare a ștergerii evenimentului.
+
+% Poză cu evenimentele listate (să se vadă și butonul de plus)
+
+\par Pentru adăugarea evenimentelor noi, administratorul căminului apasă pe butonul verde \textit{`+'}, care deschide o fereastră nouă cu un formular. Aici se introduc titlul evenimentului, descrierea, data și ora în care va avea loc acesta și se specifică dacă studenții își pot arăta intenția de participare la eveniment.
+
+% Poză cu formularul de creare evenimente
+
 \section{Administrator aplicație}
+
+\subsection{Administrarea căminelor}
+
+\par Pentru administrarea căminelor din aplicație, administratorul acesteia are la \textnormal{dis\-po\-zi\-ți\-e} pagina dedicată pentru cămine. Aici căminele sunt listate într-un tabel, cu numele lor, adresa și administratorul. În dreptul fiecărui cămin se află două butoane:
+
+\begin{itemize}
+    \item butonul de ștergere, care deschide o fereastră de confirmare. Căminele nu pot fi șterse dacă au studenți.
+    \item butonul de editare, care permite schimbarea administratorului căminului direct din linia tabelului
+\end{itemize}
+
+% Poză cu tabelul și cu o linie pentru care butonul de editare a fost apăsat
+
+\par Pentru adăugarea căminelor noi, administratorul aplicației poate apăsa pe butonul verde \textit{`+'}, care deschide o fereastră cu un formular. Aici se pot specifica numele căminului, adresa și, opțional, administratorul.
+
+% Poză cu formularul respectiv.
+
+\subsection{Gestionarea administratorilor de cămine}
+
+\par Pagina de gestionare a administratorile de cămine este foarte similară pagini de administrare a căminelor. Aceasta are un tabel în care sunt listați administratorii de cămine, cu detaliile lor, cum ar fi numele, adresa de email, numărul de telefon și căminul administrat.
+
+\par În dreptul fiecărui administrator se găsesc două butoane:
+
+\begin{itemize}
+    \item butonul de ștergere, care deschide o fereastră de confirmare.
+    \item butonul de editare, care permite schimbarea căminului administrat direct din linia tabelului
+\end{itemize}
+
+% Poză cu tabelul și cu o linie pentru care butonul de editare a fost apăsat
+
+\par Pentru adăugarea administratorilor de cămine, administratorul aplicației apasă pe butonul verde \textit{`+'} care deschide o fereastră nouă cu un formular. Câmpurile formularului permite setarea detaliilor noului administrator de cămin, cum ar fi prenumele, numele, numărul de telefon, adresa de mail și, opțional, căminul administrat.
+
+\par Noul administrator de cămin va primi un email cu parola de conectare și, dacă a fost specificat în formular, atunci căminul la care a fost asociat.
+
+% Poză cu formularul respectiv
 
 \chapter{Concluzii}
 \section{}
