@@ -734,24 +734,27 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \section{Sistemul de rutare în front-end}
 
-\newpage
+\par Angular are propriul sistem de rutare, care permite navigarea dintre paginile \textnormal{ap\-li\-ca\-ți\-ei} web fără reîncărcarea paginii în browser. Configurarea sistemului de rutare presupune specificarea path-ului, cum ar fi \textit{`/home'} și asocierea acesteia cu o componentă angular, cum ar fi \textit{`HomePageComponent'}. Astfel, când utilizatorul accesează un path al paginii, i se va încârca componenta asociată. Navigarea interna presupune schimbarea path-ului și afișarea componentei asociate, fără reîncărcarea paginii.
+
+\par Pentru a configura sistemul de rutare, angular are o componentă dedicată, \textit{`AppRoutingModule'}, care are o listă de path-uri asociate cu componentele. Aplicația UVTDorms are 17 pagini configurate în această listă.
 
 \section{Servicii front-end}
 
-% \subsection{Servicii de autentificare automatizate}
+\par În scopul modularizării și structurării potrivite a codului, Angular are un mecanism pentru a separa serviciile prin care trec cererile la back-end, de componentele aplicației. Astfel, toate apelurie au loc în servicii dedicate, fiecare parte a aplicaței având propiul serviciu. De exemplu, camerele de cămin au un serviciu care conține toate funcțiile cu care pot fi apelate end-pointurile din serviciul de camere al back-endului. Prin urmare, fiecare serviciu de back-end are un serviciu asociat în front-end.
 
-% \subsection{Structura unui serviciu}
-%header, http
+\par În mod normal, un serviciu în fronte-end este alcătuit din constante de string-uri care reprezintă path-urile la end-pointurile serviciul asociat din back-end și funcțiile prin care se realizează apelurile la aceste end-pointuri. Funcțiile acestea sunt folosite de restul componentelor.
 
-\newpage
+\par O parte importantă a serviciilor este configurarea mesajului ce urmează să fie trimis. După cum am descris în capitolele anterioare, UVTDorms are un sistem de JWToken pentru autentificare. Acest token trebuie să fie inclus în header-ul apelurilor spre back-end, iar acest lucru se întâmplă în servicii, unde se apelează un serviciu special, \textit{`AuthService'}, care are responsabilitatea de a gestiona token-ul salvat. Prin urmare, serviciul \textit{`AuthService'} este prezent aproape în toate serviciile front-end al aplicației și are rolul de a forniza header-ul necesar pentru comunicarea cu back-endul.
 
-% \section{Facilitățile aplicației}
-
-% \subsection{Sistemul de autentificare utilizatori}
-
-% \subsection{TBD}
+\par Un alt serviciu puțin mai special decât restul serviciilor este \textit{`UserService'}, care, pe lângă structura generală a serviciilor front-end (constante de path-uri și funcții de apelare), are responsabilitatea de a stoca rolul utilizatorului. Acest serviciu este folosit în toate componentele care au un comportament dependent de tipul de utilizator.
 
 \section{Interfata multilingv}
+
+\par Având în vedere că Universitatea de Vest din Timișoara nu are doar studenți vorbitori de limba română, aplicația UVTDorms pune la dispoziția utilizatorilor interfața atât în limba română cât și în limba engleză.
+
+\par Datorită Angular, implementarea unei interfețe multilingv se poate realiza eficient, utilizând un pachet special pentru traducerea aplicațiilor web, \textit{`ngx-translate'}\cite{ngx_translate}. Cu ajutorul acestui pachet, traducerea aplicației se realizează prin crearea a câte un fișier JSON pentru fiecare limbă. În aceste fișiere, se specifică cuvinte cheie care se asociează cu un string. În HTML-ul aplicației se specifică cuvântul cheie din JSON și textul afișat va în limba selectată de utilizator.
+
+\par Pentru a schimba limba interfeței, utilizator are în bara de navigare un buton care este steagul țării în a cărei limba este afișarea curentă. Apăsând pe buton, utilizatorul poate schimba între limbile română și engleză.
 
 % \chapter{Verificarea integrității aplicației}
 
