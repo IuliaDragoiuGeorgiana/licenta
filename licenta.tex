@@ -49,7 +49,7 @@
 
         FACULTATEA DE MATEMATIC\u A \c SI INFORMATIC\u A
 
-        PROGRAMUL DE STUDII DE LICEN\c T\u A Informatic\u a  }}
+        PROGRAMUL DE STUDII DE LICEN\c T\u A INFORMATICĂ  }}
 
     \vspace{120pt}
     {\huge {\bf LUCRARE DE LICEN\c T\u A}}
@@ -59,7 +59,7 @@
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
 
-\noindent Prof.Conf.Dr.\ Micotă Flavia Elena\hfill Dr\u agoiu  Iulia-Georgiana}
+\noindent Conf.Dr.\ Micotă Flavia Elena\hfill Dr\u agoiu  Iulia-Georgiana}
 
 \vfill
 \begin{center}
@@ -85,7 +85,7 @@
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
 
-\noindent Prof.Conf.Dr.\ Micot\u a Flavia Elena \hfill Dr\u agoiu Iulia-Georgiana}
+\noindent Conf.Dr.\ Micot\u a Flavia Elena \hfill Dr\u agoiu Iulia-Georgiana}
 
 \vfill
 \begin{center}
@@ -213,24 +213,25 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
 
 \par Una dintre principalele funcționalități dedicată studenților este crearea \textnormal{pro\-gra\-mă\-ri\-lor} la spălătoria căminului. Aceștia pot beneficia de o programare săptămânală, care este formată din două ore la mașina de spălat rufe urmate de două ore la uscătorul de rufe. În cazul în care studentul dorește anularea programării, acesta poate anula programarea și, în limita disponibilităților, să realizeze o altă programare. Dacă pe perioada șederii în căminul studențesc apar diferite probleme tehnice care necesită intervenție din partea personalului, aceștia pot crea un tichet pentru reparații.
 
-\par De asemenea, propagarea în mod eficient a informațiilor despre evenimentele ce au loc în cadrul căminului este asigurată de funcționalitățile organizatorice specifice.
+\par De asemenea, acesta poate vizualiza evenimentele adăugate de către administrorul căminului din  din care face parte, iar dacă acestea sunt deschise participării studenților.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{resurse/diagrame/use_case_student.drawio.png}
+    \includegraphics[width=0.6\linewidth,height=0.4\textheight]{resurse/diagrame/UVTDors_UseCaseStudent.jpg}
     \caption{Diagrama cazuri de utilizare student}
 \end{figure}
 
 \subsection{Cazuri de utilizare pentru administratorul de cămin}
-\par Administratorul de cămin are unul dintre cele două roluri de administrare ale aplicației, care este responsabil pentru administrarea unui cămin și al studenților cazați în căminul respectiv.
+\par Administratorul de cămin este responsabil pentru administrarea unui cămin și al studenților cazați în căminul respectiv.
 
-\par Acest rol prevede manipularea listei studenților în perioada de înscriere, adică acceptarea sau respingerea studenților care au un loc într-un cămin, sau dezactivarea conturilor studenților asociate căminului. Tot printre responsabilitățile administratorului se află și organizarea spălătoriei din cămin, adică administrarea mașinilor de spălat și a uscătoarelor de rufe, și administrarea programărilor. În cazul în care apare o problemă tehnică în cămin, și un tichet de reparații a fost deschis, administratorul este responsabil să se ocupe de acesta și, în cazul în care e necesar, să creeze anunțuri care ajung la toți studenții afectați.
-
-\par Pe lângă cele descrise mai sus, administrarea evenimentelor ce au loc în cadrul căminului, se află tot pe lista responsabilităților administratorului căminului, care le poate crea, edita și șterge.
+\par Acest rol prevede manipularea listei studenților în perioada de înscriere, adică acceptarea sau respingerea studenților care au un loc într-un cămin, sau dezactivarea conturilor studenților asociate căminului, dacă aceștia părăsesc sau schimbă căminul. Totodată, acesta poate adăuga camere în cămin și poate vizualiza inforamții legate de persoanele cazate în aceea cameră, având un rol important în gestionarea spațiului din cămin.
+\par De asemenea, printre responsabilitățile administratorului se află și organizarea spălătoriei din cămin, adică administrarea mașinilor de spălat și a uscătoarelor de rufe(adăugarea,ștergerea și schimbarea statusul mașinilor daca apar defecțiuni). 
+\par Gestionarea eficientă a defecțiunilor raportate de către locatari joacă un rol important în ceea ce privește confortul și prevenirea problemelor și defecțiunilor apărute pe termen lung, astfel, administratorul căminului este cel care redirecționează problemele apărute personalului, dar și monitorizează statusul rezolvării acesteia.
+\par Pe lângă cele descrise mai sus, administrarea evenimentelor ce au loc în cadrul căminului, se află tot pe lista sarcinilor administratorului căminului, care le poate pe crea, edita și șterge.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{resurse/diagrame/Usecase_administrator_camin.drawio.png}
+    \includegraphics[width=0.6\linewidth, height=0.3\textheight]{resurse/diagrame/UVTDorms_USECASE_ADMINISTRATOR_CAMIN.jpg}
     \caption{Diagrama cazuri de utilizare administrator cămin}
 \end{figure}
 
@@ -243,12 +244,12 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{resurse/diagrame/cazuri_de_utilizare_administrator_aplicatie_1.png}
-    \caption{Diagrama cazuri de utilizare administrator cămin}
+    \includegraphics[width=0.5\linewidth, height=0.2\textheight]{resurse/diagrame/UVTDorms_UseCaseAdministratorAplicatie.jpg}
+    \caption{Diagrama cazuri de utilizare administrator aplicație}
 \end{figure}
 
 \section{Structura unităților de execuție}
-\par Așa cum s-a putut observa și din diagrama de instalare prezentată mai sus, aplicația este structurată pe mai multe straturi, care la rândul lor sunt modularizate pentru o funcționare logică și eficientă.
+\par Aplicația este structurată pe mai multe straturi, care la rândul lor sunt modularizate pentru o funcționare logică și eficientă.
 
 \par Primul modul, cel al clientului, este alcătuit din trei componente ale căror cooperare oferă o experință plăcută utilizatorului, fiind modulul care interacționează în mod direct cu acesta. Prima componentă, HTML GUI constituie interfața aplicției cu care ia contact utilizatorul declanșând acțiunile care reprezintă funcționalitățile aplicției prin elemente de HTML precum butoane. Aceste acțiuni declanșate de componenta HTML GUI sunt reprezentate de componenta GUI function. Cea de-a doua componentă (GUI function) este responsabilă pentru activitățile logice ale primului modul și declanșează inițierea legăturii cu următorul modul prin cea de-a treia componentă, Client-Side Angular Services.
 
@@ -265,122 +266,131 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
 \section{Structura bazei de date}\label{sec:architectura-bazei-de-date}
 \par Având în vedere varietatea obiectelor abstracte pe care le folosește sistemul, și necesitatea de reutilizare a acestora, aplicația își are datele structurate într-o bază de date. Toate elementele din această structură încapsulează informații esențiale despre principalele obiecte cu care operează aplicația.
 
-\par Una dintre cele mai importante abstractizări este cea al userului, tabelul \textit{users}, care este o structură ce încapsulează datele unui utilizator obișnuit, cum ar fi numele, adresa de e-mail, numărul de telefon, parola, rolul, starea de activitate a contului și, desigur, un identificator unic.
+\par Una dintre cele mai importante abstractizări este cea al userului, tabelul \textit{users}, care este o structură ce încapsulează datele unui utilizator obișnuit, cum ar fi numele, adresa de e-mail, numărul de telefon, parola, imaginea de profil, rolul, starea de activitate a contului, evenimentele și, desigur, un identificator unic.
 
-\par Printre tipurile de utilizatori se enumără și studenții, care au anumite date pe care restul tipurilor de utilizatori nu le au, motiv pentru care a fost nevoie crearea unei tabele, \textit{students\_details}, care are ca atribute detaliile necesare lucrării cu obiecte ce abstractizează studenți. Printre aceste detalii se află CNP-ul, identificatorul unic al camerei în care este cazat studentul și numărul matricol.
 
-\par Un alt tip de utilizator cu detalii diferite este administratorul căminului, care, pe lângă datele unui utilizator obișnuit, mai are și identificatorul unic al căminului pentru care este responsabil. Pentru încapsularea acestor informații am creat tabelul \textit{dorm\_administrator\_details}.q
 
-\par Anunțurile din sistem sunt încapsulate în tabelul \textit{announcements}, care are un identificator unic al anunțului, identificatorul unic al utilizatorului care a creat anunțul, un titlu, un text ce reprezintă descrierea anunțului și data in care anunțul a fost creat.
+\par Printre tipurile de utilizatori se enumără și studenții, care au anumite date pe care restul tipurilor de utilizatori nu le au, motiv pentru care a fost nevoie crearea unei tabele, \textit{students\_details}, care are ca atribute detaliile necesare lucrării cu obiecte ce abstractizează studenți. Printre aceste detalii se află camera, tichetele, programările și cereri de înregistrare.
 
-\par Căminele aflate în sistem au fiecare un identificator unic, o adresă și un nume, încapsulate în tabelul \textit{dorms}. Camerele din cămine au într-un mod similar un identificator unic, numărul camerei în contextul căminului și identificatorul unic al căminului, în tabelul \textit{rooms}.
+\par Un alt tip de utilizator cu detalii diferite este administratorul căminului, care, pe lângă datele unui utilizator obișnuit, mai are și căminului pentru care este responsabil, dar și evenimentele create de acesta. Pentru încapsularea acestor informații am creat tabelul \textit{dorm\_administrator\_details}.q
 
-\par Datele mașinilor de spălat și ale uscătoarelor din spălătoriile căminelor sunt în tabelele \textit{wash\_machines} și \textit{dryers}. Ambele au un identificator unic, la fel și identificatorul unic al căminului în care se află, un număr de identificare în contextul căminului și un câmp care reprezintă starea mașinii, adică disponibilitatea acesteia, sau dacă este defectă.
+\par Anunțurile din sistem sunt încapsulate în tabelul \textit{events}, care are un identificator unic al anunțului,administratorul care a creat evenimentul, un titlu, un text ce reprezintă descrierea anunțului, data în care anunțul a fost creat,data ținerii evenimentului, posibilitatea de a putea sau nu participa la eveniment și studenții care o să participe
 
-\par Programările la spălătoria căminului sunt reprezentate prin structura tabelului \textit{laundry\_appointments}. Fiecare programare are un identificator unic, precum și identificatorul unic al utilizatorului care a creat-o, dar și identificatoarele unice al mașinii de spălat și al uscătorului la care s-a făcut programarea. Începutul și finalul rezervării sunt informații care sunt încapsulate tot în această structură.
+\par Căminele aflate în sistem au fiecare un identificator unic, o adresă, un nume, camerele, mașinile, uscătoarele, dar și tichetele asociate, toate fiind încapsulate în tabelul \textit{dorms}. Camerele din cămine au într-un mod similar un identificator unic, numărul camerei în contextul căminului și identificatorul unic al căminului, în tabelul \textit{rooms}.
 
-\section{Structura unităților de cod}
-\par Mai jos sunt prezentate diagramele unităților de cod. Acestea reflectă structurarea codului care implementează funcționalitățile și serviciile serverului web, precum și mapările care permint conectarea la baza de date.
+\par Datele mașinilor de spălat și ale uscătoarelor din spălătoriile căminelor sunt în tabelele \textit{wash\_machines} și \textit{dryers}. Ambele au un identificator unic, la fel și identificatorul unic al căminului în care se află, un număr de identificare în contextul căminului și un câmp care reprezintă starea mașinii, adică disponibilitatea acesteia, sau dacă este defectă și programările pentru fiecare.
 
-\par Entitățile existente în cod sunt mapările directe ale elementelor din baza de date în care se specifică explicit încapsularea internă dintre ele, ca și consecință a relațiilor. Prin urmare, în diagrama din Figura 2.7.\ putem observa relații bidirecționale, de compoziție și agregare. De exemplu, relația de compoziție dintre \textit{User} și \textit{StudentDetails}, unde cel din urmă are mereu un obiect de tip \textit{User}. Dar această relație în contextul entităților presupune și un complement al relației de compoziție, în cazul nostru cea de agregare care se realizează printr-o listă de obiecte de tip \textit{StudentDetails} în contextul \textit{User}.
+\par Programările la spălătoria căminului sunt reprezentate prin structura tabelului \textit{laundry\_appointments}. Fiecare programare are un identificator unic, precum și identificatorul unic al utilizatorului care a creat-o, dar și identificatoarele unice al mașinii de spălat și al uscătorului la care s-a făcut programarea. Începutul, finalul rezervării  și statusul programării sunt informații care sunt încapsulate tot în această structură.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{resurse/diagrame/uvtdorms1.2.drawio.png}
+    \includegraphics[width=1\linewidth]{resurse/diagrame/DB_Diagram.png}
     \caption{Diagrama unităților de cod pentru entități}
 \end{figure}
 
-\par Repository reprezintă stratul de abstractizare a bazei de date. JPA Repository pune la dispoziție diferite metode specializate pe manipularea tabelelor existente în baza de date precum scrierea, ștergerea și modificarea datelor. În același timp, \textnormal{re\-po\-si\-to\-ry-urile} permit definirea unor metode specifice pentru executare unor operații complexe.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{resurse/diagrame/uvtdorms_d2.drawio.png}
-    \caption{Diagrama unităților de cod pentru repository}
-\end{figure}
+% \section{Structura unităților de cod}
+% \par Mai jos sunt prezentate diagramele unităților de cod. Acestea reflectă structurarea codului care implementează funcționalitățile și serviciile serverului web, precum și mapările care permint conectarea la baza de date.
 
-\par Serviciile corespunzătoare fiecărei componente din sistem sunt elementele cheie în manipularea obiectelor existente. Ele sunt responsabile pentru activitățile principale și execută operații complexe, uneori folosindu-se chiar de alte servicii. De exemplu, \textit{LaundryAppointmentService} utilizează numeroase alte servicii pentru realizarea cererilor legate de programările la spălătorie.
+% \par Entitățile existente în cod sunt mapările directe ale elementelor din baza de date în care se specifică explicit încapsularea internă dintre ele, ca și consecință a relațiilor. Prin urmare, în diagrama din Figura 2.7.\ putem observa relații bidirecționale, de compoziție și agregare. De exemplu, relația de compoziție dintre \textit{User} și \textit{StudentDetails}, unde cel din urmă are mereu un obiect de tip \textit{User}. Dar această relație în contextul entităților presupune și un complement al relației de compoziție, în cazul nostru cea de agregare care se realizează printr-o listă de obiecte de tip \textit{StudentDetails} în contextul \textit{User}.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{resurse/diagrame/uvtdorms_d3.drawio.png}
-    \caption{Diagrama unităților de cod pentru servicii}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=1\linewidth]{resurse/diagrame/uvtdorms1.2.drawio.png}
+%     \caption{Diagrama unităților de cod pentru entități}
+% \end{figure}
 
-\par Controllerele reprezintă end-point-urile serverului web ale aplicație și oferă metode predefinite care execută operații solicitate de client. Controllerele au fiecare un service la care redirecționează apelurile venite din exterior.
+% \par Repository reprezintă stratul de abstractizare a bazei de date. JPA Repository pune la dispoziție diferite metode specializate pe manipularea tabelelor existente în baza de date precum scrierea, ștergerea și modificarea datelor. În același timp, \textnormal{re\-po\-si\-to\-ry-urile} permit definirea unor metode specifice pentru executare unor operații complexe.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{resurse/diagrame/uvtdorms_d4.drawio.png}
-    \caption{Diagrama unităților de cod pentru controllere}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=1\linewidth]{resurse/diagrame/uvtdorms_d2.drawio.png}
+%     \caption{Diagrama unităților de cod pentru repository}
+% \end{figure}
 
-\section{Flux de navigare}
-\par Fluxul de navigare al aplicației a fost gândit să fie unul intuitiv, ușor de folosit pentru oricine. Prin urmare, în loc de pagini multiple și pași complecși de navigare, am ales o structura simplă a paginilor.
+% \par Serviciile corespunzătoare fiecărei componente din sistem sunt elementele cheie în manipularea obiectelor existente. Ele sunt responsabile pentru activitățile principale și execută operații complexe, uneori folosindu-se chiar de alte servicii. De exemplu, \textit{LaundryAppointmentService} utilizează numeroase alte servicii pentru realizarea cererilor legate de programările la spălătorie.
 
-\par Având în vedere că aplicația are mai multe tipuri de utilizatori, paginile accesibile de aceștia diferă și, prin urmare, la fel și fluxul de navigare. Însă, un element ce poate fi regăsit în fluxul oricărui utilizator este pagina de autentificare, punctul în care se întâmplă divergența ramurilor fluxurilor de navigare, unde se poate verifica tipul utilizatorului.
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=1\linewidth]{resurse/diagrame/uvtdorms_d3.drawio.png}
+%     \caption{Diagrama unităților de cod pentru servicii}
+% \end{figure}
 
-\par În cazul în care utilizatorul încă nu are un cont, poate intra pe pagina de înregistrare care, la fel ca pagina de autentificare, este accesibilă tuturor tipurilor de utilizatori, apăsând pe butonul de înregistrare aflată pe pagina de autentificare. După ce formularul de înregistrare a fost completat și butonul de finalizare apăsat, utilizatorul este redirecționat pe pagina de autentificare prin butonul cu mesajul sugestiv, ce apare pe pop-up-ul posterior finalizării completării formularului de înregistrare.
+% \par Controllerele reprezintă end-point-urile serverului web ale aplicație și oferă metode predefinite care execută operații solicitate de client. Controllerele au fiecare un service la care redirecționează apelurile venite din exterior.
 
-\par În momentul în care utilizatorul s-a autentificat, acesta este redirecționat pe pagina acasă. De acolo poate reveni pe pagina de autentificare apăsând pe butonul de delogare. Pagina acasă afișează informații generale, dar și butoane diferite în funcție de tipul utilizatorului. Însă, butonul care redirecționează utilizatorul pe pagina cu detaliile contului este vizibilă pentru toate tipurile de utilizatori.
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=1\linewidth]{resurse/diagrame/uvtdorms_d4.drawio.png}
+%     \caption{Diagrama unităților de cod pentru controllere}
+% \end{figure}
 
-\par Pagina cu detaliile contului utilizatorului afișează istoricul activităților acestuia și opțiunile de setare a datelor, precum parola. De aici, utilizatorul poate reveni pe pagina acasă apăsând pe butonul cu același nume.
+% \section{Flux de navigare}
+% \par Fluxul de navigare al aplicației a fost gândit să fie unul intuitiv, ușor de folosit pentru oricine. Prin urmare, în loc de pagini multiple și pași complecși de navigare, am ales o structura simplă a paginilor.
 
-\subsection{Fluxul de navigare din perspectiva unui student}
-\par Studenții sunt cei care au acces la paginile care întruchipează principalele \textnormal{func\-ți\-o\-na\-li\-tăți} ale aplicației.
+% \par Având în vedere că aplicația are mai multe tipuri de utilizatori, paginile accesibile de aceștia diferă și, prin urmare, la fel și fluxul de navigare. Însă, un element ce poate fi regăsit în fluxul oricărui utilizator este pagina de autentificare, punctul în care se întâmplă divergența ramurilor fluxurilor de navigare, unde se poate verifica tipul utilizatorului.
 
-\par Una dintre aceste pagini este pagina de crearea programărilor la spălătorie, accesibilă prin butonul \textit{creare programare} aflat pe pagina acasă. Pentru a face o programare, studenții trebuie să completeze un formular unde tebuie să seteze informații legate de programare, precum data și intervalul în care are loc aceasta și mașina de spălat la care se face programarea. După finalizarea completării formularului, în urma apăsării butonului de finalizare, apare pop-up-ul de confirmare a creării programării cu un buton de redirecționare pe pagina acasă.
+% \par În cazul în care utilizatorul încă nu are un cont, poate intra pe pagina de înregistrare care, la fel ca pagina de autentificare, este accesibilă tuturor tipurilor de utilizatori, apăsând pe butonul de înregistrare aflată pe pagina de autentificare. După ce formularul de înregistrare a fost completat și butonul de finalizare apăsat, utilizatorul este redirecționat pe pagina de autentificare prin butonul cu mesajul sugestiv, ce apare pe pop-up-ul posterior finalizării completării formularului de înregistrare.
 
-\par O altă pagină accesibilă doar studenților este pagina de raportare de probleme tehnice. Aici studentul poate furniza informații despre camera sau căminul în care a fost identificată problema (în cazul în care problema nu se află într-o cameră a căminului, atunci se specifică doar căminul), data identificării acesteia, descrierea problemei și alte informații relevante. După trimiterea raportului, apare un pop-up care confirmă crearea acestuia, alături de un buton de redirecționare pe pagina acasă.
+% \par În momentul în care utilizatorul s-a autentificat, acesta este redirecționat pe pagina acasă. De acolo poate reveni pe pagina de autentificare apăsând pe butonul de delogare. Pagina acasă afișează informații generale, dar și butoane diferite în funcție de tipul utilizatorului. Însă, butonul care redirecționează utilizatorul pe pagina cu detaliile contului este vizibilă pentru toate tipurile de utilizatori.
 
-\par Pentru vizualizarea evenimentelor ce au loc în cadrul căminului, studenților se află la dispoziție pagina de evenimente, unde pot afla detaliile activităților. De aici, se pot întoarce pe pagina de acasă cu ajutorului butonului cu același nume.
+% \par Pagina cu detaliile contului utilizatorului afișează istoricul activităților acestuia și opțiunile de setare a datelor, precum parola. De aici, utilizatorul poate reveni pe pagina acasă apăsând pe butonul cu același nume.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\linewidth]{resurse/diagrame/diagrama_de_navigare1.1.drawio.png}
-    \caption{Diagrama de stări și tranziții cu fluxul ecranelor pentru student}
-\end{figure}
+% \subsection{Fluxul de navigare din perspectiva unui student}
+% \par Studenții sunt cei care au acces la paginile care întruchipează principalele \textnormal{func\-ți\-o\-na\-li\-tăți} ale aplicației.
 
-\subsection{Fluxul de navigare din perspectiva unui administrator cămin}
-\par Administratorul căminului este responsabil pentru majoritatea elementelor organizatorice din cadrul unui cămin. Prin urmare, acesta are acces la numeroase pagini de administrare, de unde poate reveni pe pagina acasă cu ajutorului butonului \textit{acasă}.
+% \par Una dintre aceste pagini este pagina de crearea programărilor la spălătorie, accesibilă prin butonul \textit{creare programare} aflat pe pagina acasă. Pentru a face o programare, studenții trebuie să completeze un formular unde tebuie să seteze informații legate de programare, precum data și intervalul în care are loc aceasta și mașina de spălat la care se face programarea. După finalizarea completării formularului, în urma apăsării butonului de finalizare, apare pop-up-ul de confirmare a creării programării cu un buton de redirecționare pe pagina acasă.
 
-\par Una dintre paginile de administrare este cea a studenților, unde administratorul căminului poate accepta sau respinge studenții care s-au înregistrat la un cămin. Tot aici, administratorul poate să efectueze căutări în lista studenților cazați în cămin și mai are și opțiuni de a inactiva conturile studenților.
+% \par O altă pagină accesibilă doar studenților este pagina de raportare de probleme tehnice. Aici studentul poate furniza informații despre camera sau căminul în care a fost identificată problema (în cazul în care problema nu se află într-o cameră a căminului, atunci se specifică doar căminul), data identificării acesteia, descrierea problemei și alte informații relevante. După trimiterea raportului, apare un pop-up care confirmă crearea acestuia, alături de un buton de redirecționare pe pagina acasă.
 
-\par Pentru adăugarea sau aplicarea stării de indisponibiliate a mașinilor din spălătoria căminului și administrarea altor utilități din cămin, administratorul are la dispoziție pagina de administrare a căminului, accesibilă prin butonul \textit{cămin}.
+% \par Pentru vizualizarea evenimentelor ce au loc în cadrul căminului, studenților se află la dispoziție pagina de evenimente, unde pot afla detaliile activităților. De aici, se pot întoarce pe pagina de acasă cu ajutorului butonului cu același nume.
 
-\par Pagina de administrare programări, accesibilă prin butonul \textit{programări}, afișează detaliile legate de programările la spălătoria căminului precum și istoricul de programări. Aici administratorul are opțiunea de a urmări demersul acestora și opțiunea de a anula programări.
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.75\linewidth]{resurse/diagrame/diagrama_de_navigare1.1.drawio.png}
+%     \caption{Diagrama de stări și tranziții cu fluxul ecranelor pentru student}
+% \end{figure}
 
-\par Pentru administrarea raportărilor problemelor tehnice, administratorul căminului are acces la o pagină dedicată, prin butonul \textit{raportări probleme tehnice}, unde poate vedea detaliile rapoartelor și le poate închide după ce acestea au fost rezolvate.
+% \subsection{Fluxul de navigare din perspectiva unui administrator cămin}
+% \par Administratorul căminului este responsabil pentru majoritatea elementelor organizatorice din cadrul unui cămin. Prin urmare, acesta are acces la numeroase pagini de administrare, de unde poate reveni pe pagina acasă cu ajutorului butonului \textit{acasă}.
 
-\par Ultima pagină administrativă ce se află la dispoziția administratorului este cea a evenimentelor, pe care poate intra apăsând pe butonul \textit{evenimente}. Aici administratorul poate crea, modifica și șterge evenimente ce au loc în cadrul căminului.
+% \par Una dintre paginile de administrare este cea a studenților, unde administratorul căminului poate accepta sau respinge studenții care s-au înregistrat la un cămin. Tot aici, administratorul poate să efectueze căutări în lista studenților cazați în cămin și mai are și opțiuni de a inactiva conturile studenților.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\linewidth]{resurse/diagrame/diagrama_de_navigare.2drawio.png}
-    \caption{Diagrama de stări și tranziții cu fluxul ecranelor pentru administartorul de cămin}
-\end{figure}
+% \par Pentru adăugarea sau aplicarea stării de indisponibiliate a mașinilor din spălătoria căminului și administrarea altor utilități din cămin, administratorul are la dispoziție pagina de administrare a căminului, accesibilă prin butonul \textit{cămin}.
 
-\subsection{Fluxul de navigare din perspectiva administratorului aplicției}
-\par Administrartorul aplicației este cel care se ocupă atât de buna funcționare a \textnormal{ap\-li\-ca\-ți\-ei}, cât și de adăugarea căminelor și distribuirea noilor administratori.
+% \par Pagina de administrare programări, accesibilă prin butonul \textit{programări}, afișează detaliile legate de programările la spălătoria căminului precum și istoricul de programări. Aici administratorul are opțiunea de a urmări demersul acestora și opțiunea de a anula programări.
 
-\par Acesta prin butonul \textit{administratori} poate accesa pagina unde are posibilitatea de a vizualiza și  a realiza diferite operații asupra administratorilor de cămine, precum adăugarea și inactivarea conturilor administratorilor sau căutarea acestora. Tot aici, odată adăugați administratorii, acestora li se pot atribui căminul corespunzător.
+% \par Pentru administrarea raportărilor problemelor tehnice, administratorul căminului are acces la o pagină dedicată, prin butonul \textit{raportări probleme tehnice}, unde poate vedea detaliile rapoartelor și le poate închide după ce acestea au fost rezolvate.
 
-\par Pentru administrarea căminelor, administratorul aplicației are acces la pagina cu același nume prin intermediul butonului \textit{cămine}, unde poate adăuga sau șterge cămine.
+% \par Ultima pagină administrativă ce se află la dispoziția administratorului este cea a evenimentelor, pe care poate intra apăsând pe butonul \textit{evenimente}. Aici administratorul poate crea, modifica și șterge evenimente ce au loc în cadrul căminului.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\linewidth]{resurse/diagrame/diagrama_de_navigare3.drawio.png}
-    \caption{Diagrama de stări și tranziții cu fluxul ecranelor pentru administratorul aplicației}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.75\linewidth]{resurse/diagrame/diagrama_de_navigare.2drawio.png}
+%     \caption{Diagrama de stări și tranziții cu fluxul ecranelor pentru administartorul de cămin}
+% \end{figure}
+
+% \subsection{Fluxul de navigare din perspectiva administratorului aplicției}
+% \par Administrartorul aplicației este cel care se ocupă atât de buna funcționare a \textnormal{ap\-li\-ca\-ți\-ei}, cât și de adăugarea căminelor și distribuirea noilor administratori.
+
+% \par Acesta prin butonul \textit{administratori} poate accesa pagina unde are posibilitatea de a vizualiza și  a realiza diferite operații asupra administratorilor de cămine, precum adăugarea și inactivarea conturilor administratorilor sau căutarea acestora. Tot aici, odată adăugați administratorii, acestora li se pot atribui căminul corespunzător.
+
+% \par Pentru administrarea căminelor, administratorul aplicației are acces la pagina cu același nume prin intermediul butonului \textit{cămine}, unde poate adăuga sau șterge cămine.
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.75\linewidth]{resurse/diagrame/diagrama_de_navigare3.drawio.png}
+%     \caption{Diagrama de stări și tranziții cu fluxul ecranelor pentru administratorul aplicației}
+% \end{figure}
 
 \chapter{Implementarea aplicației}
 \par Pentru realizarea propriu-zisă a aplicației voi urmări structura prezentată în capitolul anterior. Dezvoltarea se va desfășura în paralel atât pe partea de front-end a aplicației, cât și pe partea de back-end. Astfel, fiecare funcționalitate va fi implementată incremental, iar testarea lor va fi posibilă și din perspectiva utilizatorului, deja de la începutul dezvoltării.
 
-\par Având în vedere că implementarea unor mecanisme sunt similare, vor fi prezentate doar câte un exemplar din cele distincte. Deși pe parcursul realizării codului sursă se urmăresc pincipiile \textit{Clean Code}\cite{martin2009clean} și se evită repetarea codului și se profită de avantajele programării orientate obiect, este totuși imposibilă modularizarea microserviciilor astfel încăt să nu existe părți similare.
+\par Având în vedere că implementarea unor mecanisme sunt similare, vor fi prezentate doar câte un exemplar din cele distincte. Deși pe parcursul realizării codului sursă se urmăresc pincipiile \textit{Clean Code}\cite{martin2009clean} și se evită repetarea codului și se profită de avantajele programării orientate obiect, este totuși imposibilă modularizarea microserviciilor, astfel încăt să nu existe părți similare.
 
 \section{Configurarea backend-ului}
 \par Printre lucrurile prioritare în dezvoltarea aplicației se află realizarea conexiunii dintre front-end și back-end. Acesta presupune mai mulți factori, principalele fiind de natură de securitate. Framework-ul Spring-Boot permite variate configurații ale serverului pentru a asigura accesarea serviciilor doar de cei autorizați, creând astfel măsurile de bază ale securității aplicației\cite{scarioni2019pro}.
 
-\par În secțiunile următoare vor fi prezentate configurarea accesului la serviciile serverului atât prin condiționarea adreselor care solicită acces, cât și prin condiționarea accesurilor prin verificarea parametrilor din solicitare. Cel din urmă va fi executată doar în cazul anumitor puncte de acces, fiindcă serverul va avea și servicii \textit{publice}, adică servicii care sunt accesibile nu numai utilizatorilor care au un cont.
+\par În secțiunile următoare vor fi prezentate configurarea accesului la serviciile serverului atât prin condiționarea adreselor care solicită acces, cât și prin condiționarea accesurilor prin verificarea parametrilor din solicitare. Cea din urmă va fi executată doar în cazul anumitor puncte de acces, fiindcă serverul va avea și servicii \textit{publice}, adică servicii care sunt accesibile nu numai utilizatorilor care au un cont.
 
 \subsection{Cross-Origin Resource Sharing}
 \par Unul dintre cele mai aplicate mecanisme de filtrarea apelurilor este \textit{Cross-Origin Resource Sharing}\cite{gibbinscross} (CORS). Acesta vine cu funcționalități diferite în funcție de nivelul de aplicabilitate.
@@ -400,8 +410,8 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
 \begin{enumerate}
     \item configurarea originilor cu acces (pe parcursul dezvoltării, singurul URL cu acces va fi \textit{`http://localhost:4200'})
     \item configurarea tipurilor de header permise
-    \item specificatea metodelor permise
-    \item setarea punctelor de acces pentru care se aplică configurarea cors (pentru a include toate punctele, se va da URL-ul \textit{`/**'})
+    \item specificarea metodelor permise
+    \item setarea punctelor de acces pentru care se aplică configurarea CORS (pentru a include toate punctele, se va folosi URL-ul \textit{`/**'})
 \end{enumerate}
 
 \begin{lstlisting}[language=Java, caption={Clasa prin care se realizează configurarea CORS}]
@@ -554,11 +564,15 @@ public interface IRoomRepository extends JpaRepository<Room, Long> {
 
 \subsection{Maparea claselor Spring-Boot la tabelele PostgreSQL}
 
-\par Prin intermediul JPA Repository, se poate realiza maparea entităților (claselor Java) la tabelele din baza de date. Această mapare se realizează prin numele membrilor claselor și prin ajutorul anotărilor. Anotările oferă informații suplimentare despre cum să fie interpretate clasele și membrii acestora. Tot aici se pot specifica și relațiile dintre entități.
+\par Prin intermediul JPA Repository, se poate realiza maparea entităților (claselor Java) la tabelele din baza de date. Această mapare se realizează prin numele membrilor claselor și prin ajutorul anotărilor. Adnotările oferă informații suplimentare despre cum să fie interpretate clasele și membrii acestora. Tot aici se pot specifica și relațiile dintre entități.
 
 \par În exemplul de mai jos se poate observa cum se realizează maparea entității \textit{`User'} la tabela \textit{`users'}. Entitatea are un identificator unic de tip UUID, numele, prenumele, adresa de email, numărul de telefon, parola și alte detalii specifice unui utilizator. De asemenea, entitatea are și relații cu alte entități, precum \textit{`StudentDetails'} sau \textit{`DormAdministratorDetails'}.
 
 \begin{lstlisting}[language=Java, caption={Clasa User}]
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Builder
 @Table(name = "users")
@@ -573,18 +587,26 @@ public class User {
     @Column(unique = true)
     private String phoneNumber;
     private String password;
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private StudentDetails studentDetails;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<RepairTicket> repairTickets;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Announcement> announcements;
+
     @Enumerated(EnumType.STRING)
     private Role role;
+
     @OneToOne(mappedBy = "administrator", cascade = CascadeType.ALL)
     private DormAdministratorDetails dormAdministratorDetails;
+
+    @ManyToMany
+    private List<Eveniment> attendingToEvents;
+
     private Boolean isActive;
-}
+
+    @Lob
+    private byte[] profilePicture;
 \end{lstlisting}
 
 \subsection{Data Transfer Object}
@@ -663,9 +685,9 @@ public class LaundryAppointmentService {
 
 \subsection{Rest Controller și maparea resurselor}
 
-\par Pentru a crea un end-point accesibil din front-end, se va crea o clasă care are anotările \textit{`@RestController'} și \textit{`@RequestMapping'}\cite{burke2009restful}. Acestea indică faptul că clasa este un controller și că metodele acesteia sunt accesibile prin intermediul unor URL-uri specifice.
+\par Pentru a crea un end-point accesibil din front-end, se va crea o clasă care are adnotările \textit{`@RestController'} și \textit{`@RequestMapping'}\cite{burke2009restful}. Acestea indică faptul că clasa este un controller și că metodele acesteia sunt accesibile prin intermediul unor URL-uri specifice.
 
-\par Controllerele au ca membru serviciile la care transmit cererile primite. Acestea apelează metodele serviciilor și returnează rezultatele către front-end. În cazul în care o cerere nu este validă, controllerul poate să arunce o excepție, care va fi prinsă de un \textit{`ControllerAdvice'}\ref{sec:exception-handler} și va fi transformată într-un răspuns de eroare.
+\par Controllerele au ca atribute serviciile la care transmit cererile primite. Acestea apelează metodele serviciilor și returnează rezultatele către front-end. În cazul în care o cerere nu este validă, controllerul poate să arunce o excepție, care va fi prinsă de un \textit{`ControllerAdvice'}\ref{sec:exception-handler} și va fi transformată într-un răspuns de eroare.
 
 \par De exemplu, controllerul responsabil pentru accesarea serviciilor aferente \textnormal{us\-că\-toa\-re\-lor} din spălătoria unui cămin este \textit{`DryerController'}.
 
@@ -682,7 +704,7 @@ public class DryerController {
 
 \subsection{Configurarea end-point-urilor}
 
-\par Pentru configurarea end-point-urilor se folosește anotarea \textit{`@GetMapping'}, care specifică metoda HTTP GET, și anotarea \textit{`@PostMapping'}, care specifică metoda HTTP POST\cite{varanasi2015spring}. Acestea sunt folosite pentru a specifica URL-ul la care este accesibilă metoda.
+\par Pentru configurarea end-point-urilor se folosește adnotarea \textit{`@GetMapping'}, care specifică metoda HTTP GET, și anotarea \textit{`@PostMapping'}, care specifică metoda HTTP POST\cite{varanasi2015spring}. Acestea sunt folosite pentru a specifica URL-ul la care este accesibilă metoda.
 
 \par Metodele pot primi parametri de la front-end, care sunt extrase atât din header-ul cererii, cât și din body-ul acesteia. În cazul în care parametrii sunt trimiși în body-ul cererii, aceștia sunt obținuți prin anotarea \textit{`@RequestBody'}. În cazul în care parametrii sunt trimiși în URL-ul cererii, aceștia sunt obținuți prin anotarea \textit{`@PathVariable'}. Iar în cazul în care informațiile se află în header-ul cererii, cum ar fi token-ul de autentificare, acesta se extrage separat și controllerul o primește la parametri ca și obiect de tip \textit{`Authentication'}.
 
@@ -718,11 +740,11 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \section{Componentele Angular}
 
-\par Interfața aplicației, partea de front-end, este construită cu Angular, care este un framework bazat pe TypeScript\cite{geetha2022interpretation}. Acest framework permite alcătuire paginilor și a componentelor într-un mod optim, oferind un mediu de dezvoltat ușor de menținut.
+\par Interfața aplicației, partea de front-end, este construită cu Angular, care este un framework bazat pe TypeScript\cite{geetha2022interpretation}. Acest framework permite alcătuire paginilor și a componentelor într-un mod optim, oferind un mediu de dezvoltare ușor de menținut.
 
 \par Angular permite crearea componentelor, fiecare având câte un fișier de TypeScript, HTML, CSS și testare. Astfel, componentele sunt foarte bine modularizate. În aplicația UVTDorms, fiecare pagină este o componentă separată, cu propriile \textnormal{func\-ți\-o\-na\-li\-tă\-ți}. Unele pagini au propriile lor subcomponente în cazul în care complexitatea \textnormal{func\-ți\-o\-na\-li\-tă\-ți\-lor} și, respectiv sau, aspectul reutabilizității solicită acest lucru.
 
-\par Accesarea paginilor este condiționată de rolul utilizatorului. În cazul în care un utilizator neautentificat intră pe aplicația web, singura pagină accesibilă acestuia este pagina de autentificare. Orice încercare de a intra pe o altă pagină va eșua, fiindcă verificarea rolului se întâmplă în core-ul aplicației. În mod similar, unele subcomponente și elemente apar doar pentru anumiți utilizatori. De exemplu, în bara de navigare a aplicației, butoanele de navigare apar în funcției de rolul utilizatorului. Astfel, pentru un anumit tip de utilizator, apar doar butoanele care duc la paginile la care utilizatorul are acces.
+\par Accesarea paginilor este condiționată de rolul utilizatorului. În cazul în care un utilizator neautentificat intră pe aplicația web, singura pagină accesibilă acestuia este pagina de autentificare. Orice încercare de a intra pe o altă pagină va eșua, fiindcă verificarea rolului se întâmplă în core-ul aplicației. În mod similar, unele subcomponente și elemente apar doar pentru anumiți utilizatori. De exemplu, în bara de navigare a aplicației, butoanele de navigare apar în funcție de rolul utilizatorului. Astfel, pentru un anumit tip de utilizator, apar doar butoanele care duc la paginile la care utilizatorul are acces.
 
 \par În cazul paginilor comune, cum ar fi pagina utilizatorului, unde detaliilor contului diferă, din baza de date se vor cere doar datele potrivite rolului utilizatorului, fără să se mai apeleze și end-point-urile pentru datele altor roluri.
 
@@ -730,21 +752,21 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \par Angular permite utilizarea bibliotecilor de componente de interfețe de utilizator. Aceste biblioteci oferă componente costumizabile, atât pe partea de afișare cât și pe partea de funcționalități. În mod normal, utilizarea a astfel de biblioteci este o soluție eficientă, fiindcă permit o dezvoltare mai rapidă și consistentă.
 
-\par Pentru dezvoltarea aplicației UVTDorms, am folosit două astfel de biblioteci: \textit{`Material UI'} și \textit{`PrimeNG'}. Primul este o bibliotecă dezvoltată chiar de Angular. A doua este independentă, dar este mult mai mare și oferă componente mai complexe. Eu am folosit componentele din aceste biblioteci în special în form-uri, elementele lor de input având un aspect foarte bine realizat. Bibliotecile s-au dovedit a fi foarte eficient și la afișarea datelor, cum ar fi în cazul tabelelor. 
+\par Pentru dezvoltarea aplicației UVTDorms, am folosit două astfel de biblioteci: \textit{`Material UI'}\cite{material_ui_angular} și \textit{`PrimeNG'}\cite{prime_ng_home}. Primul este o bibliotecă dezvoltată chiar de Angular. A doua este independentă, dar este mult mai mare și oferă componente mai complexe. Eu am folosit componentele din aceste biblioteci în special în form-uri, elementele lor de input având un aspect foarte bine realizat. Bibliotecile s-au dovedit a fi foarte eficiente și la afișarea datelor, cum ar fi în cazul tabelelor. 
 
 \section{Sistemul de rutare în front-end}
 
-\par Angular are propriul sistem de rutare, care permite navigarea dintre paginile \textnormal{ap\-li\-ca\-ți\-ei} web fără reîncărcarea paginii în browser. Configurarea sistemului de rutare presupune specificarea path-ului, cum ar fi \textit{`/home'} și asocierea acesteia cu o componentă angular, cum ar fi \textit{`HomePageComponent'}. Astfel, când utilizatorul accesează un path al paginii, i se va încârca componenta asociată. Navigarea interna presupune schimbarea path-ului și afișarea componentei asociate, fără reîncărcarea paginii.
+\par Angular are propriul sistem de rutare, care permite navigarea dintre paginile \textnormal{ap\-li\-ca\-ți\-ei} web fără reîncărcarea paginii în browser. Configurarea sistemului de rutare presupune specificarea path-ului, cum ar fi \textit{`/home'} și asocierea acesteia cu o componentă Angular, cum ar fi \textit{`HomePageComponent'}. Astfel, când utilizatorul accesează un path al paginii, i se va încărca componenta asociată. Navigarea internă presupune schimbarea path-ului și afișarea componentei asociate, fără reîncărcarea paginii.
 
-\par Pentru a configura sistemul de rutare, angular are o componentă dedicată, \textit{`AppRoutingModule'}, care are o listă de path-uri asociate cu componentele. Aplicația UVTDorms are 17 pagini configurate în această listă.
+\par Pentru a configura sistemul de rutare, Angular are o componentă dedicată, \textit{`AppRoutingModule'}, care are o listă de path-uri asociate cu componentele. Aplicația UVTDorms are 17 pagini configurate în această listă.
 
 \section{Servicii front-end}
 
-\par În scopul modularizării și structurării potrivite a codului, Angular are un mecanism pentru a separa serviciile prin care trec cererile la back-end, de componentele aplicației. Astfel, toate apelurie au loc în servicii dedicate, fiecare parte a aplicaței având propiul serviciu. De exemplu, camerele de cămin au un serviciu care conține toate funcțiile cu care pot fi apelate end-pointurile din serviciul de camere al back-endului. Prin urmare, fiecare serviciu de back-end are un serviciu asociat în front-end.
+\par În scopul modularizării și structurării potrivite a codului, Angular are un mecanism pentru a separa serviciile prin care trec cererile la back-end, de componentele aplicației. Astfel, toate apelurile au loc în servicii dedicate, fiecare parte a aplicaței având propriul serviciu. De exemplu, camerele de cămin au un serviciu care conține toate funcțiile cu care pot fi apelate end-pointurile din serviciul de camere al back-endului. Prin urmare, fiecare serviciu de back-end are un serviciu asociat în front-end.
 
-\par În mod normal, un serviciu în fronte-end este alcătuit din constante de string-uri care reprezintă path-urile la end-pointurile serviciul asociat din back-end și funcțiile prin care se realizează apelurile la aceste end-pointuri. Funcțiile acestea sunt folosite de restul componentelor.
+\par În mod normal, un serviciu în front-end este alcătuit din constante de string-uri care reprezintă path-urile la end-pointurile serviciul asociat din back-end și funcțiile prin care se realizează apelurile la aceste end-pointuri. Funcțiile acestea sunt folosite de restul componentelor.
 
-\par O parte importantă a serviciilor este configurarea mesajului ce urmează să fie trimis. După cum am descris în capitolele anterioare, UVTDorms are un sistem de JWToken pentru autentificare. Acest token trebuie să fie inclus în header-ul apelurilor spre back-end, iar acest lucru se întâmplă în servicii, unde se apelează un serviciu special, \textit{`AuthService'}, care are responsabilitatea de a gestiona token-ul salvat. Prin urmare, serviciul \textit{`AuthService'} este prezent aproape în toate serviciile front-end al aplicației și are rolul de a forniza header-ul necesar pentru comunicarea cu back-endul.
+\par O parte importantă a serviciilor este configurarea mesajului ce urmează să fie trimis. După cum am descris în capitolele anterioare, UVTDorms are un sistem de JWToken pentru autentificare. Acest token trebuie să fie inclus în header-ul apelurilor spre back-end, iar acest lucru se întâmplă în servicii, unde se apelează un serviciu special, \textit{`AuthService'}, care are responsabilitatea de a gestiona token-ul salvat. Prin urmare, serviciul \textit{`AuthService'} este prezent aproape în toate serviciile front-end al aplicației și are rolul de a furniza header-ul necesar pentru comunicarea cu back-endul.
 
 \par Un alt serviciu puțin mai special decât restul serviciilor este \textit{`UserService'}, care, pe lângă structura generală a serviciilor front-end (constante de path-uri și funcții de apelare), are responsabilitatea de a stoca rolul utilizatorului. Acest serviciu este folosit în toate componentele care au un comportament dependent de tipul de utilizator.
 
@@ -756,17 +778,18 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \par Pentru a schimba limba interfeței, utilizator are în bara de navigare un buton care este steagul țării în a cărei limba este afișarea curentă. Apăsând pe buton, utilizatorul poate schimba între limbile română și engleză.
 
+\section{Responsive}
 \chapter{Ghid utilizator}
 
 \section{Autentificare}
 
-\par Pagina inaițială a aplicației UVTDorms este pagina de autentificare. Aici utilizatorul are posibilitatea de a se autentifica, de a se înregistra și de a-și recupare parola uitată.
+\par Pagina de pornire a aplicației UVTDorms este pagina de autentificare. Aici utilizatorul are posibilitatea de a se autentifica, de a se înregistra și de a-și recupare parola uitată.
 
 \par Inițial, pe pagina de autentificare se află un formular de autentificare, unde utilizatorul poate să-și introducă adresa de email și parola. Apăsând pe butonul de autentificare, utilizatorul va fi redirecționat pe pagina contului său. În cazul în care adresa de email sau parola nu au fost corecte, se va afișa un mesaj de eroare.
 
 % Poză cu formularul de login (dar să se vadă și partea din dreapta, partea albastră)
 
-\par În cazul în care utilizatorul și-a uitat parola, apăsând pe butonul de \textit{`Ți-ai uitat parola?'}, va fi redirectionat pe o altă pagină cu un formular unde poate să-și introducă adresa de mail. Apăsând pe butonul \textit{`Trimite'}, i se va trimite un mail cu un link câtre o pagină cu un formular unde poate să-și seteze o parolă nouă.
+\par În cazul în care utilizatorul și-a uitat parola, apăsând pe butonul de \textit{`Ți-ai uitat parola?'}, va fi redirectionat pe o altă pagină cu un formular unde poate să-și introducă adresa de mail. Apăsând pe butonul \textit{`Trimite'}, i se va trimite un mail cu un link către o pagină cu un formular unde poate să-și seteze o parolă nouă.
 
 % Două poze, une lângă alta, una cu formularul de email pentru resetarea parolei, și cealaltă cu formularul de resetare a parolei
 
@@ -796,7 +819,7 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \subsection{Cerere de înregistrare la cămin}
 
-\par Pe pagina de profil, studenții au o subfereastră \textit{`Cereri de înregistrare'}. Aici au posibilitatea de a face cereri noi de înregistrare, apăsând pe butonul \textit{`+'} și selectând căminul și camera. După ce cerearea a fost trimisă, aceasta va apărea în lista de cereri de înregistrare cu detaliile cererii, cum ar fi adresa de email ar administratorului care trebuie să accepte cererea, și statusul cererii.
+\par Pe pagina de profil, studenții au o subfereastră \textit{`Cereri de înregistrare'}. Aici au posibilitatea de a face cereri noi de înregistrare, apăsând pe butonul \textit{`+'} și selectând căminul și camera. După ce cererea a fost trimisă, aceasta va apărea în lista de cereri de înregistrare cu detaliile cererii, cum ar fi adresa de email a administratorului care trebuie să accepte cererea, și statusul cererii.
 
 % Poză cu un tabel cu mai multe cereri, cele vechi deja acceptate (Faci cereri noi în InitialDataLoader)
 
@@ -822,7 +845,7 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \subsection{Lista de evenimente}
 
-\par Pe pagina de evenimente studenții și administratorii de cămin pot viziona lista de evenimente din cămin. Aici pot vedea titlul evenimentului, autorul, descrierea, data când va avea loc acesta și câți participanți vor fi. La fiecare eveniment apare și un buton \textit{`Participă'}, cu care utilizatorii pot comunica intenția de a participa la eveniment. După apăsearea butonului, acesta se transformă în butonul \textit{`Anulează participarea'}.
+\par Pe pagina de evenimente studenții și administratorii de cămin pot vizualiza lista de evenimente din cămin. Aici pot vedea titlul evenimentului, autorul, descrierea, data când va avea loc acesta și câți participanți vor fi. La fiecare eveniment apare și un buton \textit{`Participă'}, cu care utilizatorii pot comunica intenția de a participa la eveniment. După apăsarea butonului, acesta se transformă în butonul \textit{`Anulează participarea'}.
 
 % Poză cu pagina de evenimente
 
@@ -846,11 +869,11 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 % Poză cu tabel, cu un drop-down deschis pentru o mașină
 
-\par În partea dreaptă a fiecărei mașini se află un buton albastru de editare. Aceasta deschide o fereastră unde administratorul căminului poate să schimbe numele mașinii, uscătorul asociat și statusul. În cazul în care mașina devine defectă și are programări, toate programările vor fi anulate și studenții vor fi anunțați.
+\par În partea dreaptă a fiecărei mașini se află un buton albastru de editare. Aceasta deschide o fereastră unde administratorul căminului poate să schimbe numele mașinii, uscătorul asociat și statusul. În cazul în care mașina devine defectă și are programări, toate programările vor fi anulate și studenții vor fi anunțați printr-un mail corespunzător.
 
 % Poză cu formularul
 
-\par Pentru administrarea uscătoarelor, administratorul poate să schimba tipul \textnormal{ma\-și\-ni\-lor} afișate cu ajutorul drop-down-ului din stânga sus. Structura tabelului este aceeași cu cea a mașinilor de spălat. Singura diferență este în cazul în care un uscător devine defect, fiindcă atunci studentul are opțiunea de a păstra programarea la măsina de spălat, fără uscător.
+\par Pentru administrarea uscătoarelor, administratorul poate să schimbe tipul \textnormal{ma\-și\-ni\-lor} afișate cu ajutorul drop-down-ului din stânga sus. Structura tabelului este aceeași cu cea a mașinilor de spălat. Singura diferență este în cazul în care un uscător devine defect, fiindcă atunci studentul are opțiunea de a păstra programarea la măsina de spălat, fără uscător.
 
 \par Pentru adăugarea mașinilor, administratorul căminului apasă pe butonul verde \textit{`+'} din partea de dreapta sus a ecranului. Se deschide o fereastră cu un formular în 3 părți:
 
@@ -864,7 +887,7 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \subsection{Administrarea studenților}
 
-\par Cea mai importantă parte a aplicației UVTDorms sunt studenții. Pe pagina dedicată administrării studenților dintr-un cămin, administroatorul acestuia are la dispoziție un table undes sunt listați toți studenții din cămin, într-un tabel cu numele studenților, numărul camerei lor, numărul matricol, și numărul de telefon.
+\par Cea mai importantă parte a aplicației UVTDorms sunt studenții. Pe pagina dedicată administrării studenților dintr-un cămin, administratorul acestuia are la dispoziție un tabel unde sunt listați toți studenții din cămin, într-un tabel cu numele studenților, numărul camerei lor, numărul matricol, și numărul de telefon.
 
 % Poză cu tabelul
 
@@ -894,9 +917,9 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \subsection{Administrarea tichetelor de reparații}
 
-\par Pentru gestionarea tichetelor de anunțarea problemelor, deschise de studenții \textnormal{că\-mi\-nu\-lui}, administratorul acestuia are o pagină dedicată. Aici sunt listate toate tichetele din cămin, într-un tabel cu data creării, titlu și status.
+\par Pentru gestionarea tichetelor de raportare a  problemelor, deschise de studenții \textnormal{că\-mi\-nu\-lui}, administratorul acestuia are o pagină dedicată. Aici sunt listate toate tichetele din cămin, într-un tabel cu data creării, titlu și status.
 
-\par În stânga fiecărui tichet este un buton care extinde linia și apar detaliile tichetului, cum ar fi tipul de intervenție necesar, descrierea problemei, dacă problema a fost anunțată în trecut, adresa de email al studentului care a făcut tichetul și numărul de cameră.
+\par În stânga fiecărui tichet este un buton care extinde secțiunea și apar detaliile tichetului, cum ar fi tipul de intervenție necesar, descrierea problemei, dacă problema a fost anunțată în trecut, adresa de email a studentului care a făcut tichetul și numărul de cameră.
 
 \par Pentru a actualiza statusul unui tichet, administratorul apasă pe statusul curent al acestuia și apare un fereastră mică pentru confirmarea schimbării statusului din \textit{`Deschis'} în \textit{`Rezolvat'} și invers.
 
@@ -931,7 +954,7 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \subsection{Gestionarea administratorilor de cămine}
 
-\par Pagina de gestionare a administratorile de cămine este foarte similară pagini de administrare a căminelor. Aceasta are un tabel în care sunt listați administratorii de cămine, cu detaliile lor, cum ar fi numele, adresa de email, numărul de telefon și căminul administrat.
+\par Pagina de gestionare a administratorile de cămine este foarte similară paginii de administrare a căminelor. Aceasta are un tabel în care sunt listați administratorii de cămine, cu detaliile lor, cum ar fi numele, adresa de email, numărul de telefon și căminul administrat.
 
 \par În dreptul fiecărui administrator se găsesc două butoane:
 
@@ -942,9 +965,9 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 % Poză cu tabelul și cu o linie pentru care butonul de editare a fost apăsat
 
-\par Pentru adăugarea administratorilor de cămine, administratorul aplicației apasă pe butonul verde \textit{`+'} care deschide o fereastră nouă cu un formular. Câmpurile formularului permite setarea detaliilor noului administrator de cămin, cum ar fi prenumele, numele, numărul de telefon, adresa de mail și, opțional, căminul administrat.
+\par Pentru adăugarea administratorilor de cămine, administratorul aplicației apasă pe butonul verde \textit{`+'} care deschide o fereastră nouă cu un formular. Câmpurile formularului permite setarea detaliilor noului administrator de cămin, cum ar fi prenumele, numele, numărul de telefon, adresa de mail și, opțional, căminul asociat.
 
-\par Noul administrator de cămin va primi un email cu parola de conectare și, dacă a fost specificat în formular, atunci căminul la care a fost asociat.
+\par Noul administrator de cămin va primi un email cu parola de conectare și, dacă a fost specificat în formular, căminul la care a fost asociat.
 
 % Poză cu formularul respectiv
 
@@ -952,7 +975,7 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \section{Despre aplicația UVTDorms}
 
-\par Aplicația UVTDorms este o aplicație web, accesibilă din browsere și are ca scop digitalizarea unor rutin din cadrul căminelor studențești. Oferă o platformă unde atât aduce o îmbunătățire atât pentru activitățile studenților cât și în cea a administratorilor căminelor. Cu ajutorul aplicației studenții pot:
+\par Aplicația UVTDorms este o aplicație web, accesibilă din browsere și are ca scop digitalizarea unor rutine din cadrul căminelor studențești. Oferă o platformă unde atât aduce o îmbunătățire atât pentru activitățile studenților cât și în cea a administratorilor căminelor. Cu ajutorul aplicației studenții pot:
 
 \begin{itemize}
     \item face programări la spălătorie
@@ -961,8 +984,6 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
     \item să se înscrie în alte cămine
     \item vizualiza programările și tichetele create
 \end{itemize}
-
-
 
 \section{Design aplicație}
 \section{Implementare eficientă cu framework-uri}
