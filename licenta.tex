@@ -975,7 +975,7 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \section{Despre aplicația UVTDorms}
 
-\par Aplicația UVTDorms este o aplicație web, accesibilă din browsere și are ca scop digitalizarea unor rutine din cadrul căminelor studențești. Oferă o platformă unde atât aduce o îmbunătățire atât pentru activitățile studenților cât și în cea a administratorilor căminelor. Cu ajutorul aplicației studenții pot:
+\par Aplicația UVTDorms este o aplicație web, accesibilă din browsere și are ca scop digitalizarea unor rutine din cadrul căminelor studențești. Oferă o platformă care aduce o îmbunătățire atât pentru activitățile studenților cât și pentru cea a administratorilor căminelor. Cu ajutorul aplicației studenții pot:
 
 \begin{itemize}
     \item face programări la spălătorie
@@ -985,10 +985,37 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
     \item vizualiza programările și tichetele create
 \end{itemize}
 
+\par Administratorii căminelor pot gestiona toate acestea, pe lângă administrarea camerelor și a studenților care se înscriu în cămine.
+
+\par Al treilea rol, la fel de important în cadrul aplicației este administratorul acesteia, care adaugă cămine noi și gestionează administratorii acesteia.
+
+\par Aplicația UVTDorms a fost gândită să fie accesibilă atât de pe desktop, cât și de pe dsipozitive mobile. Astfel, implementarea \textit{`responsive'} a aplicației își adaptează interfața la ecranele dispozitivelor de pe care sunt accesate. 
+
 \section{Design aplicație}
+
+\par UVTDorms este o aplicație cu arhitectură modularizată, modernă, care permite o dezvoltare continuă și eficientă. Atât design-ul bazei de data cât și a back-end-ului sunt gândite să fie ușor extensibile. De asemenea, framework-ul Angular, prin natura sa permite extinderea aplicației într-un mod foarte eficient.
+
+\par Modularizarea componentelor aplicației pe toate straturile sale s-a dovedit a fi foarte utilă, deoarece efectuarea debugging-ului nu a reprezentat niciodată o problemă. Acest lucru se datorează separării responsabilităților dintre modulele aplicației.
+
 \section{Implementare eficientă cu framework-uri}
+
+\par Aplicația UVTDorms a fost dezvoltată în conformitate cu standardele moderne de dezvoltare software. Am ales să folosesc Angular pe front-end, fiind unul dintre cele mai folosite framework-uri, cu suport oficial și o varietate foarte mare de pachete utile. Pe back-end am folosit framework-ul Spring Boot, care se bazează pe Java, unul dintre cele mai populare limbaje de programare. Spring Boot este unul dintre cele mai întălnite framework-uri în contextul back-end-ului aplicațiilor web.
+
+\par Cu ajutor acestora, implementarea aplicației s-a desfășurat eficient, folosind toate utilitățile framework-urilor utilizați.
+
 \section{Interfață intuitivă și ghid asociat}
-\section{Lansarea aplicației}
+
+\par Interfața aplicației UVTDorms a fost gândită să fie una simpla, intuitivă, ușor de învățat și folosit. Paginile aplicației nu sunt prea încărcate și conțin doar elementele necesare.
+
+\par Fiecare pagină a aplicației are traducere în două limbi, română și engleză, fiindcă studenții Universității de Vest din Timișoara nu sunt doar vorbitori de limba română.
+
+\par Aplicația are și un ghid de utilizator, pentru toate funcționalitățile aplicației, începând cu cele comune și la final structurate pe roluri. Ghidul are și capturi de ecran, pentru a arăta și exemplu pentru utilizatorii care citesc ghid-ul.
+
+\section{Direcții viitoare}
+
+\par Având în vedere că aplicația UVTDorms a ajuns la prima versiune finală, aceasta poată să fie instalată pe un server și asociat cu un nume domain și utilizat de studenții și administratorii căminelor. Deși aplicația mai poate fi extinsă cu funcționalități noi, aceasta deja oferă toată funcționalitățile de bază pe care și le-a propus.
+
+\par Un exemplu bun de extindere a aplicației ar fi integrarea cu procesul de obținere a locurilor în cămine. UVTDorms permite înscrierea studenților în căminele în care au fost deja cazați, dar încă nu suportă procesul de obținere a locurilor.
 
 \bibliography{mybib}
 \bibliographystyle{abbrv}
