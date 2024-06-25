@@ -59,7 +59,7 @@
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
 
-\noindent Conf.Dr.\ Micotă Flavia Elena\hfill Dr\u agoiu  Iulia-Georgiana}
+\noindent Conf. Dr.\ Micotă Flavia Elena\hfill Dr\u agoiu  Iulia-Georgiana}
 
 \vfill
 \begin{center}
@@ -75,7 +75,7 @@
             FACULTATEA DE MATEMATIC\u A \c SI INFORMATIC\u A
 
 
-            PROGRAMUL DE STUDII DE LICEN\c T\u A  Informatic\u a  }}
+            PROGRAMUL DE STUDII DE LICEN\c T\u A  INFORMATIC\u A  }}
 
     \vspace{120pt}
     {\huge {\bf UVTDorms}}
@@ -85,7 +85,7 @@
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
 
-\noindent Conf.Dr.\ Micot\u a Flavia Elena \hfill Dr\u agoiu Iulia-Georgiana}
+\noindent Conf. Dr.\ Micot\u a Flavia Elena \hfill Dr\u agoiu Iulia-Georgiana}
 
 \vfill
 \begin{center}
@@ -98,70 +98,70 @@
 \section*{Abstract}
 
 \par The scope of this work is to create a useful platform for students in dormitories and their administrators. This web application will digitalize and automate many routine tasks in dormitories, such as creating appointments for the dormitory laundry, reporting problems, announcing events, managing students, and registering for dormitories. 
-\vspace{1em}
 
-\par Although the application presented in this paper is dedicated to the West University of Timișoara and its dormitories, the software can be extended and used by any other university with a similar organizational structure.
-\vspace{1em}
+\par Although the application presented in this paper is dedicated to the West University of Timișoara and its dormitories, the software can be extended and used by any other universities with a similar organizational structure.
 
 \par The UVTDorms application is an easy-to-use platform for both students and dorm administrators, offering a simple, digitalized solution for students to create and manage laundry appointments, report problems quickly, and view upcoming events in the dormitory.
-\vspace{1em}
 
 \par Dormitory administrators can manage the dormitory's washing machines and \textnormal{dry\-ers} (adding new ones if necessary), handle problem reports, and create new events. They can also manage the dormitory's rooms and students.
-\vspace{1em}
 
 \par All these functionalities make it possible for any university with an organizational structure compatible with the project to use the software. Therefore, the application provides general utility and can help digitalize laundry management, event announcements, problem reporting, and student management in dormitories, offering numerous advantages to both students and dorm administrators.
-\vspace{1em}
+\vspace{3em}
+\par Keywords: web application, java, angular, spring-boot, dorms, digitalization
 
 \tableofcontents
-\newpage
-
 
 \chapter{Introducere}
-\section{Motivație și obiective}
+
 \par O bună organizare și o bună comunicare reprezintă doi factori foarte importanți în viața oricărei persoane, dar mai ales în viața oricărui student, în special în contextul vieții în cămin. Pentru a menține un mediu de trai plăcut, studenții trebuie să coabiteze cu alți studenți, iar acest lucru este posibil doar printr-o bună comunicare și organizare. Fiind un număr foarte mare de studenți, comunicarea și organizarea devin procese dificile, dacă se folosesc metode clasice. Căminele oferă diferite resurse studenților, precum mașinile de spălat și uscătoarele de rufe, spațiile comune (sală de lectură, bucătării, băi), dar și întâlniri pe diferite tematici cu studenții locatari pentru o mai bună integrare și acomadare în cămin. O organizare eficientă și o comunicare bună în cadrul căminelor asigură  utilizarea resurselor fără conflicte între locatari, dar și că informația ajunge în mod neeronat către toți locatarii.
 
 \par Ca și studentă, dar și ca locatară în căminele din cadrul universității am avut nenumărate dificultăți și provocări în ceea ce privește viața în cămin. Atunci când mi-am ales tema lucrării de licență, mi-am dorit foarte mult ca aceasta să fie folositoare și să vină în ajutorul viitorilor studenți din cadrul universității, a studenților din cadrul proiectelor Erasmus, cât și a personalului administrativ. Astfel, aceasta să simplifice și să automatizeze multe din procesele din cadrul căminelor.
 
-\par Aplicația își propune să ofere o modalitate de reducere a sarcinilor repetitive, centralizând gestionarea facilităților și resurelor comune. Aplicația include un sistem de autentificare și creare de conturi atât pentru studenți, administratorii de cămin, cât și pentru adminstratorul aplicației. Studentul se poate înregistra furnizând anumite date personale, urmând ca administratorul, în urma notificării, să aprobe sau să respingă cererea de înscriere a studentului. 
-\par O funcționalitate de bază a aplicției o reprezintă programarea la mașina de spălat rufe, respectiv uscătoarele de rufe. Astfel, aceasta elimină procesul incomod de a face programarea pe foaie, reduce posibilele conflicte date de ștergerea intenționată a programărilor, risipa de hârtie, iar administratorul căminului poate gestiona astfel sălătoria, să modifice statusul mașinilor în cazul în care apare vreo defecțiune și să notifice studenții pentru a se reprograma sau să îi informeze că programarea a fost anulată. În plus, studentul poate deschide un tichet de reparații sau reclamații către administrorul căminului.
+\par Aplicația își propune să ofere o modalitate de reducere a sarcinilor repetitive, centralizând gestionarea facilităților și resurselor comune. Aplicația include un sistem de autentificare și creare de conturi atât pentru studenți și administratorii de cămin. Studentul se poate înregistra furnizând anumite date personale, urmând ca administratorul, în urma notificării, să aprobe sau să respingă cererea de înscriere a studentului. 
+\par O funcționalitate de bază a aplicației o reprezintă programarea la mașina de spălat rufe, respectiv uscătoarele de rufe. Astfel, aceasta elimină procesul incomod de a face programarea pe foaie, reduce posibilele conflicte date de ștergerea intenționată a programărilor, risipa de hârtie. Administratorul căminului poate gestiona spălătoria prin modificarea statusului mașinilor în cazul în care apare vreo defecțiune, prin notificarea studenților pentru a se reprograma sau informarea lor că programarea a fost anulată. În plus, studentul poate deschide un tichet de reparații sau reclamații către administratorul căminului.
 \par Suportul multilingv vine în ajutorul tuturor studenților, mai ales a studenților locatari din programul Erasmus, facilitând o bună integrare a acestora, dar și accesul facil și eficient la infomații și resurse.
-\par Administratorul caminului poate facilita comunicarea cu locatarii prin publicarea de anunțuri și evenimente, astfel încurajandu-i pe locatari să participe la evenimente, dar și îi ține la curent cu noile regulamente sau anunțuri legate de viața în cămin.
-De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se că fiecare tichet este redirecționat către personalul tehnic necesar, dar și monitorizează statusul fiecărei reparații. Pentru a înregistra camerele din cămin în aplicație, acesta poate adăuga, gestiona și vizualiza camere și studenții cazați în camere, oferind un control al spațiilor din cămin.
+\par Administratorul căminului poate facilita comunicarea cu locatarii prin publicarea de anunțuri și evenimente, astfel încurajându-i pe locatari să participe la evenimente, dar și îi ține la curent cu noile regulamente sau anunțuri legate de viața în cămin.
+De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se că fiecare tichet este redirecționat către personalul tehnic necesar, dar și monitorizează statusul fiecărei reparații. Pentru a înregistra camerele din cămin în aplicație, acesta poate adăuga, gestiona și vizualiza camerele și studenții cazați în camere, oferind un control al spațiilor din cămin.
 \par Administratorul aplicației poate adăuga și gestiona crearea de conturi de administartori de cămine, dar și adăugarea de cămine și distribuirea administratorilor corespunzător căminelor.
 
 \section{Aplicații similare}
-\par Un rol important în dezvoltarea unei noi aplicații îl joacă aplicațiile similare. Comparația cu acestea reprezintă un pas de pornire, analizând punctele tari, punctele slabe sau cele lipsă, pentru a îmbunătății experința utilizatorului, dar și pentru a decoperi potențialul unei inovări. După o căutare îndelungată am aflat că în România, o singură aplicație abordează într-o anumită măsură această problemă, astfel UVTDorms reprezintă o inovație, nu doar la nivel local, cât și a țării. Pe lângă aplicația \textbf{me.UTCN}, găsită la noi în țară, am mai găsit încă o aplicație similară: \textbf{TUSA}.  În subsecțiunile următoare, o să descriu aplicțiile, precum și punctele tari și slable considerate de mine pentru fiecare aplicație în parte, iar la final, un tabel care să reprezinte o scurtă comparație a celor mai importante funcționalități.
+\par Un rol important în dezvoltarea unei noi aplicații îl joacă aplicațiile similare. Comparația cu acestea reprezintă un pas de pornire, analizând punctele tari, punctele slabe sau cele lipsă, pentru a îmbunătății experința utilizatorului, dar și pentru a decoperi potențialul unei inovări. După o căutare îndelungată, am aflat că în România, o singură aplicație abordează într-o anumită măsură această problemă, astfel 
+ aplicația UVTDorms reprezintă o inovație, nu doar la nivel local, dar și a țării. Pe lângă aplicația \textbf{me.utcj.app} \cite{me.utcj.app}, găsită la noi în țară, am mai găsit încă o aplicație similară: \textbf{TUSA} \cite{tusa_home_page}.  În subsecțiunile următoare, o să descriu aplicațiile, precum și punctele tari și slabe considerate de mine pentru fiecare aplicație în parte, iar la final, un tabel care să reprezinte o scurtă comparație a celor mai importante funcționalități.
 
-\subsection{me.UTCN}
-\par Aplicația \textbf{me.UTCN} este o aplicație mobilă destinată studenților locatari ai \textnormal{că\-mi\-ne\-lor}  din cadrul Universității Tehnice din Cluj-Napoca. Aceasta oferă patru \textnormal{func\-ți\-o\-na\-li\-tă\-ți} de bază: vizualizarea notelor, vizualizarea meniului zilei de la cantină, programarea la mașina de spălat rufe și formularul de reparații. Studenții se conectează cu contul instituțional, astfel doar studenții universității pot avea posibilitatea de a beneficia de folosirea resurselor. Anterior aceștia au fost adăugați în sistem, fiind atribuiți căminului și camerei corespunzătoare. Aceștia pot să facă programare la mașina de spălat consultând un calendar unde pot vedea programările altor locatari și intervalele libere. Programarea se face pe baza numărului camerei și al numelui. De asemenea, studentul poate să deschidă un tichet de reparații, să vadă statusul acestuia sau tichetele anterioare deschise.
+\subsection{me.utcj.app}
+\par Aplicația \textbf{me.utcj.app} este o aplicație mobilă destinată studenților locatari ai \textnormal{că\-mi\-ne\-lor}  din cadrul Universității Tehnice din Cluj-Napoca. Aceasta oferă patru \textnormal{func\-ți\-o\-na\-li\-tă\-ți} de bază: vizualizarea notelor, vizualizarea meniului zilei de la cantină, programarea la mașina de spălat rufe și formularul de reparații. Studenții se conectează cu contul instituțional, astfel doar studenții universității pot avea posibilitatea de a beneficia de folosirea resurselor. Anterior aceștia au fost adăugați în sistem, fiind atribuiți căminului și camerei corespunzătoare. Aceștia pot să facă programare la mașina de spălat consultând un calendar unde pot vedea programările altor locatari și intervalele libere. Programarea se face pe baza numărului camerei și al numelui. De asemenea, studentul poate să deschidă un tichet de reparații, să vadă statusul acestuia sau tichetele anterioare deschise.
 
 \begin{figure}[H]
     \centering
     \begin{minipage}{.5\textwidth}
         \centering
-        \includegraphics[width=.8\linewidth]{resurse/aplicatii_similare/utcn.png}
-        \caption{Captură funcționalități}
+        \includegraphics[width=.9\linewidth]{resurse/aplicatii_similare/me.utcj.png}
+        \caption{Creare programare la mașina de spălat}
 
     \end{minipage}%
     \begin{minipage}{.5\textwidth}
         \centering
-        \includegraphics[width=.8\linewidth]{resurse/aplicatii_similare/utcn2.png}
-        \caption{Captură formular reparații}
+        \includegraphics[width=.9\linewidth]{resurse/aplicatii_similare/me.utcj_tichete.png}
+        \caption{Istoric tichete reparații}
 
     \end{minipage}
 \end{figure}
 
 \subsection{TUSA }
 \par TUSA (Tasmanian University Student Association)\footnote{\url{https://www.tusa.org.au/student-advocate-appointment/}}  este o aplicație destinată \textnormal{stu\-den\-ți\-lor} din cadrul Universității din Tasmania oferind sprijin pentru integrare, dar și sprijin și informații legate de resurse și servicii pentru o cât mai bună experiență studențească. Aplicația oferă informații studenților sau viitorilor studenți despre posibilele oportunități, evenimente, cluburi sau voluntariate la care pot lua parte, cum se pot înscrie  sau cum pot chiar ei să creeze un astfel de club sau societate. De asemenea, aplicația ajută studenții în ceea ce privește informarea despre beneficiile precum suport academic, consultanță financiară, alimentație sau locuințe. Studenții pot să își facă programare la mașina de spălat rufe conform orarului și disponibilității. Aceștia aleg ora și data disponibilă și își introduc numele, adresa de email și un număr de telefon. Accesul la programare nu este restricționat, deci și persoanele din afara universității pot face programare.
+
 \par În plus, studenții sunt încurajați să ofere feedback despre experiența lor ca studenți, având o secțiune  destinată pentru acest lucru. Pentru orice întrebare sau problemă, acesția pot completa un formular în care să  detalieze nelămurirea avută.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.26]{resurse/aplicatii_similare/tusa.png}
-    \caption{Captură programare la mașina de spălat rufe}
-    \vspace{15mm}
-    \includegraphics[scale=0.26]{resurse/aplicatii_similare/Tusa_Events.png}
-    \caption{Captură evenimente}
+    \includegraphics[width=0.7\linewidth]{resurse/aplicatii_similare/tusa.png}
+    \caption{Creare programare la mașina de spălat rufe}
+\end{figure}
+\vspace{15mm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/aplicatii_similare/Tusa_Events.png}
+    \caption{Vizualizare evenimente}
 \end{figure}
 
 \vspace{15mm}
@@ -172,7 +172,7 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
 \begin{table}[H]
     \centering
     \begin{tabular}{cccc}
-        & \textbf{me.UTCN}         & \textbf{TUSA}  & \textbf{UVTDorms} \\
+        & \textbf{me.utcj.app}         & \textbf{TUSA}  & \textbf{UVTDorms} \\
         Evenimente/anunțuri                            & Nu               & Da       &Da\\
         Feedback                                       & Nu               & Da       &Nu\\
         Formular reparații                             & Da               & Nu       &Da\\
@@ -182,13 +182,16 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
     \caption{Comparație între aplicații\label{comparatii-intre-aplicatii}}
 \end{table}
 
+\section{Structură lucrare}
+Lucrarea este structurată în cinci capitole și mai multe subsecțiuni care urmăresc să prezinte aplicația UVTDorms cu toate detaliile relevante. Primul capitol este destinat prezentării problemei, motivației și a obiectivelor, dar și o analiză și o comparație cu soluțiile deja existente. În următorul capitol, este prezentată arhitectura aplicației, exemplificând și detaliind prin diagrame corespunzătoare precum: diagrama arhitecturii aplicației, diagramele cazurilor de utilizare pentru fiecare tip de utilizator, diagrama structurii unităților de execuție, dar și diagrama bazei de date. Al treilea capitol cuprinde mai multe subsecțiuni în care sunt prezentate detalii de implementare a aplicației, atât în ceea ce privește back-end-ul, front-end-ul, configurarea bazei de date, dar și detalii despre securitate, serviciul de email și internaționalizarea aplicației. Capitolul patru este destinat utilizatorului, reprezentând un ghid de utilizare care îmbunătățește experiența utilizatorului și ajută la o mai bună înțelegere. Ultimul capitol, sumarizează detaliile prezentate în lucrare, dar și menționează posibilele direcții viitoare.
+
 \chapter{Arhitectura aplicației}
-\par Pentru o funcționare optimă și eficientă a aplicației, arhitectura acesteia a fost gândită într-un mod care permite modularizarea componentelor principale și care prevede cele mai bune metode de intercomunicare. Arhitectura aplicației privită de la o distanță care permite înțelegarea structurării principalelor componente ale aplicației poate fi reflectată prin următoarea diagrama, așa cum poate fi observat din Figura 2.1.
+\par Pentru o funcționare optimă și eficientă a aplicației, arhitectura acesteia a fost gândită într-un mod care permite modularizarea componentelor principale și care prevede cele mai bune metode de intercomunicare. Arhitectura aplicației privită de la o distanță care permite înțelegarea structurării principalelor componente ale aplicației poate fi reflectată prin următoarea diagramă, așa cum poate fi observată din Figura 2.1.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{resurse/diagrame/Diagrama_Arhitectura2.drawio.png}
-    \caption{Diagrama arhitecturii aplicției}\label{fig:arhitect}
+    \caption{Diagrama arhitecturii aplicației}\label{fig:arhitect}
 \end{figure}
 
 \par Așa cum reiese și din figura\ref{fig:arhitect}, utilizatorul aplicației poate interacționa cu aceasta folosind un browser web. De asemenea, prin utilizarea infrastructurii oferite de browserele web, aplicația devine accesibilă utilizatorilor și prin utilizarea telefoanelor mobile. 
@@ -197,69 +200,69 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
 
 \par HTTPS (Hyper Text Transfer Protocol/Secure) este un protocol folosit de rețele de calculatoare. Acesta criptează datele transmise de-a lungul rețelei de la un punct la altul. Este predecesorul protocolului HTTP\@. Acesta oferă în plus securitate care se bazează pe certificatele bazate pe criptografia digitală care permite urmărirea autenticității utilizatorilor.
 
-\par În momentul declanșării unor activități de prelucrare a datelor sau a unei cereri de date, browserul web accesează unul dintre end-point-urile stratului de prezentare a serverului web, care aplică logica funcționalității sale si returnează datele solicitate sau realizează modificările cerute.
+\par În momentul declanșării unor activități de prelucrare a datelor sau a unei cereri de date, browserul web accesează unul dintre end-point-urile stratului de prezentare a serverului web, care aplică logica funcționalității sale și returnează datele solicitate sau realizează modificările cerute.
 
-\par Serverul web este responsabil doar pentru prelucrarea și manipularea datelor, dar nu și pentru stocarea acestora. Pentru o funcționare cât mai eficientă și optimă și pentru timp scurt de răspuns, stocarea datelor se întâmplă într-un modul separat al arhitecturii, pe serverul bazei de date, care este conectat în mod direct la serverul web prin interfața bazei de date al acesteia. Astfel, de fiecare dată când serverul web trebuie să manipuleze datele aplicației, acesta le accesează  din componenta separată.
+\par Serverul web este responsabil doar pentru prelucrarea și manipularea datelor, dar nu și pentru stocarea acestora. Pentru o funcționare cât mai eficientă și optimă și pentru timp scurt de răspuns, stocarea datelor se întâmplă într-un modul separat al arhitecturii, pe serverul bazei de date, care este conectat în mod direct la serverul web prin interfața bazei de date. Astfel, de fiecare dată când serverul web trebuie să manipuleze datele aplicației, acesta le accesează  din componenta separată.
 
 \par Prin urmare, arhitectura aplicației este alcătuită din trei module principale, structurate într-o ierarhie de comunicare eficientă.
 
-\section{Cazuri de utilizare}
-\par Utilizatorii aplicației sunt studenții, administratorii de cămine și administratorul aplicației. Unul din cazurile de utilizare comune tuturor tipurilor de utilizatori este autentificarea care reprezintă o funcționalitate importantă prin care utilizatorii își acceseză conturile. Alături de autentificare, recuperarea parolei,schimbarea acesteia, schimbarea numărului de telefon reprezintă de asemenea, cazuri de utilizare comune. Recuperarea parolei reprezintă o măsură de siguranță în cazul în care utilizatorul își pierde parola, ceea ce ar însemna și imposibilitatea de a accesa contul. Prin această funcționalitate, utilizatorii au posibilitatea de a-și salva contul și de a-și seta o parolă nouă. De asemenea, schimbarea parolei este posibilă și în cazuri generale din meniul de setări a tuturor tipurilor de utilizatori ca o formă de siguranță.
+\section{Cazuri de utilizare} 
+\par Utilizatorii aplicației sunt studenții, administratorii de cămine și administratorul aplicației. Unul din cazurile de utilizare comune tuturor tipurilor de utilizatori este autentificarea care reprezintă o funcționalitate importantă prin care utilizatorii își acceseză conturile. Alături de autentificare, recuperarea parolei, schimbarea acesteia,  schimbarea numărului de telefon reprezintă de asemenea, cazuri de utilizare comune. Recuperarea parolei reprezintă o măsură de siguranță în cazul în care utilizatorul își pierde parola, ceea ce ar însemna și imposibilitatea de a accesa contul. Prin această funcționalitate, utilizatorii au posibilitatea de a-și salva contul și de a-și seta o parolă nouă. De asemenea, schimbarea parolei este posibilă din meniul de setări a tuturor tipurilor de utilizatori ca o formă de siguranță.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth, height=0.3\textheight]{resurse/diagrame/UVTDorms_UseCase_Student.jpg}
-    \caption{Diagrama cazuri de utilizare comune}
+    \caption{Diagrama cazurilor de utilizare comune}
 \end{figure}
 
 \par Cazurile de utilizare sunt reprezentate și detaliate pentru fiecare tip de utilizator în subsecțiunile următoare.
 
 \subsection{Cazuri de utilizare pentru student}
-\par Principalul beneficiar al aplicației web este studentul locatar în căminul studențesc. Odată cazat în cămin, acesta poate să își creeze un cont și să solicite administratorului căminului din care face parte, validarea contului de student asociat cu căminul respectiv. După crearea cererii, studentul primește un mail de confirmare cu privirea la realizarea cererii de înscriere și o parolă temporală pentru cont, pe care o poate schimba ulterior. Până la acceptarea cererii de înscriere, poate să intre în aplicație cu email-ul cu care și-a creat contul și parola primită, dar nu va avea acces la funcționalitățiile oferite, rolul acestuia fiind de student inactiv.
+\par Principalul beneficiar al aplicației web este studentul locatar în căminul studențesc. Odată cazat în cămin, acesta poate să își creeze un cont și să solicite administratorului căminului din care face parte, validarea contului de student asociat cu căminul respectiv. După crearea cererii, studentul primește un mail de confirmare cu privirea la realizarea cererii de înscriere și o parolă temporară pentru cont, pe care o poate schimba ulterior. Până la acceptarea cererii de înscriere, poate să intre în aplicație cu email-ul cu care și-a creat contul și parola primită, dar nu are acces la funcționalitățiile oferite, rolul acestuia fiind de student inactiv.
 
-\par Una dintre principalele funcționalități dedicată studenților este crearea \textnormal{pro\-gra\-mă\-ri\-lor} la spălătoria căminului. Aceștia pot beneficia de o programare săptămânală, care este formată din două ore la mașina de spălat rufe urmate de două ore la uscătorul de rufe. În cazul în care studentul dorește anularea programării, acesta poate anula programarea și, în limita disponibilităților, să realizeze o altă programare. Dacă pe perioada șederii în căminul studențesc apar diferite probleme tehnice care necesită intervenție din partea personalului, aceștia pot crea un tichet pentru reparații.
+\par Una dintre principalele funcționalități dedicată studenților este crearea \textnormal{pro\-gra\-mă\-ri\-lor} la spălătoria căminului. Aceștia pot beneficia de o programare săptămânală, care este formată din două ore la mașina de spălat rufe, urmată de două ore la uscătorul de rufe. În cazul în care studentul dorește anularea programării, acesta poate anula programarea și, în limita disponibilităților, să realizeze o altă programare. Dacă pe perioada șederii în căminul studențesc apar diferite probleme tehnice care necesită intervenție din partea personalului, aceștia pot crea un tichet pentru reparații.
 
-\par De asemenea, acesta poate vizualiza evenimentele adăugate de către administrorul căminului din  din care face parte, iar dacă acestea sunt deschise participării studenților.
+\par De asemenea, acesta poate vizualiza evenimentele adăugate de către administratorul căminului din care face parte, iar dacă acestea sunt deschise participării studenților, să își exprime dorința de participare. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth,height=0.4\textheight]{resurse/diagrame/UVTDors_UseCaseStudent.jpg}
-    \caption{Diagrama cazuri de utilizare student}
+    \caption{Diagrama cazurilor de utilizare specifice studentului}
 \end{figure}
 
 \subsection{Cazuri de utilizare pentru administratorul de cămin}
 \par Administratorul de cămin este responsabil pentru administrarea unui cămin și al studenților cazați în căminul respectiv.
 
-\par Acest rol prevede manipularea listei studenților în perioada de înscriere, adică acceptarea sau respingerea studenților care au un loc într-un cămin, sau dezactivarea conturilor studenților asociate căminului, dacă aceștia părăsesc sau schimbă căminul. Totodată, acesta poate adăuga camere în cămin și poate vizualiza inforamții legate de persoanele cazate în aceea cameră, având un rol important în gestionarea spațiului din cămin.
-\par De asemenea, printre responsabilitățile administratorului se află și organizarea spălătoriei din cămin, adică administrarea mașinilor de spălat și a uscătoarelor de rufe(adăugarea,ștergerea și schimbarea statusul mașinilor daca apar defecțiuni). 
-\par Gestionarea eficientă a defecțiunilor raportate de către locatari joacă un rol important în ceea ce privește confortul și prevenirea problemelor și defecțiunilor apărute pe termen lung, astfel, administratorul căminului este cel care redirecționează problemele apărute personalului, dar și monitorizează statusul rezolvării acesteia.
-\par Pe lângă cele descrise mai sus, administrarea evenimentelor ce au loc în cadrul căminului, se află tot pe lista sarcinilor administratorului căminului, care le poate pe crea, edita și șterge.
+\par Acest rol prevede manipularea listei studenților în perioada de înscriere, adică acceptarea sau respingerea studenților care au un loc într-un cămin, sau dezactivarea conturilor studenților asociate căminului, dacă aceștia părăsesc sau schimbă căminul. Totodată, acesta poate adăuga camere în cămin și poate vizualiza informații legate de persoanele cazate în aceea cameră, având un rol important în gestionarea spațiului din cămin.
+\par De asemenea, printre responsabilitățile administratorului se află și organizarea spălătoriei din cămin, adică administrarea mașinilor de spălat și a uscătoarelor de rufe (adăugarea, editarea și schimbarea statusului mașinilor dacă apar defecțiuni). 
+\par Gestionarea eficientă a defecțiunilor raportate de către locatari joacă un rol important în ceea ce privește confortul și prevenirea problemelor și defecțiunilor apărute pe termen lung, astfel, administratorul căminului este cel care redirecționează problemele apărute personalului, dar și monitorizează statusul rezolvării acestora.
+\par Pe lângă cele descrise mai sus, administrarea evenimentelor ce au loc în cadrul căminului, se află tot pe lista sarcinilor administratorului căminului, care le poate crea, edita și șterge.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth, height=0.3\textheight]{resurse/diagrame/UVTDorms_USECASE_ADMINISTRATOR_CAMIN.jpg}
-    \caption{Diagrama cazuri de utilizare administrator cămin}
+    \caption{Diagrama cazurilor de utilizare specifice administratorului căminului}
 \end{figure}
 
 \subsection{Cazuri de utilizare pentru administratorul aplicației}
-\par Administrarea la nivel înalt al aplicației este o activitate crucială în origanizarea aplicației. Acest rol prevede atât responsabilități legate de căminele universității care folosesc aplicația, cât și cele legate de administratorii acestor cămine.
+\par Administrarea aplicației la nivel înalt este o activitate crucială pentru buna ei funcționare. Acest rol prevede atât responsabilitățile legate de căminele universității care folosesc aplicația, cât și cele legate de administratorii acestor cămine.
 
 \par Astfel, unul dintre principalele cazuri de utilizare ale administratorilor de aplicație este adăugarea de cămin, prin care sistemul căminelor universității poate fi extins.
 
-\par Căminelor existente în sistem, administratorul aplicației le poate asocia câte un administrator. Totodată, și schimbarea administratorilor se realizează de administratorul aplicației. În acest caz, contul administratorului de cămin nu este șters, ci doar dezactivat de administratorul aplicației.
+\par Căminelor existente în sistem, administratorul aplicației le poate asocia câte un administrator. Totodată, și asocierea și ștergerea administratorilor se realizează de administratorul aplicației. În acest caz, contul administratorului de cămin nu este șters, ci doar dezactivat de administratorul aplicației.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth, height=0.2\textheight]{resurse/diagrame/UVTDorms_UseCaseAdministratorAplicatie.jpg}
-    \caption{Diagrama cazuri de utilizare administrator aplicație}
+    \caption{Diagrama cazurilor de utilizare specifice administratorului de aplicație}
 \end{figure}
 
 \section{Structura unităților de execuție}
 \par Aplicația este structurată pe mai multe straturi, care la rândul lor sunt modularizate pentru o funcționare logică și eficientă.
 
-\par Primul modul, cel al clientului, este alcătuit din trei componente ale căror cooperare oferă o experință plăcută utilizatorului, fiind modulul care interacționează în mod direct cu acesta. Prima componentă, HTML GUI constituie interfața aplicției cu care ia contact utilizatorul declanșând acțiunile care reprezintă funcționalitățile aplicției prin elemente de HTML precum butoane. Aceste acțiuni declanșate de componenta HTML GUI sunt reprezentate de componenta GUI function. Cea de-a doua componentă (GUI function) este responsabilă pentru activitățile logice ale primului modul și declanșează inițierea legăturii cu următorul modul prin cea de-a treia componentă, Client-Side Angular Services.
+\par Primul modul, cel al clientului, este alcătuit din trei componente ale căror cooperare oferă o experință plăcută utilizatorului, fiind modulul care interacționează în mod direct cu acesta. Prima componentă, HTML GUI constituie interfața aplicației cu care ia contact utilizatorul declanșând acțiunile care reprezintă funcționalitățile aplicației, prin elemente de HTML precum butoane. Aceste acțiuni declanșate de componenta HTML GUI sunt reprezentate de componenta GUI function. Cea de-a doua componentă (GUI function) este responsabilă pentru activitățile logice ale primului modul și declanșează inițierea legăturii cu următorul modul prin cea de-a treia componentă, Client-Side Angular Services.
 
-\par Cel de al doilea modul, este structurat în patru componente care sunt responsabile pentru diferite activități de execuție. Controller-ul, este componenta care \textnormal{in\-te\-rac\-ți\-o\-nea\-ză} în mod direct cu primul modul și conține end-point-urile care sunt accesate de  Client-Side Angular Services. În cea de a doua componentă, Services, se realizează logica de afaceri bazată pe datele primite de la utilizator. JPA Repository este componenta care interacționează în mod direct cu baza de date, oferind funcții de manipulare a datelor utilizând reprezentările interne ale tabelelor. Acestea sunt create cu ajutorul mapării entitatăților din componenta Entity.
+\par Cel de-al doilea modul, este structurat în patru componente care sunt responsabile pentru diferite activități de execuție. Controller-ul, este componenta care \textnormal{in\-te\-rac\-țio\-nea\-ză} în mod direct cu primul modul și conține end-point-urile care sunt accesate de  Client-Side Angular Services. În cea de-a doua componentă, Services, se realizează logica de afaceri bazată pe datele primite de la utilizator. JPA Repository este componenta care interacționează în mod direct cu baza de date, oferind funcții de manipulare a datelor utilizând reprezentările interne ale tabelelor. Acestea sunt create cu ajutorul mapării entităților din componenta Entity.
 
 \par Ultimul modul, DataBase Server este responsabil pentru stocarea, structurarea și organizarea datelor, astfel încât accesarea lor să fie posibilă într-un mod cât mai eficient.
 
@@ -270,27 +273,27 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
 \end{figure}
 
 \section{Structura bazei de date}\label{sec:architectura-bazei-de-date}
-\par Având în vedere varietatea obiectelor abstracte pe care le folosește sistemul, și necesitatea de reutilizare a acestora, aplicația își are datele structurate într-o bază de date. Toate elementele din această structură încapsulează informații esențiale despre principalele obiecte cu care operează aplicația.
+\par Având în vedere varietatea obiectelor abstracte pe care le folosește sistemul și necesitatea de reutilizare a acestora, aplicația își are datele structurate într-o bază de date. Toate elementele din această structură încapsulează informații esențiale despre principalele obiecte cu care operează aplicația.
 
-\par Una dintre cele mai importante abstractizări este cea al userului, tabelul \textit{users}, care este o structură ce încapsulează datele unui utilizator obișnuit, cum ar fi numele, adresa de e-mail, numărul de telefon, parola, imaginea de profil, rolul, starea de activitate a contului, evenimentele și, desigur, un identificator unic.
+\par Una dintre cele mai importante abstractizări este cea a userului, tabelul \textit{users}, care este o structură ce încapsulează datele unui utilizator obișnuit, cum ar fi numele, adresa de e-mail, numărul de telefon, parola, imaginea de profil, rolul, starea de activitate a contului, evenimentele și, desigur, un identificator unic.
 
 
 
-\par Printre tipurile de utilizatori se enumără și studenții, care au anumite date pe care restul tipurilor de utilizatori nu le au, motiv pentru care a fost nevoie crearea unei tabele, \textit{students\_details}, care are ca atribute detaliile necesare lucrării cu obiecte ce abstractizează studenți. Printre aceste detalii se află camera, tichetele, programările și cereri de înregistrare.
+\par Printre tipurile de utilizatori se enumără și studenții, care au anumite date pe care restul tipurilor de utilizatori nu le au, motiv pentru care a fost nevoie de crearea unei tabele, \textit{students\_details}, care are ca atribute detaliile necesare lucrării cu obiecte ce abstractizează entitatea student. Printre aceste detalii se află camera, tichetele, programările și cererile de înregistrare.
 
-\par Un alt tip de utilizator cu detalii diferite este administratorul căminului, care, pe lângă datele unui utilizator obișnuit, mai are și căminului pentru care este responsabil, dar și evenimentele create de acesta. Pentru încapsularea acestor informații am creat tabelul \textit{dorm\_administrator\_details}.q
+\par Un alt tip de utilizator cu detalii diferite este administratorul căminului, care, pe lângă datele unui utilizator obișnuit, mai are și datele căminului pentru care este responsabil, dar și evenimentele create de acesta. Pentru încapsularea acestor informații am creat tabelul \textit{dorm\_administrator\_details}.
 
-\par Anunțurile din sistem sunt încapsulate în tabelul \textit{events}, care are un identificator unic al anunțului,administratorul care a creat evenimentul, un titlu, un text ce reprezintă descrierea anunțului, data în care anunțul a fost creat,data ținerii evenimentului, posibilitatea de a putea sau nu participa la eveniment și studenții care o să participe
+\par Anunțurile din sistem sunt încapsulate în tabelul \textit{events}, care conține un identificator unic al anunțului, administratorul care a creat evenimentul, un titlu, un text ce reprezintă descrierea anunțului, data în care anunțul a fost creat, data desfășurării evenimentului, posibilitatea de a putea sau nu participa la eveniment și studenții care vor participa.
 
-\par Căminele aflate în sistem au fiecare un identificator unic, o adresă, un nume, camerele, mașinile, uscătoarele, dar și tichetele asociate, toate fiind încapsulate în tabelul \textit{dorms}. Camerele din cămine au într-un mod similar un identificator unic, numărul camerei în contextul căminului și identificatorul unic al căminului, în tabelul \textit{rooms}.
+\par Căminele aflate în sistem au fiecare un identificator unic, o adresă, un nume, camerele, mașinile de spălat, uscătoarele, dar și tichetele asociate, toate fiind încapsulate în tabelul \textit{dorms}. Camerele din cămine au într-un mod similar un identificator unic, numărul camerei, căminul, studenții locatari și cererile de înregistare a studenților pentru camera respectivă, detalii prezente în tabelul \textit{rooms}.
 
-\par Datele mașinilor de spălat și ale uscătoarelor din spălătoriile căminelor sunt în tabelele \textit{wash\_machines} și \textit{dryers}. Ambele au un identificator unic, la fel și identificatorul unic al căminului în care se află, un număr de identificare în contextul căminului și un câmp care reprezintă starea mașinii, adică disponibilitatea acesteia, sau dacă este defectă și programările pentru fiecare.
+\par Datele mașinilor de spălat și ale uscătoarelor din spălătoriile căminelor sunt în tabelele \textit{wash\_machines} și \textit{dryers}. Ambele au un identificator unic, la fel și identificatorul unic al căminului în care se află, un număr de identificare în contextul căminului și un câmp care reprezintă starea mașinii, adică disponibilitatea acesteia și programările pentru fiecare.
 
 \par Programările la spălătoria căminului sunt reprezentate prin structura tabelului \textit{laundry\_appointments}. Fiecare programare are un identificator unic, precum și identificatorul unic al utilizatorului care a creat-o, dar și identificatoarele unice al mașinii de spălat și al uscătorului la care s-a făcut programarea. Începutul, finalul rezervării  și statusul programării sunt informații care sunt încapsulate tot în această structură.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{resurse/diagrame/DB_Diagram.png}
+    \includegraphics[width=1\linewidth]{resurse/diagrame/database.png}
     \caption{Diagrama unităților de cod pentru entități}
 \end{figure}
 
@@ -389,14 +392,14 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
 % \end{figure}
 
 \chapter{Implementarea aplicației}
-\par Pentru realizarea propriu-zisă a aplicației voi urmări structura prezentată în capitolul anterior. Dezvoltarea se va desfășura în paralel atât pe partea de front-end a aplicației, cât și pe partea de back-end. Astfel, fiecare funcționalitate va fi implementată incremental, iar testarea lor va fi posibilă și din perspectiva utilizatorului, deja de la începutul dezvoltării.
+\par Pentru realizarea propriu-zisă a aplicației urmăresc structura prezentată în capitolul anterior. Dezvoltarea se desfășoară în paralel atât pe partea de front-end a aplicației, cât și pe partea de back-end. Astfel, fiecare funcționalitate este implementată incremental, iar testarea lor este posibilă și din perspectiva utilizatorului, deja de la începutul dezvoltării.
 
-\par Având în vedere că implementarea unor mecanisme sunt similare, vor fi prezentate doar câte un exemplar din cele distincte. Deși pe parcursul realizării codului sursă se urmăresc pincipiile \textit{Clean Code}\cite{martin2009clean} și se evită repetarea codului și se profită de avantajele programării orientate obiect, este totuși imposibilă modularizarea microserviciilor, astfel încăt să nu existe părți similare.
+\par Având în vedere că implementările unor mecanisme sunt similare, vor fi prezentate doar câte un exemplar din cele distincte. Deși pe parcursul realizării codului sursă se urmăresc principiile \textit{Clean Code}\cite{martin2009clean} și se evită repetarea codului și se profită de avantajele programării orientate pe obiect, este totuși imposibilă modularizarea microserviciilor, astfel încât să nu existe părți similare.
 
 \section{Configurarea backend-ului}
-\par Printre lucrurile prioritare în dezvoltarea aplicației se află realizarea conexiunii dintre front-end și back-end. Acesta presupune mai mulți factori, principalele fiind de natură de securitate. Framework-ul Spring-Boot permite variate configurații ale serverului pentru a asigura accesarea serviciilor doar de cei autorizați, creând astfel măsurile de bază ale securității aplicației\cite{scarioni2019pro}.
+\par Printre lucrurile prioritare în dezvoltarea aplicației se află realizarea conexiunii dintre front-end și back-end. Aceasta presupune mai mulți factori, principalii fiind de natură de securitate. Framework-ul Spring-Boot permite variate configurații ale serverului pentru a asigura accesarea serviciilor doar de către cei autorizați, creând astfel măsurile de bază ale securității aplicației\cite{scarioni2019pro}.
 
-\par În secțiunile următoare vor fi prezentate configurarea accesului la serviciile serverului atât prin condiționarea adreselor care solicită acces, cât și prin condiționarea accesurilor prin verificarea parametrilor din solicitare. Cea din urmă va fi executată doar în cazul anumitor puncte de acces, fiindcă serverul va avea și servicii \textit{publice}, adică servicii care sunt accesibile nu numai utilizatorilor care au un cont.
+\par În secțiunile următoare vor fi prezentate configurarea accesului la serviciile serverului, atât prin condiționarea adreselor care solicită acces, cât și prin condiționarea accesului prin verificarea parametrilor din solicitare. Cea din urmă este executată doar în cazul anumitor puncte de acces, fiindcă serverul are și servicii \textit{publice}, adică servicii care sunt accesibile nu numai utilizatorilor care au un cont.
 
 \subsection{Cross-Origin Resource Sharing}
 \par Unul dintre cele mai aplicate mecanisme de filtrarea apelurilor este \textit{Cross-Origin Resource Sharing}\cite{gibbinscross} (CORS). Acesta vine cu funcționalități diferite în funcție de nivelul de aplicabilitate.
@@ -411,13 +414,13 @@ De asemenea, acesta gestionează tichetele de reparții, astfel asigurându-se c
     \caption{CORS flow\cite{gibbinscross}}
 \end{figure}
 
-\par Pentru a configura CORS pentru aplicația UVTDorms, se va crea clasa \textit{`CorsConfig'} în folderul \textit{`utils/'}. Clasa va avea un \textit{`@Bean'}, adică o funcție ce va returna un obiect de tip \textit{`CorsFilter'}. Aici va fi creată sursa ce permite configurarea CORS pe baza URL-lui. Configurarea va acoperi aspecte cum ar fi:
+\par Pentru a configura CORS pentru aplicația UVTDorms, se crează clasa \textit{`CorsConfig'} în folderul \textit{`utils/'}. Clasa are un \textit{`@Bean'}, adică o funcție ce returnează un obiect de tip \textit{`CorsFilter'}. Aici este creată sursa ce permite configurarea CORS pe baza URL-lui. Configurarea acoperă aspecte cum ar fi:
 
 \begin{enumerate}
-    \item configurarea originilor cu acces (pe parcursul dezvoltării, singurul URL cu acces va fi \textit{`http://localhost:4200'})
+    \item configurarea originilor cu acces (pe parcursul dezvoltării, singurul URL cu acces este \textit{`http://localhost:4200'})
     \item configurarea tipurilor de header permise
     \item specificarea metodelor permise
-    \item setarea punctelor de acces pentru care se aplică configurarea CORS (pentru a include toate punctele, se va folosi URL-ul \textit{`/**'})
+    \item setarea punctelor de acces pentru care se aplică configurarea CORS (pentru a include toate punctele, se folosește URL-ul \textit{`/**'})
 \end{enumerate}
 
 \begin{lstlisting}[language=Java, caption={Clasa prin care se realizează configurarea CORS}]
@@ -453,7 +456,7 @@ public class CorsConfig
 \subsection{JSON Web Token Authentification}
 \par Una dintre cele mai sigure metode de autentificare și de încapsulare a anumitor informații relevante este JSON Web Token\cite{jones2015json}. Acesta este un token care, de fapt reprezintă un obiect JSON criptat. În mod normal, aceste obiecte conțin informații necesare la autentificarea utilizatorilor. Deoarece este criptat, token-ul poate fi salvat local, în cache-ul browser-ului și poate fi citit la următoarea accesare a aplicației web.
 
-\par În cadrul aplicației UVTDorms, obiectul JSON criptat conține o cheie de autentificare temporară, rolul și adresa de email ale utilizatorului. Token-ul obținut prin criptarea obiectului este inclus în header-ul fiecărei solicitare ce se face din front- spre back-end. Acesta este generat în momentul în care utilizatorul se autentifică și selectează opțiunea de \textit{`Ține-mă minte'}.
+\par În cadrul aplicației UVTDorms, obiectul JSON criptat conține o cheie de autentificare temporară, rolul și adresa de email ale utilizatorului. Token-ul obținut prin criptarea obiectului este inclus în header-ul fiecărei solicitări ce se face din front- spre back-end. Acesta este generat în momentul în care utilizatorul se autentifică și selectează opțiunea de \textit{`Ține-mă minte'}.
 
 \begin{lstlisting}[language=Java, caption={Funcția de generare a token-ului}]
 public String createToken(TokenDto dto)
@@ -472,9 +475,9 @@ public String createToken(TokenDto dto)
 
 \subsection{Security configuration}
 
-\par În cadrul aplicației UVTDorms, un alt strat de securitate este adăugat print configurarrea Spring Security\cite{spilca2020spring}. Aceste este un framework ce oferă funcționalități de securitate pentru aplicațiile Java. Permite configurarea securității la nivel de URL, de metode HTTP, de acces la resurse și de autentificare. Face posibilă crearea de end-point-uri `publice' și `private', în funcție de necesități.
+\par În cadrul aplicației UVTDorms, un alt strat de securitate este adăugat prin configurarea Spring Security\cite{spilca2020spring}. Acesta este un framework ce oferă funcționalități de securitate pentru aplicațiile Java. Permite configurarea securității la nivel de URL, de metode HTTP, de acces la resurse și de autentificare. Face posibilă crearea de end-point-uri `publice' și `private', în funcție de necesități.
 
-\par Pentru a configura Spring Security, se va crea o clasă \textit{`SecurityConfig'} în folderul \textit{`utils/'}. Aceasta va avea o metodă care returnează un \textit{`SecurityFilterChain'}, ce va conține configurarea end-point-urilor securizate. Configurarea va include:
+\par Pentru a configura Spring Security, se crează o clasă \textit{`SecurityConfig'} în folderul \textit{`utils/'}. Aceasta are o metodă care returnează un \textit{`SecurityFilterChain'}, ce conține configurarea end-point-urilor securizate. Configurarea include:
 
 \begin{enumerate}
     \item Verificarea de JWT înaintea accesării end-point-urilor
@@ -556,7 +559,7 @@ public class RestExceptionHandler {
 
 \par Pentru a accesa baza de date, am folosit JPA Repository\cite{gierke2012spring}. Acesta oferă un strat de abstractizare dintre o bază de date și aplicația Spring-Boot. Prin intermediul JPA Repository, se pot crea ușor metode de manipulare a datelor, precum adăugarea, ștergerea sau modificarea acestora. Acest strat oferă și posibilitatea de a crea metode specifice pentru operații complexe, dar permite și crearea de metode de căutare după anumite criterii, cum ar fi numele sau adresa de email a unui utilizator, fără scrierea de query-uri SQL\@.
 
-\par Pentru a crea un repository, se va crea o interfață care extinde \textit{`JpaRepository'} și care are ca parametri tipul entității și tipul cheii primare a acesteia. În această interfață se pot adăuga metode specifice pentru operații complexe. În exemplul următor poate fi observat implementarea unor metode specifice pentru entitatea \textit{`Room'}.
+\par Pentru a crea un repository, se crează o interfață care extinde \textit{`JpaRepository'} și care are ca parametri tipul entității și tipul cheii primare a acesteia. În această interfață se pot adăuga metode specifice pentru operații complexe. În exemplul următor poate fi observat implementarea unor metode specifice pentru entitatea \textit{`Room'}.
 
 \begin{lstlisting}[language=Java, caption={Interfața JPA Repository pentru entitatea Room}]
 @Repository
@@ -570,7 +573,7 @@ public interface IRoomRepository extends JpaRepository<Room, Long> {
 
 \subsection{Maparea claselor Spring-Boot la tabelele PostgreSQL}
 
-\par Prin intermediul JPA Repository, se poate realiza maparea entităților (claselor Java) la tabelele din baza de date. Această mapare se realizează prin numele membrilor claselor și prin ajutorul anotărilor. Adnotările oferă informații suplimentare despre cum să fie interpretate clasele și membrii acestora. Tot aici se pot specifica și relațiile dintre entități.
+\par Prin intermediul JPA Repository, se poate realiza maparea entităților (claselor Java) la tabelele din baza de date. Această mapare se realizează prin numele membrilor claselor și cu ajutorul adnotărilor. Adnotările oferă informații suplimentare despre cum să fie interpretate clasele și membrii acestora. Tot aici se pot specifica și relațiile dintre entități.
 
 \par În exemplul de mai jos se poate observa cum se realizează maparea entității \textit{`User'} la tabela \textit{`users'}. Entitatea are un identificator unic de tip UUID, numele, prenumele, adresa de email, numărul de telefon, parola și alte detalii specifice unui utilizator. De asemenea, entitatea are și relații cu alte entități, precum \textit{`StudentDetails'} sau \textit{`DormAdministratorDetails'}.
 
@@ -617,9 +620,9 @@ public class User {
 
 \subsection{Data Transfer Object}
 
-\par Datele aplicației UVTDorms sunt stocate în entitățile mapate la tabelele din baza de date. Acestea conțin toate informațiile asociate cu o entitate, inclusiv relațiile cu alte entități. De fiecare dată când front-end-ul solicită informații serverului, acestea sunt trimise sub formă de obiecte. Pentru a evita trimiterea unui obiect întreg și pentru a restructura informații într-un mod mai ușor de folosit, am creat obiecte de transfer de date (DTO)\cite{pantaleev2007identifying}.
+\par Datele aplicației UVTDorms sunt stocate în entitățile mapate la tabelele din baza de date. Acestea conțin toate informațiile asociate unei entități, inclusiv relațiile cu alte entități. De fiecare dată când front-end-ul solicită informații serverului, acestea sunt trimise sub formă de obiecte. Pentru a evita trimiterea unui obiect întreg și pentru a restructura informațiile într-un mod mai ușor de folosit, am creat obiecte de transfer de date (DTO)\cite{pantaleev2007identifying}.
 
-\par Aceste obiecte sunt clase simple, care conțin doar informațiile necesare pentru o anumită operație. De exemplu, pentru a afișa informațiile unui utilizator pe pagina de profil, se va folosi clasa \textit{UserDetailsDto}, care conține doar numele, prenumele, adresa de email și numărul de telefon al utilizatorului.
+\par Aceste obiecte sunt clase simple, care conțin doar informațiile necesare pentru o anumită operație. De exemplu, pentru a afișa informațiile unui utilizator pe pagina de profil, se folosește clasa \textit{UserDetailsDto}, care conține doar numele, prenumele, adresa de email și numărul de telefon al utilizatorului.
 
 \begin{lstlisting}[language=Java, caption={Clasa UserDetailsDto}]
 public class UserDetailsDto {
@@ -641,7 +644,7 @@ public class UserDetailsDto {
 \begin{enumerate}
     \item se verifică dacă studentul are deja o programare pentru aceeași săptămână,
     \item se verifică dacă mașina de spălat și uscătorul sunt disponibile,
-    \item se procesează intervalul selectat de student astfel încât să fie în formatul necesar creării programării,
+    \item se procesează intervalul selectat de student,  astfel încât să fie în formatul necesar creării programării,
     \item se creează programarea,
     \item programarea se salvează în baza de date.
 \end{enumerate}
@@ -685,13 +688,13 @@ public class LaundryAppointmentService {
 \end{lstlisting}
 
 \section{Accesarea serviciilor back-end}
-%controlere back-end
+
 
 \par Accesarea serviciilor back-end nu se poate realiza în mod direct, ci prin intermediul unor end-point-uri. Acestea sunt metode ce sa află în stratul controller al aplicației și sunt responsabile pentru a primi cererile de la front-end și pentru a le redirecționa către serviciile corespunzătoare.
 
 \subsection{Rest Controller și maparea resurselor}
 
-\par Pentru a crea un end-point accesibil din front-end, se va crea o clasă care are adnotările \textit{`@RestController'} și \textit{`@RequestMapping'}\cite{burke2009restful}. Acestea indică faptul că clasa este un controller și că metodele acesteia sunt accesibile prin intermediul unor URL-uri specifice.
+\par Pentru a crea un end-point accesibil din front-end, se crează o clasă care are adnotările \textit{`@RestController'} și \textit{`@RequestMapping'}\cite{burke2009restful}. Acestea indică faptul că clasa este un controller și că metodele acesteia sunt accesibile prin intermediul unor URL-uri specifice.
 
 \par Controllerele au ca atribute serviciile la care transmit cererile primite. Acestea apelează metodele serviciilor și returnează rezultatele către front-end. În cazul în care o cerere nu este validă, controllerul poate să arunce o excepție, care va fi prinsă de un \textit{`ControllerAdvice'}\ref{sec:exception-handler} și va fi transformată într-un răspuns de eroare.
 
@@ -710,7 +713,7 @@ public class DryerController {
 
 \subsection{Configurarea end-point-urilor}
 
-\par Pentru configurarea end-point-urilor se folosește adnotarea \textit{`@GetMapping'}, care specifică metoda HTTP GET, și anotarea \textit{`@PostMapping'}, care specifică metoda HTTP POST\cite{varanasi2015spring}. Acestea sunt folosite pentru a specifica URL-ul la care este accesibilă metoda.
+\par Pentru configurarea end-point-urilor se folosește adnotarea \textit{`@GetMapping'}, care este specifică metodei HTTP GET, și adnotarea \textit{`@PostMapping'}, care este specifică metodei HTTP POST\cite{varanasi2015spring}. Acestea sunt folosite pentru a specifica URL-ul la care este accesibilă metoda.
 
 \par Metodele pot primi parametri de la front-end, care sunt extrase atât din header-ul cererii, cât și din body-ul acesteia. În cazul în care parametrii sunt trimiși în body-ul cererii, aceștia sunt obținuți prin anotarea \textit{`@RequestBody'}. În cazul în care parametrii sunt trimiși în URL-ul cererii, aceștia sunt obținuți prin anotarea \textit{`@PathVariable'}. Iar în cazul în care informațiile se află în header-ul cererii, cum ar fi token-ul de autentificare, acesta se extrage separat și controllerul o primește la parametri ca și obiect de tip \textit{`Authentication'}.
 
@@ -736,19 +739,26 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \section{Configurarea serviciului de Email}
 
-\par Serviciile email reprezintă o parte importantă a aplicației UVTDorms, aceasta fiind principalul canal de comunicare. Am ales să transmit toate informațiile importante prin email, fiindcă astfel mesajele pot ajunge și la utilizatorii care nu urmăresc în mod activ fluxul de activitate al aplicației.
+\par Serviciile email reprezintă o parte importantă a aplicației UVTDorms, acestea fiind principalul canal de comunicare. Am ales să transmit toate informațiile importante prin email, fiindcă astfel mesajele pot ajunge și la utilizatorii care nu urmăresc în mod activ fluxul de activitate al aplicației.
 
 \par Pentru a utiliza acest serviciu, m-am folosit de o clasă ce aparține pachetului \textit{`javamail'} din framework-ul \textit{`Spring Boot'}. Acesta oferă o metodă simplă și ușoară pentru compunerea și trimiterea email-urilor, prin seterea unor câmpuri esențiale, cum ar fi subiectul și receptorul\cite{guide_to_spring_email}.
 
 \par Pentru a trimite email-uri care au o structură HTML, ceea ce permite stilizarea și formatarea email-urile, am folosit \textit{`SpringTemplateEngine'}, care este un pachet ce aparține de \textit{`Thymeleaf'}. Cu ajutorul acestuia se pot deschide fișiere HTML șablonizate (în care se specifică variabile ce urmează să fie înlocuite în momentul aplicării șablonului). Pentru a înlocui variabilele din șablon, se specifică cuvântul cheie unic prin care se identifică fiecare variabilă și se specifică înlocuitorul acesteia\cite{template_engine_for_spring_boot}.
 
-\par Astfel, aplicația UVTDorms trimite email-uri utilizatorilor cu toate informațiile relevante. Tot prin email se primesc confirmările de înregistrări ale conturilor (atât la studenți cât și la administratorii de cămin), cu parola noua generată, dar și notificările, cum ar fi anularea unei programări, se trimit tot prin email.
+\par Astfel, aplicația UVTDorms trimite email-uri utilizatorilor cu toate informațiile relevante. Tot prin email se primesc confirmările de înregistrări ale conturilor (atât la studenți cât și la administratorii de cămin), cu parola nouă generată, dar și notificările, cum ar fi anularea unei programări, se trimit tot prin email.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/email.png}
+    \caption{Exemplu email de confirmare }
+\end{figure}
+
 
 \section{Componentele Angular}
 
-\par Interfața aplicației, partea de front-end, este construită cu Angular, care este un framework bazat pe TypeScript\cite{geetha2022interpretation}. Acest framework permite alcătuire paginilor și a componentelor într-un mod optim, oferind un mediu de dezvoltare ușor de menținut.
+\par Interfața aplicației, partea de front-end, este construită cu Angular, care este un framework bazat pe TypeScript\cite{geetha2022interpretation}. Acest framework permite alcătuirea paginilor și a componentelor într-un mod optim, oferind un mediu de dezvoltare ușor de menținut.
 
-\par Angular permite crearea componentelor, fiecare având câte un fișier de TypeScript, HTML, CSS și testare. Astfel, componentele sunt foarte bine modularizate. În aplicația UVTDorms, fiecare pagină este o componentă separată, cu propriile \textnormal{func\-ți\-o\-na\-li\-tă\-ți}. Unele pagini au propriile lor subcomponente în cazul în care complexitatea \textnormal{func\-ți\-o\-na\-li\-tă\-ți\-lor} și, respectiv sau, aspectul reutabilizității solicită acest lucru.
+\par Framework-ul Angular permite crearea componentelor, fiecare având câte un fișier de TypeScript, HTML, CSS și testare. Astfel, componentele sunt foarte bine modularizate. În aplicația UVTDorms, fiecare pagină este o componentă separată, cu propriile \textnormal{func\-țio\-na\-li\-tă\-ți}. Unele pagini au propriile lor subcomponente în cazul în care complexitatea \textnormal{func\-ți\-o\-na\-li\-tă\-ți\-lor} și, respectiv sau, aspectul reutilizabilității solicită acest lucru.
 
 \par Accesarea paginilor este condiționată de rolul utilizatorului. În cazul în care un utilizator neautentificat intră pe aplicația web, singura pagină accesibilă acestuia este pagina de autentificare. Orice încercare de a intra pe o altă pagină va eșua, fiindcă verificarea rolului se întâmplă în core-ul aplicației. În mod similar, unele subcomponente și elemente apar doar pentru anumiți utilizatori. De exemplu, în bara de navigare a aplicației, butoanele de navigare apar în funcție de rolul utilizatorului. Astfel, pentru un anumit tip de utilizator, apar doar butoanele care duc la paginile la care utilizatorul are acces.
 
@@ -756,19 +766,19 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \subsection{Biblioteci de componente IU}
 
-\par Angular permite utilizarea bibliotecilor de componente de interfețe de utilizator. Aceste biblioteci oferă componente costumizabile, atât pe partea de afișare cât și pe partea de funcționalități. În mod normal, utilizarea a astfel de biblioteci este o soluție eficientă, fiindcă permit o dezvoltare mai rapidă și consistentă.
+\par Angular permite utilizarea bibliotecilor de componente de interfețe de utilizator. Aceste biblioteci oferă componente costumizabile, atât pe partea de afișare cât și pe partea de funcționalități. În mod normal, utilizarea unor astfel de biblioteci este o soluție eficientă, fiindcă permit o dezvoltare mai rapidă și consistentă.
 
-\par Pentru dezvoltarea aplicației UVTDorms, am folosit două astfel de biblioteci: \textit{`Material UI'}\cite{material_ui_angular} și \textit{`PrimeNG'}\cite{prime_ng_home}. Primul este o bibliotecă dezvoltată chiar de Angular. A doua este independentă, dar este mult mai mare și oferă componente mai complexe. Eu am folosit componentele din aceste biblioteci în special în form-uri, elementele lor de input având un aspect foarte bine realizat. Bibliotecile s-au dovedit a fi foarte eficiente și la afișarea datelor, cum ar fi în cazul tabelelor. 
+\par Pentru dezvoltarea aplicației UVTDorms, am folosit două astfel de biblioteci: \textit{`Material UI'}\cite{material_ui_angular} și \textit{`PrimeNG'}\cite{prime_ng_home}. Prima este o bibliotecă dezvoltată chiar de Angular. A doua este independentă, dar este mult mai mare și oferă componente mai complexe. Eu am folosit componentele din aceste biblioteci în special în form-uri, elementele lor de input având un aspect foarte bine realizat. Bibliotecile s-au dovedit a fi foarte eficiente și la afișarea datelor, cum ar fi în cazul tabelelor. 
 
 \section{Sistemul de rutare în front-end}
 
-\par Angular are propriul sistem de rutare, care permite navigarea dintre paginile \textnormal{ap\-li\-ca\-ți\-ei} web fără reîncărcarea paginii în browser. Configurarea sistemului de rutare presupune specificarea path-ului, cum ar fi \textit{`/home'} și asocierea acesteia cu o componentă Angular, cum ar fi \textit{`HomePageComponent'}. Astfel, când utilizatorul accesează un path al paginii, i se va încărca componenta asociată. Navigarea internă presupune schimbarea path-ului și afișarea componentei asociate, fără reîncărcarea paginii.
+\par Angular are propriul sistem de rutare, care permite navigarea dintre paginile \textnormal{ap\-li\-ca\-ți\-ei} web fără reîncărcarea paginii în browser. Configurarea sistemului de rutare presupune specificarea path-ului, cum ar fi \textit{`/home'} și asocierea acesteia cu o componentă Angular, cum ar fi \textit{`HomePageComponent'}. Astfel, când utilizatorul accesează un path al paginii, este încărcată componenta asociată. Navigarea internă presupune schimbarea path-ului și afișarea componentei asociate, fără reîncărcarea paginii.
 
 \par Pentru a configura sistemul de rutare, Angular are o componentă dedicată, \textit{`AppRoutingModule'}, care are o listă de path-uri asociate cu componentele. Aplicația UVTDorms are 17 pagini configurate în această listă.
 
 \section{Servicii front-end}
 
-\par În scopul modularizării și structurării potrivite a codului, Angular are un mecanism pentru a separa serviciile prin care trec cererile la back-end, de componentele aplicației. Astfel, toate apelurile au loc în servicii dedicate, fiecare parte a aplicaței având propriul serviciu. De exemplu, camerele de cămin au un serviciu care conține toate funcțiile cu care pot fi apelate end-pointurile din serviciul de camere al back-endului. Prin urmare, fiecare serviciu de back-end are un serviciu asociat în front-end.
+\par În scopul modularizării și structurării potrivite a codului, Angular are un mecanism pentru a separa serviciile prin care trec cererile la back-end, de componentele aplicației. Astfel, toate apelurile au loc în servicii dedicate, fiecare parte a aplicației având propriul serviciu. De exemplu, camerele de cămin au un serviciu care conține toate funcțiile cu care pot fi apelate end-pointurile din serviciul de camere al back-endului. Prin urmare, fiecare serviciu de back-end are un serviciu asociat în front-end.
 
 \par În mod normal, un serviciu în front-end este alcătuit din constante de string-uri care reprezintă path-urile la end-pointurile serviciul asociat din back-end și funcțiile prin care se realizează apelurile la aceste end-pointuri. Funcțiile acestea sunt folosite de restul componentelor.
 
@@ -776,110 +786,203 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \par Un alt serviciu puțin mai special decât restul serviciilor este \textit{`UserService'}, care, pe lângă structura generală a serviciilor front-end (constante de path-uri și funcții de apelare), are responsabilitatea de a stoca rolul utilizatorului. Acest serviciu este folosit în toate componentele care au un comportament dependent de tipul de utilizator.
 
-\section{Interfata multilingv}
+\section{Internaționalizare}
 
 \par Având în vedere că Universitatea de Vest din Timișoara nu are doar studenți vorbitori de limba română, aplicația UVTDorms pune la dispoziția utilizatorilor interfața atât în limba română cât și în limba engleză.
 
-\par Datorită Angular, implementarea unei interfețe multilingv se poate realiza eficient, utilizând un pachet special pentru traducerea aplicațiilor web, \textit{`ngx-translate'}\cite{ngx_translate}. Cu ajutorul acestui pachet, traducerea aplicației se realizează prin crearea a câte un fișier JSON pentru fiecare limbă. În aceste fișiere, se specifică cuvinte cheie care se asociează cu un string. În HTML-ul aplicației se specifică cuvântul cheie din JSON și textul afișat va în limba selectată de utilizator.
+\par Datorită Angular, implementarea unei interfețe multilingv se poate realiza eficient, utilizând un pachet special pentru traducerea aplicațiilor web, \textit{`ngx-translate'}\cite{ngx_translate}. Cu ajutorul acestui pachet, traducerea aplicației se realizează prin crearea a câte un fișier JSON pentru fiecare limbă. În aceste fișiere, se specifică cuvinte cheie care se asociează cu un string. În HTML-ul aplicației se specifică cuvântul cheie din JSON și textul afișat va fi în limba selectată de utilizator.
 
-\par Pentru a schimba limba interfeței, utilizator are în bara de navigare un buton care este steagul țării în a cărei limba este afișarea curentă. Apăsând pe buton, utilizatorul poate schimba între limbile română și engleză.
+\par Pentru a schimba limba interfeței, utilizatorul are în bara de navigare un buton care este steagul țării în a cărei limbă este afișarea curentă. Apăsând pe buton, utilizatorul poate schimba între limbile română și engleză.
 
-\section{Responsive}
+
 \chapter{Ghid utilizator}
-
+În acest capitol este prezentat ghidul de utilzare al aplicației din perspectiva fiecărui tip de utilizator.
 \section{Autentificare}
 
-\par Pagina de pornire a aplicației UVTDorms este pagina de autentificare. Aici utilizatorul are posibilitatea de a se autentifica, de a se înregistra și de a-și recupare parola uitată.
+\par Pagina de pornire a aplicației UVTDorms este pagina de autentificare. Aici utilizatorul are posibilitatea de a se autentifica, de a se înregistra și de a-și recupera parola uitată.
 
-\par Inițial, pe pagina de autentificare se află un formular de autentificare, unde utilizatorul poate să-și introducă adresa de email și parola. Apăsând pe butonul de autentificare, utilizatorul va fi redirecționat pe pagina contului său. În cazul în care adresa de email sau parola nu au fost corecte, se va afișa un mesaj de eroare.
+\par Inițial, pe pagina de autentificare se află un formular de autentificare, unde utilizatorul poate să-și introducă adresa de email și parola. Apăsând pe butonul de autentificare, utilizatorul este redirecționat pe pagina contului său. În cazul în care adresa de email sau parola nu au fost corecte,  un mesaj de eroare este afișat.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{resurse/ghid_utilizare/login.png}
+    \caption{Formular de autentificare}
+\end{figure}
 
 % Poză cu formularul de login (dar să se vadă și partea din dreapta, partea albastră)
 
-\par În cazul în care utilizatorul și-a uitat parola, apăsând pe butonul de \textit{`Ți-ai uitat parola?'}, va fi redirectionat pe o altă pagină cu un formular unde poate să-și introducă adresa de mail. Apăsând pe butonul \textit{`Trimite'}, i se va trimite un mail cu un link către o pagină cu un formular unde poate să-și seteze o parolă nouă.
+\par În cazul în care utilizatorul și-a uitat parola, apăsând pe butonul de \textit{`Ți-ai uitat parola?'}, este redirectionat pe o altă pagină cu un formular unde poate să-și introducă adresa de mail. Apăsând pe butonul \textit{`Trimite'}, i se trimite un mail cu un link către o pagină cu un formular unde poate să-și seteze o parolă nouă.
 
-% Două poze, une lângă alta, una cu formularul de email pentru resetarea parolei, și cealaltă cu formularul de resetare a parolei
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=.8\linewidth]{resurse/ghid_utilizare/resetare_parola_email.png}
+        \caption{Formular resetare parolă email}
+
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=.8\linewidth]{resurse/ghid_utilizare/parola_uitata_formular.png}
+        \caption{Formular resetare parolă }
+
+    \end{minipage}
+\end{figure}
+
+
 
 \subsection{Înregistrare}
 
 \par Studenții noi care încă nu au cont, pot să deschidă fereastra de înregistrare apăsând pe butonul \textit{`Înregistrare'}. Aici trebuie să introducă datele personale, cum ar fi numele, adresa de email, numărul de telefon. Deodată cu înregistrarea contului se face și o cerere de înregistrare la cămin. Din acest motiv, în formularul de înregistrare studenții trebuie să selecteze și căminul și camera lor.
 
-% Poza că formularul de înregistrare
 
-\par După trimiterea formularului, studenții vor primi un email cu parola generată (pe care pot să o schimbe ulterior). Acești studenți vor fi inactivi până când cererea lor nu va fi acceptată de administratorului căminului. Astfel, singura fereastră la care vor avea acces după ce s-au autentificat, este fereastra cererilor de înregistrare la cămine.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{resurse/ghid_utilizare/inregistrare.png}
+    \caption{Formular de înregistrare}
+\end{figure}
+
+\par După trimiterea formularului, studenții vor primi un email cu parola generată (pe care pot să o schimbe ulterior). Acești studenți vor fi inactivi până când cererea lor nu va fi acceptată de  către administratorul căminului. Astfel, singura fereastră la care vor avea acces după ce s-au autentificat, este fereastra cererilor de înregistrare la cămine.
 
 \subsection{Setări cont}
 
-\par Pe pagina de profil al utilizatorilor, aceștia au mai multe tipuri de setări posibile. Apăsând pe poza de profil, utilizatorii o pot schimba.
+\par Pe pagina de profil a utilizatorilor, aceștia au mai multe tipuri de setări posibile. Apăsând pe poza de profil, utilizatorii o pot schimba.
 
-% Poză cu detaliile utilizatorului, unde faci hover pe poza de profil
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4 \linewidth,height=0.4\textheight]{resurse/ghid_utilizare/detalii_profil.png}
+    \caption{Detalii utilizator}
+\end{figure}
 
-\par În partea de jos al detaliilor utilizatorilor sunt două butoane:
+\par În partea de jos a detaliilor utilizatorilor sunt două butoane:
+
 \begin{itemize}
     \item \textit{`Schimbă numărul de telefon'}, cu care utilizatorul poate deschide un formular pentru schimbarea numărului de telefon
     \item \textit{`Schimbă parola'}, cu care utilizatorul poate deschide formularul de schimbare a parolei
 \end{itemize}
 
-% Două poze, una lângă alta: una cu formularul de schimba numarul de telefon si cealalta cu formularul de schimba parola
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=.7\linewidth]{resurse/ghid_utilizare/change_phone_number.png}
+        \caption{Formular de schimbare a numărului de telefon}
+
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=.8\linewidth]{resurse/ghid_utilizare/schimbare_parola.png}
+        \caption{Formular de schimbare a parolei }
+
+    \end{minipage}
+\end{figure}
 
 \section{Student}
+În subsecțiunea următoare este prezentat ghidul de utilizare pentru student. 
 
 \subsection{Cerere de înregistrare la cămin}
 
-\par Pe pagina de profil, studenții au o subfereastră \textit{`Cereri de înregistrare'}. Aici au posibilitatea de a face cereri noi de înregistrare, apăsând pe butonul \textit{`+'} și selectând căminul și camera. După ce cererea a fost trimisă, aceasta va apărea în lista de cereri de înregistrare cu detaliile cererii, cum ar fi adresa de email a administratorului care trebuie să accepte cererea, și statusul cererii.
+\par Pe pagina de profil, studenții au o subfereastră \textit{`Cereri de înregistrare'}. Aici au posibilitatea de a face cereri noi de înregistrare, apăsând pe butonul \textit{`+'} și selectând căminul și camera. După ce cererea a fost trimisă, aceasta  apare în lista de cereri de înregistrare cu detaliile cererii, cum ar fi adresa de email a administratorului care trebuie să accepte cererea și statusul cererii.
 
-% Poză cu un tabel cu mai multe cereri, cele vechi deja acceptate (Faci cereri noi în InitialDataLoader)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{resurse/ghid_utilizare/register_request_student.png}
+    \caption{Tabelul cu cererile de înscriere a unui student}
+\end{figure}
 
 \subsection{Crearea de programare la spălătorie}
 
-\par Studenții pot face câte o programare pe săptămână la spălătoria căminului. Pentru a face o programare nouă, pot intra pe pagina de programări (cu butonul \textit{`Programări'} din bara de navigare) unde au un formular de completat. Aici trebuie să aleagă ziua săptămânii (începând cu ziua curentă, inclusiv), mașina de spălat și intervalul orar.
+\par Studenții pot face câte o programare pe săptămână la spălătoria căminului. Pentru a face o programare nouă, pot intra pe pagina de programări (cu butonul \textit{`Programări'} din bara de navigare), unde au un formular de completat. Aici trebuie să aleagă ziua săptămânii (începând cu ziua curentă, inclusiv), mașina de spălat și intervalul orar.
 
 \par Dacă formularul a fost completat, studentul trebuie să apese butonul \textit{`Programează-te'} și să confirme programarea.
 
-% Poză cu formularul completat
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/programare_la_spalatorie.png}
+    \caption{Formularul de programare la spălătorie}
+\end{figure}
 
 \subsection{Gestionarea programărilor existente}
 
-\par Pe pagina de profil, în subfereastra \textit{`Programările mele la spălătorie'} studentul are posibilitatea de a vedea toate programările sale: cele noi, cele anulate și cele deja trecute. Pentru cele noi studentul are posibilitatea de a o anula, apăsând pe butonul \textit{`X'}.
+\par Pe pagina de profil, în subfereastra \textit{`Programările mele la spălătorie'} studentul are posibilitatea de a vedea toate programările sale: cele noi, cele anulate și cele deja trecute. Pentru cele noi studentul are posibilitatea de a le anula, apăsând pe butonul \textit{`X'}.
 
-% Poză cu lista de programări (din nou, pune mai multe programări în InitialDataLoader)
+
+
+\begin{figure}[H] T
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/programari_la_spalatorie.png}
+    \caption{Programări la spălătorie}
+\end{figure}
 
 \subsection{Crearea de tichete de raportare a problemelor}
 
-\par Pe pagina de tichete studentul poate completa un formular pentru anunțarea problemelor din cămin. Aici completând câmpurile de \textit{`Titlu'}, \textit{`Descriere'}, selectând tipul de intervenție necesar și specificând dacă problema a fost anunțată anterior, studentul poate trimite tichetul pentru administratorul căminului.
+\par Pe pagina de tichete studentul poate completa un formular pentru anunțarea problemelor din cămin. Aici completând câmpurile de \textit{`Titlu'}, \textit{`Descriere'}, selectând tipul de intervenție necesar și specificând dacă problema a fost anunțată anterior, studentul poate trimite tichetul către administratorul căminului.
 
-% Poză cu formularul (de preferat completat)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/creare_tichet.png}
+    \caption{Formular de creare tichet}
+\end{figure}
 
 \subsection{Lista de evenimente}
 
 \par Pe pagina de evenimente studenții și administratorii de cămin pot vizualiza lista de evenimente din cămin. Aici pot vedea titlul evenimentului, autorul, descrierea, data când va avea loc acesta și câți participanți vor fi. La fiecare eveniment apare și un buton \textit{`Participă'}, cu care utilizatorii pot comunica intenția de a participa la eveniment. După apăsarea butonului, acesta se transformă în butonul \textit{`Anulează participarea'}.
 
-% Poză cu pagina de evenimente
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/events.png}
+    \caption{Pagina cu evenimentele dintr-un cămin}
+\end{figure}
 
 \section{Administrator cămin}
-
+În subsecțiunea următoare este prezentat ghidul de utilizare pentru administratorul de cămin.
 \subsection{Administrarea camerelor}
 
 \par Administratorul căminului are responsabilitatea gestionării camerelor din cămin. Pentru a face acest lucru într-un mod eficient, UVTDorms pune la dispoziția administratorilor de cămine o pagină dedicată. Aici sunt listate toate camerele din cămin într-un tabel, unde apar și detalii, cum ar fi numărul camerei și numărul de studenți din cameră.
 
-\par În partea stânga a tabelei, pentru fiecare cameră este un buton care deschide lista de studenți din camera respectivă, cu nume și adresă de email. În partea dreaptă a camerelor se află butonul de ștergere. Camerele pot fi șterse doar în cazul în care nu are niciun student.
+\par În partea stânga a tabelei, pentru fiecare cameră este un buton care deschide lista de studenți din camera respectivă, cu nume și adresă de email. În partea dreaptă a camerelor se află butonul de ștergere. Camerele pot fi șterse doar în cazul în care nu au niciun student.
 
-% Poză cu tabelul, cu drop-down-ul cu studenti deschis pentru o camera
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/administrare_camere.png}
+    \caption{Tabelul camerele dintr-un cămin}
+\end{figure}
 
-\par Pentru a adăuga o cameră, administratorul trebuie să apese butonul verde \textit{`+'}, care deschide un formular unde trebuie specificat numărul camerei care urmează să fie adăugat.
+\par Pentru a adăuga o cameră, administratorul trebuie să apese butonul verde \textit{`+'}, care deschide un formular unde trebuie specificat numărul camerei care urmează să fie adăugată.
 
-% Poză cu formularul
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/adaugare_camera.png}
+    \caption{Formular de adăugare de cameră}
+\end{figure}
 
 \subsection{Administrarea spălătoriei}
 
-\par Administrarea spălătoriei este unul dintre responsabilitățile principale ale administratorului căminului. Pe pagina dedicată pentru acest lucru sunt listate toate mașinile de spălat într-un tabel, cu nume, uscător asociat și status. În partea stângă a fiecărei mașini se află un buton care afișează toate programările la mașina de spălat din săptămâna curentă. 
+\par Administrarea spălătoriei este una dintre responsabilitățile principale ale administratorului căminului. Pe pagina dedicată pentru acest lucru sunt listate toate mașinile de spălat într-un tabel, cu nume, uscător asociat și status. În partea stângă a fiecărei mașini se află un buton care afișează toate programările la mașina de spălat din săptămâna curentă. 
 
-% Poză cu tabel, cu un drop-down deschis pentru o mașină
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/administrare_spalatorie.png}
+    \caption{Tabelul cu mașinile din spălătorie}
+\end{figure}
 
 \par În partea dreaptă a fiecărei mașini se află un buton albastru de editare. Aceasta deschide o fereastră unde administratorul căminului poate să schimbe numele mașinii, uscătorul asociat și statusul. În cazul în care mașina devine defectă și are programări, toate programările vor fi anulate și studenții vor fi anunțați printr-un mail corespunzător.
 
-% Poză cu formularul
 
-\par Pentru administrarea uscătoarelor, administratorul poate să schimbe tipul \textnormal{ma\-și\-ni\-lor} afișate cu ajutorul drop-down-ului din stânga sus. Structura tabelului este aceeași cu cea a mașinilor de spălat. Singura diferență este în cazul în care un uscător devine defect, fiindcă atunci studentul are opțiunea de a păstra programarea la măsina de spălat, fără uscător.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{resurse/ghid_utilizare/editare_masina.png}
+    \caption{Formularul de editare a unei mașini}
+\end{figure}
+
+\par Pentru administrarea uscătoarelor, administratorul poate să schimbe tipul \textnormal{ma\-și\-ni\-lor} afișate cu ajutorul drop-down-ului din stânga sus. Structura tabelului este aceeași cu cea a mașinilor de spălat. Singura diferență este în cazul în care un uscător devine defect, fiindcă atunci studentul are opțiunea de a păstra programarea la mășina de spălat, fără uscător.
 
 \par Pentru adăugarea mașinilor, administratorul căminului apasă pe butonul verde \textit{`+'} din partea de dreapta sus a ecranului. Se deschide o fereastră cu un formular în 3 părți:
 
@@ -889,13 +992,21 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
     \item Confirmare
 \end{itemize}
 
-% Poză cu formularul de adăugare, pe pasul de confirmare
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/adugare_masina.png}
+    \caption{Formularul de adăugare mașini - pasul de confirmare}
+\end{figure}
 
 \subsection{Administrarea studenților}
 
 \par Cea mai importantă parte a aplicației UVTDorms sunt studenții. Pe pagina dedicată administrării studenților dintr-un cămin, administratorul acestuia are la dispoziție un tabel unde sunt listați toți studenții din cămin, într-un tabel cu numele studenților, numărul camerei lor, numărul matricol, și numărul de telefon.
 
-% Poză cu tabelul
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/studenti.png}
+    \caption{Tabelul cu studenții dintr-un cămin}
+\end{figure}
 
 \par Administratorul are două butoane pentru fiecare student:
 
@@ -904,11 +1015,19 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
     \item unul de editare, care deschide o fereastră unde administratorul poate schimba numărul de cameră al studentului
 \end{itemize}
 
-% Poză cu formularul pentru schimbarea camerei
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/editare_nr_camea.png}
+    \caption{Formularul pentru schimbarea numărului de cameră a unui student}
+\end{figure}
 
 \par Tot pe această pagină sunt listate și cererile de înregistrare la cămin, sub forma unor cărți micuțe cu numele studentului și data în care s-a făcut cererea. Cărțile respective au un buton, care deschid o fereastră cu detaliile cererii.
 
-% Poză cu lista de cereri
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{resurse/ghid_utilizare/cereri_inscriere.png}
+    \caption{Lista de cereri de înregistrare la cămin}
+\end{figure}
 
 \par Fereastra cu detaliile studentului conține toate informațiile studentului și două butoane:
 
@@ -919,48 +1038,72 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \par În ambele cazuri, studenții sunt anunțați prin email.
 
-% Poză cu detalii cerere de înregistrare
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/detalii_cererre_inscriere.png}
+    \caption{Detaliile unei cereri de înregistrare}
+\end{figure}
 
 \subsection{Administrarea tichetelor de reparații}
 
-\par Pentru gestionarea tichetelor de raportare a  problemelor, deschise de studenții \textnormal{că\-mi\-nu\-lui}, administratorul acestuia are o pagină dedicată. Aici sunt listate toate tichetele din cămin, într-un tabel cu data creării, titlu și status.
+\par Pentru gestionarea tichetelor de raportare a  problemelor, deschise de studenții \textnormal{că\-mi\-nu\-lui}, administratorul acestuia are o pagină dedicată. Aici sunt listate toate tichetele din cămin, într-un tabel care conține  data creării, titlul și statusul fiecărui tichet.
 
 \par În stânga fiecărui tichet este un buton care extinde secțiunea și apar detaliile tichetului, cum ar fi tipul de intervenție necesar, descrierea problemei, dacă problema a fost anunțată în trecut, adresa de email a studentului care a făcut tichetul și numărul de cameră.
 
-\par Pentru a actualiza statusul unui tichet, administratorul apasă pe statusul curent al acestuia și apare un fereastră mică pentru confirmarea schimbării statusului din \textit{`Deschis'} în \textit{`Rezolvat'} și invers.
+\par Pentru a actualiza statusul unui tichet, administratorul apasă pe statusul curent al acestuia și apare o fereastră mică pentru confirmarea schimbării statusului din \textit{`Deschis'} în \textit{`Rezolvat'} și invers.
 
-% Poză cu tabelul, cu o linie extinsă și popup-ul de confirmare de schimbare status vizibil pentru un tichet
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/schimbare_status_tichet.png}
+    \caption{Tabelul cu tichetele de reparații}
+\end{figure}
 
 \subsection{Administrarea evenimentelor}
 
 \par Fiecare administrator de cămin poate organiza evenimente în căminul administrat. Pentru gestionarea evenimentelor, administratorii au o ferestră pe pagina lor de cont. Aici apar toate evenimentele din cămin, cu toate detaliile evenimentului, la fel ca pe pagina de evenimente. Singura diferență reprezintă lipsa butonului \textit{`Participă'}, care este înlocuit de butonul \textit{`Șterge'}. Acesta deschide un mesaj de confirmare a ștergerii evenimentului.
 
-% Poză cu evenimentele listate (să se vadă și butonul de plus)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/eveneimente_administare.png}
+    \caption{Tabelul cu evenimentele d.p.d.v al administratorului căminului}
+\end{figure}
 
 \par Pentru adăugarea evenimentelor noi, administratorul căminului apasă pe butonul verde \textit{`+'}, care deschide o fereastră nouă cu un formular. Aici se introduc titlul evenimentului, descrierea, data și ora în care va avea loc acesta și se specifică dacă studenții își pot arăta intenția de participare la eveniment.
 
-% Poză cu formularul de creare evenimente
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/creare_evenimente.png}
+    \caption{Formulare de creare de eveniment}
+\end{figure}
 
 \section{Administrator aplicație}
-
+În subsecțiunea următoare este prezentat ghidul de utilizare pentru administatorul aplicației.
 \subsection{Administrarea căminelor}
 
-\par Pentru administrarea căminelor din aplicație, administratorul acesteia are la \textnormal{dis\-po\-zi\-ți\-e} pagina dedicată pentru cămine. Aici căminele sunt listate într-un tabel, cu numele lor, adresa și administratorul. În dreptul fiecărui cămin se află două butoane:
+\par Pentru administrarea căminelor din aplicație, administratorul acestuia are la \textnormal{dis\-po\-zi\-ți\-e} pagina dedicată pentru cămine. Aici căminele sunt listate într-un tabel, cu numele lor, adresa și administratorul. În dreptul fiecărui cămin se află două butoane:
 
 \begin{itemize}
     \item butonul de ștergere, care deschide o fereastră de confirmare. Căminele nu pot fi șterse dacă au studenți.
     \item butonul de editare, care permite schimbarea administratorului căminului direct din linia tabelului
 \end{itemize}
 
-% Poză cu tabelul și cu o linie pentru care butonul de editare a fost apăsat
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/editare_camine.png}
+    \caption{Tabelul cu căminele}
+\end{figure}
 
 \par Pentru adăugarea căminelor noi, administratorul aplicației poate apăsa pe butonul verde \textit{`+'}, care deschide o fereastră cu un formular. Aici se pot specifica numele căminului, adresa și, opțional, administratorul.
 
-% Poză cu formularul respectiv.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/aduga_camin.png}
+    \caption{Formular de adăugare cămin}
+\end{figure}
 
 \subsection{Gestionarea administratorilor de cămine}
 
-\par Pagina de gestionare a administratorile de cămine este foarte similară paginii de administrare a căminelor. Aceasta are un tabel în care sunt listați administratorii de cămine, cu detaliile lor, cum ar fi numele, adresa de email, numărul de telefon și căminul administrat.
+\par Pagina de gestionare a administratorilor de cămine este foarte similară paginii de administrare a căminelor. Aceasta are un tabel în care sunt listați administratorii de cămine, cu detaliile lor, cum ar fi numele, adresa de email, numărul de telefon și căminul administrat.
 
 \par În dreptul fiecărui administrator se găsesc două butoane:
 
@@ -969,16 +1112,25 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
     \item butonul de editare, care permite schimbarea căminului administrat direct din linia tabelului
 \end{itemize}
 
-% Poză cu tabelul și cu o linie pentru care butonul de editare a fost apăsat
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/editare_administrator_camin.png}
+    \caption{Tabel cu administratorii de cămine}
+\end{figure}
 
-\par Pentru adăugarea administratorilor de cămine, administratorul aplicației apasă pe butonul verde \textit{`+'} care deschide o fereastră nouă cu un formular. Câmpurile formularului permite setarea detaliilor noului administrator de cămin, cum ar fi prenumele, numele, numărul de telefon, adresa de mail și, opțional, căminul asociat.
+\par Pentru adăugarea administratorilor de cămine, administratorul aplicației apasă pe butonul verde \textit{`+'} care deschide o fereastră nouă cu un formular. Câmpurile formularului permit setarea detaliilor noului administrator de cămin, cum ar fi prenumele, numele, numărul de telefon, adresa de mail și, opțional, căminul asociat.
 
-\par Noul administrator de cămin va primi un email cu parola de conectare și, dacă a fost specificat în formular, căminul la care a fost asociat.
+\par Noul administrator de cămin primește un email cu parola de conectare și, dacă a fost specificat în formular, căminul la care a fost asociat.
 
-% Poză cu formularul respectiv
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{resurse/ghid_utilizare/adugare_adminstrator_camin.png}
+    \caption{Formular de adăugare administrator de cămin}
+\end{figure}
 
 \chapter{Concluzii}
-
+În subsecțiunile următoare sunt sumarizate detaliile prezentate în lucrare, dar și posibile direcții viitoare.
 \section{Despre aplicația UVTDorms}
 
 \par Aplicația UVTDorms este o aplicație web, accesibilă din browsere și are ca scop digitalizarea unor rutine din cadrul căminelor studențești. Oferă o platformă care aduce o îmbunătățire atât pentru activitățile studenților cât și pentru cea a administratorilor căminelor. Cu ajutorul aplicației studenții pot:
@@ -995,31 +1147,31 @@ public ResponseEntity<UserDetailsDto> getUserDetails(Authentication authenticati
 
 \par Al treilea rol, la fel de important în cadrul aplicației este administratorul acesteia, care adaugă cămine noi și gestionează administratorii acesteia.
 
-\par Aplicația UVTDorms a fost gândită să fie accesibilă atât de pe desktop, cât și de pe dsipozitive mobile. Astfel, implementarea \textit{`responsive'} a aplicației își adaptează interfața la ecranele dispozitivelor de pe care sunt accesate. 
+\par Aplicația UVTDorms a fost gândită să fie accesibilă atât de pe desktop, cât și de pe dispozitive mobile. Astfel, implementarea \textit{`responsive'} a aplicației își adaptează interfața la ecranele dispozitivelor de pe care sunt accesate. 
 
 \section{Design aplicație}
 
-\par UVTDorms este o aplicație cu arhitectură modularizată, modernă, care permite o dezvoltare continuă și eficientă. Atât design-ul bazei de data cât și a back-end-ului sunt gândite să fie ușor extensibile. De asemenea, framework-ul Angular, prin natura sa permite extinderea aplicației într-un mod foarte eficient.
+\par UVTDorms este o aplicație cu arhitectură modularizată, modernă, care permite o dezvoltare continuă și eficientă. Atât design-ul bazei de date cât și a back-end-ului sunt gândite să fie ușor extensibile. De asemenea, framework-ul Angular, prin natura sa permite extinderea aplicației într-un mod foarte eficient.
 
 \par Modularizarea componentelor aplicației pe toate straturile sale s-a dovedit a fi foarte utilă, deoarece efectuarea debugging-ului nu a reprezentat niciodată o problemă. Acest lucru se datorează separării responsabilităților dintre modulele aplicației.
 
 \section{Implementare eficientă cu framework-uri}
 
-\par Aplicația UVTDorms a fost dezvoltată în conformitate cu standardele moderne de dezvoltare software. Am ales să folosesc Angular pe front-end, fiind unul dintre cele mai folosite framework-uri, cu suport oficial și o varietate foarte mare de pachete utile. Pe back-end am folosit framework-ul Spring Boot, care se bazează pe Java, unul dintre cele mai populare limbaje de programare. Spring Boot este unul dintre cele mai întălnite framework-uri în contextul back-end-ului aplicațiilor web.
+\par Aplicația UVTDorms a fost dezvoltată în conformitate cu standardele moderne de dezvoltare software. Am ales să folosesc Angular pe front-end, fiind unul dintre cele mai folosite framework-uri, cu suport oficial și o varietate foarte mare de pachete utile. Pe back-end am folosit framework-ul Spring Boot, care se bazează pe Java, unul dintre cele mai populare limbaje de programare. Spring Boot este unul dintre cele mai întâlnite framework-uri în contextul back-end-ului aplicațiilor web.
 
-\par Cu ajutor acestora, implementarea aplicației s-a desfășurat eficient, folosind toate utilitățile framework-urilor utilizați.
+\par Cu ajutor acestora, implementarea aplicației s-a desfășurat eficient, folosind toate utilitățile framework-urilor utilizate.
 
-\section{Interfață intuitivă și ghid asociat}
+\section{Internaționalizare și ghid asociat}
 
 \par Interfața aplicației UVTDorms a fost gândită să fie una simpla, intuitivă, ușor de învățat și folosit. Paginile aplicației nu sunt prea încărcate și conțin doar elementele necesare.
 
 \par Fiecare pagină a aplicației are traducere în două limbi, română și engleză, fiindcă studenții Universității de Vest din Timișoara nu sunt doar vorbitori de limba română.
 
-\par Aplicația are și un ghid de utilizator, pentru toate funcționalitățile aplicației, începând cu cele comune și la final structurate pe roluri. Ghidul are și capturi de ecran, pentru a arăta și exemplu pentru utilizatorii care citesc ghid-ul.
+\par Aplicația are și un ghid de utilizator, pentru toate funcționalitățile aplicației, începând cu cele comune și la final structurate pe roluri. Ghidul are și capturi de ecran, pentru a arăta și exemple pentru utilizatorii care citesc ghid-ul.
 
 \section{Direcții viitoare}
 
-\par Având în vedere că aplicația UVTDorms a ajuns la prima versiune finală, aceasta poată să fie instalată pe un server și asociat cu un nume domain și utilizat de studenții și administratorii căminelor. Deși aplicația mai poate fi extinsă cu funcționalități noi, aceasta deja oferă toată funcționalitățile de bază pe care și le-a propus.
+\par Având în vedere că aplicația UVTDorms a ajuns la prima versiune finală, aceasta poate să fie instalată pe un server și asociat cu un nume domain și utilizată de studenții și administratorii căminelor. Deși aplicația mai poate fi extinsă cu funcționalități noi, aceasta deja oferă toate funcționalitățile de bază pe care și le-a propus.
 
 \par Un exemplu bun de extindere a aplicației ar fi integrarea cu procesul de obținere a locurilor în cămine. UVTDorms permite înscrierea studenților în căminele în care au fost deja cazați, dar încă nu suportă procesul de obținere a locurilor.
 
